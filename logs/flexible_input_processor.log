@@ -1,0 +1,8 @@
+2025-06-21 23:59:55,010 - FlexibleInputProcessor - INFO - Processing file: raw_daily_reports\rudrav_meesho\rudrav_meesho.csv
+2025-06-21 23:59:55,011 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-21 23:59:55,019 - FlexibleInputProcessor - INFO - Successfully loaded data: 64 rows, 11 columns
+2025-06-21 23:59:55,025 - FlexibleInputProcessor - INFO - Cleaned data: (64, 11) -> (64, 10)
+2025-06-22 00:01:00,324 - FlexibleInputProcessor - INFO - Processing file: raw_daily_reports\rudrav_meesho\rudrav_meesho.csv
+2025-06-22 00:01:00,324 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-22 00:01:00,329 - FlexibleInputProcessor - INFO - Successfully loaded data: 64 rows, 11 columns
+2025-06-22 00:01:00,334 - FlexibleInputProcessor - INFO - Cleaned data: (64, 11) -> (64, 10)
