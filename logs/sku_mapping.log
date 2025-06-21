@@ -4,3 +4,314 @@
 2025-06-21 09:53:13,632 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
 2025-06-21 09:53:13,636 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
 2025-06-21 09:53:13,659 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 12:26:23,793 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 12:26:23,797 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 12:26:23,803 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 12:27:29,819 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 12:27:29,823 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 12:27:29,829 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 12:27:29,849 - INFO - SKU: PROCESS | MSKU: ERROR | Status: Failed to process SKU mappings: 'sku'
+2025-06-21 12:32:00,369 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 12:32:00,379 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 12:32:00,393 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 12:32:00,438 - INFO - SKU: PROCESS | MSKU: ERROR | Status: Failed to process SKU mappings: 'sku'
+2025-06-21 12:47:33,601 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 12:47:33,607 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 12:47:33,612 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 12:47:33,629 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 12:48:27,625 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 12:48:27,637 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 12:48:27,660 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 12:48:27,697 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 12:49:18,794 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 12:49:18,798 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 12:49:18,804 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 12:49:18,824 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 13:01:55,645 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 13:01:55,653 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 13:01:55,664 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 13:01:55,725 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 13:02:10,898 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 13:02:10,905 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 13:02:10,912 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 13:02:10,929 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 13:09:19,070 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 13:09:19,082 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 13:09:19,112 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 13:09:19,148 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 18:37:50,611 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 18:37:50,619 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 18:37:50,632 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 18:37:50,646 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 18:38:20,599 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 18:38:20,624 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 18:38:20,664 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 18:38:20,701 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 18:39:35,182 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 18:39:35,190 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 18:39:35,205 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 18:39:35,211 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 18:41:11,380 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 18:41:11,391 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 18:41:11,407 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 18:41:11,458 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 18:42:57,742 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 18:42:57,750 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 18:42:57,763 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 18:42:57,800 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 18:45:26,995 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 18:45:27,005 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 18:45:27,017 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 18:45:27,041 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 18:47:05,796 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 18:47:05,805 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 18:47:05,823 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 18:47:05,844 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 18:47:29,449 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 18:47:29,467 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 18:47:29,506 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 18:47:29,569 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 21:04:30,308 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 21:04:30,312 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 21:04:30,319 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 21:04:30,338 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 21:04:30,371 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:04:30,372 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0442_CLT_AF_Goku_Big: No available stock in any warehouse
+2025-06-21 21:04:30,375 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,377 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,379 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:04:30,382 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0490_ST_Fruit_Blox_Shadow: No available stock in any warehouse
+2025-06-21 21:04:30,388 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,391 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,393 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ
+2025-06-21 21:04:30,398 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,408 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,413 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,421 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0454_ST_Animal_Garfield_Orange: -1 from TLCQ
+2025-06-21 21:04:30,425 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:04:30,430 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,435 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0417_Organizer_StorageBox_SkyBlue: No available stock in any warehouse
+2025-06-21 21:04:30,442 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ
+2025-06-21 21:04:30,445 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,450 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0162_SG_FireGlass_MercuryPink: -1 from TLCQ
+2025-06-21 21:04:30,456 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,458 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0478_ST_Minecraft_Cow_Brown: -1 from TLCQ
+2025-06-21 21:04:30,460 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,463 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0013_MB_HBD_Red: No available stock in any warehouse
+2025-06-21 21:04:30,470 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:04:30,474 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,480 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ
+2025-06-21 21:04:30,490 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0463_ST_Pokemon_Gengar: -1 from TLCQ
+2025-06-21 21:04:30,496 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,499 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0148_SG_ButterFly_RedGreen: No available stock in any warehouse
+2025-06-21 21:04:30,506 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:04:30,511 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,517 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:04:30,524 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ
+2025-06-21 21:04:30,529 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,533 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0447_CLT_AF_Goku_SSJ: -1 from TLCQ
+2025-06-21 21:04:30,536 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0417_Organizer_StorageBox_SkyBlue: No available stock in any warehouse
+2025-06-21 21:04:30,540 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:04:30,541 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0156_SG_FireGlass_Yellow: No available stock in any warehouse
+2025-06-21 21:04:30,544 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_O0120_OT_DolphinBubbleMachine: No available stock in any warehouse
+2025-06-21 21:04:30,546 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0054_MB_Starwar_Black: No available stock in any warehouse
+2025-06-21 21:04:30,548 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:04:30,554 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:04:30,556 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0445_OT_Glue_Sand_Rubber_Monkey: -1 from TLCQ
+2025-06-21 21:04:30,561 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0294_OT_Harrypotter_new_wand: -1 from TLCQ
+2025-06-21 21:04:30,565 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0533_ST_Animal_Breathing_Koala_Grey: -1 from TLCQ
+2025-06-21 21:04:30,572 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:04:30,573 - INFO - SKU: INVENTORY | MSKU: ERROR | Status: Failed to update inventory: ('Lengths must match to compare', (1011,), (2,))
+2025-06-21 21:04:30,576 - INFO - SKU: OUTBOUND | MSKU: ERROR | Status: Failed to process outbound data: "['panel'] not in index"
+2025-06-21 21:09:13,158 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 21:09:13,165 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 21:09:13,181 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 21:09:13,221 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 21:09:13,273 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:09:13,283 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0442_CLT_AF_Goku_Big: No available stock in any warehouse
+2025-06-21 21:09:13,287 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,291 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,302 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:09:13,306 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0490_ST_Fruit_Blox_Shadow: No available stock in any warehouse
+2025-06-21 21:09:13,316 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,320 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,330 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ
+2025-06-21 21:09:13,336 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,346 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,350 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,356 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0454_ST_Animal_Garfield_Orange: -1 from TLCQ
+2025-06-21 21:09:13,366 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:09:13,372 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,381 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0417_Organizer_StorageBox_SkyBlue: No available stock in any warehouse
+2025-06-21 21:09:13,388 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ
+2025-06-21 21:09:13,398 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,419 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0162_SG_FireGlass_MercuryPink: -1 from TLCQ
+2025-06-21 21:09:13,433 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,441 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0478_ST_Minecraft_Cow_Brown: -1 from TLCQ
+2025-06-21 21:09:13,452 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,459 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0013_MB_HBD_Red: No available stock in any warehouse
+2025-06-21 21:09:13,468 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:09:13,475 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,484 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ
+2025-06-21 21:09:13,489 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0463_ST_Pokemon_Gengar: -1 from TLCQ
+2025-06-21 21:09:13,499 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,503 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0148_SG_ButterFly_RedGreen: No available stock in any warehouse
+2025-06-21 21:09:13,515 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:09:13,521 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,533 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:09:13,538 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ
+2025-06-21 21:09:13,548 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,552 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0447_CLT_AF_Goku_SSJ: -1 from TLCQ
+2025-06-21 21:09:13,559 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0417_Organizer_StorageBox_SkyBlue: No available stock in any warehouse
+2025-06-21 21:09:13,567 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:09:13,572 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0156_SG_FireGlass_Yellow: No available stock in any warehouse
+2025-06-21 21:09:13,579 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_O0120_OT_DolphinBubbleMachine: No available stock in any warehouse
+2025-06-21 21:09:13,584 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0054_MB_Starwar_Black: No available stock in any warehouse
+2025-06-21 21:09:13,592 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:09:13,600 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:09:13,604 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0445_OT_Glue_Sand_Rubber_Monkey: -1 from TLCQ
+2025-06-21 21:09:13,618 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0294_OT_Harrypotter_new_wand: -1 from TLCQ
+2025-06-21 21:09:13,623 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0533_ST_Animal_Breathing_Koala_Grey: -1 from TLCQ
+2025-06-21 21:09:13,634 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:09:13,650 - INFO - SKU: INVENTORY | MSKU: ERROR | Status: Failed to update inventory: ('Lengths must match to compare', (1011,), (2,))
+2025-06-21 21:09:13,658 - INFO - SKU: OUTBOUND | MSKU: SUCCESS | Status: Outbound data processed: 64 records with columns: ['date', 'panel', 'sku', 'msku', 'quantity', 'warehouse']
+2025-06-21 21:17:11,401 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 21:17:11,408 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 21:17:11,414 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 21:17:11,424 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 21:17:11,464 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:17:11,469 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0442_CLT_AF_Goku_Big: No available stock in any warehouse
+2025-06-21 21:17:11,470 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,473 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,474 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:17:11,477 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0490_ST_Fruit_Blox_Shadow: No available stock in any warehouse
+2025-06-21 21:17:11,479 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,483 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,487 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ
+2025-06-21 21:17:11,490 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,492 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,494 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,496 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0454_ST_Animal_Garfield_Orange: -1 from TLCQ
+2025-06-21 21:17:11,504 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:17:11,505 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,509 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0417_Organizer_StorageBox_SkyBlue: No available stock in any warehouse
+2025-06-21 21:17:11,511 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ
+2025-06-21 21:17:11,513 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,520 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0162_SG_FireGlass_MercuryPink: -1 from TLCQ
+2025-06-21 21:17:11,522 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,525 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0478_ST_Minecraft_Cow_Brown: -1 from TLCQ
+2025-06-21 21:17:11,527 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,529 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0013_MB_HBD_Red: No available stock in any warehouse
+2025-06-21 21:17:11,530 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:17:11,536 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,541 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ
+2025-06-21 21:17:11,543 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0463_ST_Pokemon_Gengar: -1 from TLCQ
+2025-06-21 21:17:11,545 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,547 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0148_SG_ButterFly_RedGreen: No available stock in any warehouse
+2025-06-21 21:17:11,553 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:17:11,556 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,557 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:17:11,559 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ
+2025-06-21 21:17:11,561 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,563 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0447_CLT_AF_Goku_SSJ: -1 from TLCQ
+2025-06-21 21:17:11,570 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0417_Organizer_StorageBox_SkyBlue: No available stock in any warehouse
+2025-06-21 21:17:11,571 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:17:11,573 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0156_SG_FireGlass_Yellow: No available stock in any warehouse
+2025-06-21 21:17:11,574 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_O0120_OT_DolphinBubbleMachine: No available stock in any warehouse
+2025-06-21 21:17:11,575 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0054_MB_Starwar_Black: No available stock in any warehouse
+2025-06-21 21:17:11,578 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:17:11,579 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,586 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0445_OT_Glue_Sand_Rubber_Monkey: -1 from TLCQ
+2025-06-21 21:17:11,588 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0294_OT_Harrypotter_new_wand: -1 from TLCQ
+2025-06-21 21:17:11,590 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0533_ST_Animal_Breathing_Koala_Grey: -1 from TLCQ
+2025-06-21 21:17:11,592 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:17:11,592 - INFO - SKU: INVENTORY | MSKU: ORDER_ERROR | Status: Failed to process order 46: ('Lengths must match to compare', (1011,), (2,))
+2025-06-21 21:17:11,595 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0205_MB_MHA10_Brown: -1 from TLCQ
+2025-06-21 21:17:11,597 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0148_SG_ButterFly_RedGreen: No available stock in any warehouse
+2025-06-21 21:17:11,604 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ
+2025-06-21 21:17:11,606 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,608 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0085_MB_Titanic_Brown: -1 from TLCQ
+2025-06-21 21:17:11,610 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,612 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0148_SG_ButterFly_RedGreen: No available stock in any warehouse
+2025-06-21 21:17:11,614 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0111_HD_Rug_CircleFurmat_White: No available stock in any warehouse
+2025-06-21 21:17:11,621 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,623 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:17:11,625 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,627 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0148_SG_ButterFly_RedGreen: No available stock in any warehouse
+2025-06-21 21:17:11,628 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0148_SG_ButterFly_RedGreen: No available stock in any warehouse
+2025-06-21 21:17:11,630 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ
+2025-06-21 21:17:11,634 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ
+2025-06-21 21:17:11,637 - INFO - SKU: INVENTORY | MSKU: NO_STOCK | Status: MSKU CSTE_0111_HD_Rug_CircleFurmat_White: No available stock in any warehouse
+2025-06-21 21:17:11,638 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:17:11,649 - INFO - SKU: INVENTORY | MSKU: SAVED | Status: Updated inventory saved to memory\inventory_memory.csv with 1011 records
+2025-06-21 21:17:11,656 - INFO - SKU: OUTBOUND | MSKU: SUCCESS | Status: Outbound data processed: 64 records with columns: ['date', 'panel', 'sku', 'msku', 'quantity', 'warehouse']
+2025-06-21 21:31:28,583 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Mapping data loaded from memory: clean_data\sku_mappings_final_clean.csv
+2025-06-21 21:31:28,586 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Combo SKU data loaded from master file: clean_data\combo_sku_clean.csv
+2025-06-21 21:31:28,591 - INFO - SKU: SYSTEM | MSKU: LOADED | Status: Inventory data loaded from master file: clean_data\cleaned_inventory.csv
+2025-06-21 21:31:28,603 - INFO - SKU: PROCESS | MSKU: SUCCESS | Status: SKU mapping completed successfully
+2025-06-21 21:31:28,633 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:31:28,635 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0442_CLT_AF_Goku_Big: -1 from TLCQ (stock went negative: -1)
+2025-06-21 21:31:28,638 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,639 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,641 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:31:28,644 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0490_ST_Fruit_Blox_Shadow: -1 from BLR7 (stock went negative: -1)
+2025-06-21 21:31:28,646 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,650 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,652 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ
+2025-06-21 21:31:28,654 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,656 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,658 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,660 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0454_ST_Animal_Garfield_Orange: -1 from TLCQ
+2025-06-21 21:31:28,662 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:31:28,666 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,668 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0417_Organizer_StorageBox_SkyBlue: -1 from TLCQ (stock went negative: -1)
+2025-06-21 21:31:28,670 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ
+2025-06-21 21:31:28,672 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,673 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0162_SG_FireGlass_MercuryPink: -1 from TLCQ
+2025-06-21 21:31:28,675 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,677 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0478_ST_Minecraft_Cow_Brown: -1 from TLCQ
+2025-06-21 21:31:28,678 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,683 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0013_MB_HBD_Red: -1 from BLR7 (stock went negative: -1)
+2025-06-21 21:31:28,686 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:31:28,688 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,690 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ
+2025-06-21 21:31:28,692 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0463_ST_Pokemon_Gengar: -1 from TLCQ
+2025-06-21 21:31:28,694 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,697 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from BLR7 (stock went negative: -1)
+2025-06-21 21:31:28,701 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:31:28,704 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,706 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:31:28,708 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ
+2025-06-21 21:31:28,711 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,715 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0447_CLT_AF_Goku_SSJ: -1 from TLCQ
+2025-06-21 21:31:28,719 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0417_Organizer_StorageBox_SkyBlue: -1 from BLR7 (stock went negative: -1)
+2025-06-21 21:31:28,722 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:31:28,725 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0156_SG_FireGlass_Yellow: -1 from TLCQ (stock went negative: -1)
+2025-06-21 21:31:28,727 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_O0120_OT_DolphinBubbleMachine: -1 from TLCQ (stock went negative: -1)
+2025-06-21 21:31:28,729 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0054_MB_Starwar_Black: -1 from BLR7 (stock went negative: -1)
+2025-06-21 21:31:28,734 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:31:28,736 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,739 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0445_OT_Glue_Sand_Rubber_Monkey: -1 from TLCQ
+2025-06-21 21:31:28,742 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0294_OT_Harrypotter_new_wand: -1 from TLCQ
+2025-06-21 21:31:28,744 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0533_ST_Animal_Breathing_Koala_Grey: -1 from TLCQ
+2025-06-21 21:31:28,746 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:31:28,750 - INFO - SKU: INVENTORY | MSKU: ORDER_ERROR | Status: Failed to process order 46: ('Lengths must match to compare', (1011,), (2,))
+2025-06-21 21:31:28,752 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0205_MB_MHA10_Brown: -1 from TLCQ
+2025-06-21 21:31:28,754 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from BLR8 (stock went negative: -1)
+2025-06-21 21:31:28,756 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ
+2025-06-21 21:31:28,758 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,760 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0085_MB_Titanic_Brown: -1 from TLCQ
+2025-06-21 21:31:28,762 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,767 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from BOM5 (stock went negative: -1)
+2025-06-21 21:31:28,770 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0111_HD_Rug_CircleFurmat_White: -1 from TLCQ (stock went negative: -1)
+2025-06-21 21:31:28,772 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,774 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ
+2025-06-21 21:31:28,775 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,778 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from BOM7 (stock went negative: -1)
+2025-06-21 21:31:28,783 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from CCU1 (stock went negative: -1)
+2025-06-21 21:31:28,786 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ
+2025-06-21 21:31:28,789 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ
+2025-06-21 21:31:28,792 - INFO - SKU: INVENTORY | MSKU: BACKTRACK | Status: MSKU CSTE_0111_HD_Rug_CircleFurmat_White: -1 from BLR7 (stock went negative: -1)
+2025-06-21 21:31:28,798 - INFO - SKU: INVENTORY | MSKU: UPDATED | Status: MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ
+2025-06-21 21:31:28,809 - INFO - SKU: INVENTORY | MSKU: SAVED | Status: Updated inventory saved to memory\inventory_memory.csv with 1011 records
+2025-06-21 21:31:28,817 - INFO - SKU: OUTBOUND | MSKU: SUCCESS | Status: Outbound data processed: 64 records with columns: ['date', 'panel', 'sku', 'msku', 'quantity', 'warehouse']
