@@ -6,3 +6,23 @@
 2025-06-22 00:01:00,324 - FlexibleInputProcessor - INFO - Detected format: .csv
 2025-06-22 00:01:00,329 - FlexibleInputProcessor - INFO - Successfully loaded data: 64 rows, 11 columns
 2025-06-22 00:01:00,334 - FlexibleInputProcessor - INFO - Cleaned data: (64, 11) -> (64, 10)
+2025-06-22 00:40:29,361 - FlexibleInputProcessor - INFO - Processing file: raw_daily_reports\cste_amazon\cste_amazon.csv
+2025-06-22 00:40:29,364 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-22 00:40:29,420 - FlexibleInputProcessor - INFO - Successfully loaded data: 317 rows, 15 columns
+2025-06-22 00:40:29,441 - FlexibleInputProcessor - INFO - Cleaned data: (317, 15) -> (317, 11)
+2025-06-22 00:40:29,565 - FlexibleInputProcessor - INFO - Processing file: raw_daily_reports\cste_fk\cste_fk.csv
+2025-06-22 00:40:29,566 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-22 00:40:29,589 - FlexibleInputProcessor - INFO - Successfully loaded data: 110 rows, 37 columns
+2025-06-22 00:40:29,599 - FlexibleInputProcessor - INFO - Cleaned data: (110, 37) -> (110, 36)
+2025-06-22 00:40:31,493 - FlexibleInputProcessor - INFO - Processing file: raw_daily_reports\cste_meesho\cste_meesho.csv
+2025-06-22 00:40:31,494 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-22 00:40:31,504 - FlexibleInputProcessor - INFO - Successfully loaded data: 48 rows, 11 columns
+2025-06-22 00:40:31,511 - FlexibleInputProcessor - INFO - Cleaned data: (48, 11) -> (48, 10)
+2025-06-22 00:40:32,140 - FlexibleInputProcessor - INFO - Processing file: raw_daily_reports\gl_fk\gl_fk.csv
+2025-06-22 00:40:32,144 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-22 00:40:32,163 - FlexibleInputProcessor - INFO - Successfully loaded data: 11 rows, 37 columns
+2025-06-22 00:40:32,170 - FlexibleInputProcessor - INFO - Cleaned data: (11, 37) -> (11, 34)
+2025-06-22 00:40:32,505 - FlexibleInputProcessor - INFO - Processing file: raw_daily_reports\rudrav_meesho\rudrav_meesho.csv
+2025-06-22 00:40:32,507 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-22 00:40:32,518 - FlexibleInputProcessor - INFO - Successfully loaded data: 64 rows, 11 columns
+2025-06-22 00:40:32,525 - FlexibleInputProcessor - INFO - Cleaned data: (64, 11) -> (64, 10)

@@ -597,3 +597,549 @@
 2025-06-22 00:01:00,713 - INFO - INVENTORY | UPDATED | Processed 64 orders
 2025-06-22 00:01:00,714 - INFO - INVENTORY | UPDATED | Inventory updated successfully
 2025-06-22 00:01:00,717 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 64 records
+2025-06-22 00:40:29,509 - INFO - MEMORY | LOADED | Data loaded from master: clean_data\sku_mappings_final_clean.csv
+2025-06-22 00:40:29,512 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status 1', 'status 2', 'image']
+2025-06-22 00:40:29,524 - INFO - MEMORY | LOADED | Data loaded from master: clean_data\combo_sku_clean.csv
+2025-06-22 00:40:29,527 - INFO - COMBO | INITIALIZED | Combo hashtable built with 375 entries
+2025-06-22 00:40:29,543 - INFO - MEMORY | LOADED | Data loaded from master: clean_data\cleaned_inventory.csv
+2025-06-22 00:40:29,549 - INFO - MAPPER | HASHTABLE | Built hashtable with 4327 mappings
+2025-06-22 00:40:29,553 - INFO - SYSTEM | INITIALIZED | All components loaded successfully
+2025-06-22 00:40:29,555 - INFO - MAPPER | STARTED | Processing SKU mappings
+2025-06-22 00:40:29,559 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['date', 'fnsku', 'asin', 'msku', 'title', 'event type', 'quantity', 'fulfillment center', 'disposition', 'country', 'date and time']
+2025-06-22 00:40:29,560 - INFO - MAPPER | ERROR | Validation failed: Missing required columns: ['sku']. Available: ['date', 'fnsku', 'asin', 'msku', 'title', 'event type', 'quantity', 'fulfillment center', 'disposition', 'country', 'date and time']
+2025-06-22 00:40:29,561 - INFO - INVENTORY | ERROR | No processed data for inventory update
+2025-06-22 00:40:29,562 - INFO - OUTPUT | ERROR | No processed data available
+2025-06-22 00:40:29,565 - INFO - Processing file: raw_daily_reports\cste_fk\cste_fk.csv
+2025-06-22 00:40:29,566 - INFO - Detected format: .csv
+2025-06-22 00:40:29,589 - INFO - Successfully loaded data: 110 rows, 37 columns
+2025-06-22 00:40:29,599 - INFO - Cleaned data: (110, 37) -> (110, 36)
+2025-06-22 00:40:29,671 - INFO - MEMORY | LOADED | Data loaded from master: clean_data\sku_mappings_final_clean.csv
+2025-06-22 00:40:29,675 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status 1', 'status 2', 'image']
+2025-06-22 00:40:29,684 - INFO - MEMORY | LOADED | Data loaded from master: clean_data\combo_sku_clean.csv
+2025-06-22 00:40:29,689 - INFO - COMBO | INITIALIZED | Combo hashtable built with 375 entries
+2025-06-22 00:40:29,710 - INFO - MEMORY | LOADED | Data loaded from master: clean_data\cleaned_inventory.csv
+2025-06-22 00:40:29,721 - INFO - MAPPER | HASHTABLE | Built hashtable with 4327 mappings
+2025-06-22 00:40:29,722 - INFO - SYSTEM | INITIALIZED | All components loaded successfully
+2025-06-22 00:40:29,725 - INFO - MAPPER | STARTED | Processing SKU mappings
+2025-06-22 00:40:29,732 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['ordered on', 'shipment id', 'order item id', 'order id', 'hsn code', 'order state', 'order type', 'fsn', 'sku', 'product', 'invoice no.', 'cgst', 'igst', 'sgst', 'invoice date (mm/dd/yy)', 'invoice amount', 'selling price per item', 'shipping and handling charges', 'quantity', 'price inc. fkmp contribution & subsidy', 'buyer name', 'ship to name', 'address line 1', 'address line 2', 'city', 'state', 'pin code', 'dispatch after date', 'dispatch by date', 'tracking id', 'package length (cm)', 'package breadth (cm)', 'package height (cm)', 'package weight (kg)', 'ready to make', 'with attachment']
+2025-06-22 00:40:29,926 - INFO - MAPPER | COMPLETED | Processed 110 records
+2025-06-22 00:40:29,942 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0546_ST_Animal_Lucifer_Cat_Black: 1 units from TLCQ
+2025-06-22 00:40:29,947 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0546_ST_Animal_Lucifer_Cat_Black: -1 from TLCQ (new stock: 0)
+2025-06-22 00:40:29,957 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0015_MB_HBD_Black: 1 units from TLCQ
+2025-06-22 00:40:29,962 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0015_MB_HBD_Black: -1 from TLCQ (new stock: 335)
+2025-06-22 00:40:29,972 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:29,976 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 68)
+2025-06-22 00:40:29,979 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:29,982 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 67)
+2025-06-22 00:40:29,997 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0015_MB_HBD_Black: 1 units from TLCQ
+2025-06-22 00:40:30,032 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0015_MB_HBD_Black: -1 from TLCQ (new stock: 334)
+2025-06-22 00:40:30,051 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,060 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 38)
+2025-06-22 00:40:30,075 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,080 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 37)
+2025-06-22 00:40:30,084 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:30,094 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 66)
+2025-06-22 00:40:30,098 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0470_ST_Minecraft_Sword_Small: 1 units from TLCQ
+2025-06-22 00:40:30,100 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0470_ST_Minecraft_Sword_Small: -1 from TLCQ (new stock: 66)
+2025-06-22 00:40:30,107 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0470_ST_Minecraft_Sword_Small: 1 units from TLCQ
+2025-06-22 00:40:30,113 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0470_ST_Minecraft_Sword_Small: -1 from TLCQ (new stock: 65)
+2025-06-22 00:40:30,117 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:30,120 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 65)
+2025-06-22 00:40:30,125 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:30,128 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 64)
+2025-06-22 00:40:30,131 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,133 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 36)
+2025-06-22 00:40:30,143 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0470_ST_Minecraft_Sword_Small: 1 units from TLCQ
+2025-06-22 00:40:30,146 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0470_ST_Minecraft_Sword_Small: -1 from TLCQ (new stock: 64)
+2025-06-22 00:40:30,151 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0218_SG_ThugLife_Big: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:30,155 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0218_SG_ThugLife_Big: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:30,159 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0306_MB_Sabrina_8Notes_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,162 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0306_MB_Sabrina_8Notes_Brown: -1 from TLCQ (new stock: 14)
+2025-06-22 00:40:30,165 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0014_MB_HBD_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,172 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0014_MB_HBD_Brown: -1 from TLCQ (new stock: 379)
+2025-06-22 00:40:30,179 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0240_SG_Wings_Red: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:30,183 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0240_SG_Wings_Red: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:30,188 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,192 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 35)
+2025-06-22 00:40:30,195 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,198 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 34)
+2025-06-22 00:40:30,202 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0491_ST_Fruit_Blox_Spirit: 1 units from TLCQ
+2025-06-22 00:40:30,205 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0491_ST_Fruit_Blox_Spirit: -1 from TLCQ (new stock: 0)
+2025-06-22 00:40:30,210 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0533_ST_Animal_Breathing_Koala_Grey: 1 units from TLCQ
+2025-06-22 00:40:30,212 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0533_ST_Animal_Breathing_Koala_Grey: -1 from TLCQ (new stock: 1)
+2025-06-22 00:40:30,216 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0489_ST_Fruit_Blox_Light: 1 units from TLCQ
+2025-06-22 00:40:30,219 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0489_ST_Fruit_Blox_Light: -1 from TLCQ (new stock: 3)
+2025-06-22 00:40:30,223 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0491_ST_Fruit_Blox_Spirit: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:30,226 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0491_ST_Fruit_Blox_Spirit: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:30,230 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0488_ST_Animal_Breathing_Stitch_Blue: 1 units from TLCQ
+2025-06-22 00:40:30,232 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0488_ST_Animal_Breathing_Stitch_Blue: -1 from TLCQ (new stock: 81)
+2025-06-22 00:40:30,235 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0526_ST_Animal_Breathing_Otter_Pink: 1 units from TLCQ
+2025-06-22 00:40:30,238 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0526_ST_Animal_Breathing_Otter_Pink: -1 from TLCQ (new stock: 54)
+2025-06-22 00:40:30,242 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0490_ST_Fruit_Blox_Shadow: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:30,245 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0490_ST_Fruit_Blox_Shadow: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:30,249 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0486_ST_Animal_Breathing_Otter_Brown: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:30,252 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0486_ST_Animal_Breathing_Otter_Brown: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:30,257 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,261 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 33)
+2025-06-22 00:40:30,266 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0160_SG_FireGlass_MercuryGreen: 1 units from TLCQ
+2025-06-22 00:40:30,270 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0160_SG_FireGlass_MercuryGreen: -1 from TLCQ (new stock: 0)
+2025-06-22 00:40:30,274 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0014_MB_HBD_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,278 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0014_MB_HBD_Brown: -1 from TLCQ (new stock: 378)
+2025-06-22 00:40:30,282 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,286 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 32)
+2025-06-22 00:40:30,291 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:30,297 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 63)
+2025-06-22 00:40:30,428 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0149_SG_ButterFly_Pink: 1 units from TLCQ
+2025-06-22 00:40:30,431 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0149_SG_ButterFly_Pink: -1 from TLCQ (new stock: 0)
+2025-06-22 00:40:30,517 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0014_MB_HBD_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,521 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0014_MB_HBD_Brown: -1 from TLCQ (new stock: 377)
+2025-06-22 00:40:30,526 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0217_SG_ThugLife_Thin: 1 units from TLCQ
+2025-06-22 00:40:30,546 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0217_SG_ThugLife_Thin: -1 from TLCQ (new stock: 607)
+2025-06-22 00:40:30,549 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0015_MB_HBD_Black: 1 units from TLCQ
+2025-06-22 00:40:30,555 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0015_MB_HBD_Black: -1 from TLCQ (new stock: 333)
+2025-06-22 00:40:30,558 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:30,560 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 62)
+2025-06-22 00:40:30,563 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0015_MB_HBD_Black: 1 units from TLCQ
+2025-06-22 00:40:30,565 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0015_MB_HBD_Black: -1 from TLCQ (new stock: 332)
+2025-06-22 00:40:30,568 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0470_ST_Minecraft_Sword_Small: 1 units from TLCQ
+2025-06-22 00:40:30,598 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0470_ST_Minecraft_Sword_Small: -1 from TLCQ (new stock: 63)
+2025-06-22 00:40:30,609 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0292_OT_Dumbledore_wand: 1 units from TLCQ
+2025-06-22 00:40:30,611 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0292_OT_Dumbledore_wand: -1 from TLCQ (new stock: 1)
+2025-06-22 00:40:30,614 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0491_ST_Fruit_Blox_Spirit: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:30,617 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0491_ST_Fruit_Blox_Spirit: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:30,622 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0490_ST_Fruit_Blox_Shadow: 1 units from BLR8 (insufficient stock)
+2025-06-22 00:40:30,625 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0490_ST_Fruit_Blox_Shadow: -1 from BLR8 (new stock: -1)
+2025-06-22 00:40:30,628 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0489_ST_Fruit_Blox_Light: 1 units from TLCQ
+2025-06-22 00:40:30,630 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0489_ST_Fruit_Blox_Light: -1 from TLCQ (new stock: 2)
+2025-06-22 00:40:30,637 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0478_ST_Minecraft_Cow_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,641 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0478_ST_Minecraft_Cow_Brown: -1 from TLCQ (new stock: 1)
+2025-06-22 00:40:30,645 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0489_ST_Fruit_Blox_Light: 1 units from TLCQ
+2025-06-22 00:40:30,648 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0489_ST_Fruit_Blox_Light: -1 from TLCQ (new stock: 1)
+2025-06-22 00:40:30,654 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0045_MB_LavienRose_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,658 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0045_MB_LavienRose_Brown: -1 from TLCQ (new stock: 52)
+2025-06-22 00:40:30,664 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0160_SG_FireGlass_MercuryGreen: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:30,666 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0160_SG_FireGlass_MercuryGreen: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:30,673 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,679 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 31)
+2025-06-22 00:40:30,686 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:30,690 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:30,696 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0292_OT_Dumbledore_wand: 1 units from TLCQ
+2025-06-22 00:40:30,704 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0292_OT_Dumbledore_wand: -1 from TLCQ (new stock: 0)
+2025-06-22 00:40:30,711 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0487_ST_Animal_Breathing_Otter_Blue: 1 units from TLCQ
+2025-06-22 00:40:30,714 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0487_ST_Animal_Breathing_Otter_Blue: -1 from TLCQ (new stock: 74)
+2025-06-22 00:40:30,724 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0486_ST_Animal_Breathing_Otter_Brown: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:30,730 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0486_ST_Animal_Breathing_Otter_Brown: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:30,736 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0015_MB_HBD_Black: 1 units from TLCQ
+2025-06-22 00:40:30,740 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0015_MB_HBD_Black: -1 from TLCQ (new stock: 331)
+2025-06-22 00:40:30,745 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0084_MB_Spirated_Black: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:30,748 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0084_MB_Spirated_Black: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:30,755 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0491_ST_Fruit_Blox_Spirit: 1 units from BLR8 (insufficient stock)
+2025-06-22 00:40:30,759 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0491_ST_Fruit_Blox_Spirit: -1 from BLR8 (new stock: -1)
+2025-06-22 00:40:30,763 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from BLR8 (insufficient stock)
+2025-06-22 00:40:30,765 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from BLR8 (new stock: -1)
+2025-06-22 00:40:30,774 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0036_MB_HBD_White: 1 units from TLCQ
+2025-06-22 00:40:30,777 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0036_MB_HBD_White: -1 from TLCQ (new stock: 44)
+2025-06-22 00:40:30,782 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0014_MB_HBD_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,786 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0014_MB_HBD_Brown: -1 from TLCQ (new stock: 376)
+2025-06-22 00:40:30,794 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,798 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 30)
+2025-06-22 00:40:30,809 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0015_MB_HBD_Black: 1 units from TLCQ
+2025-06-22 00:40:30,812 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0015_MB_HBD_Black: -1 from TLCQ (new stock: 330)
+2025-06-22 00:40:30,822 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:30,828 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 61)
+2025-06-22 00:40:30,840 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0482_ST_Animal_Kitty_Kuromi_Black: 1 units from TLCQ
+2025-06-22 00:40:30,845 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0482_ST_Animal_Kitty_Kuromi_Black: -1 from TLCQ (new stock: 4)
+2025-06-22 00:40:30,857 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,865 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 29)
+2025-06-22 00:40:30,878 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,886 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 28)
+2025-06-22 00:40:30,900 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0489_ST_Fruit_Blox_Light: 1 units from TLCQ
+2025-06-22 00:40:30,907 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0489_ST_Fruit_Blox_Light: -1 from TLCQ (new stock: 0)
+2025-06-22 00:40:30,915 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0490_ST_Fruit_Blox_Shadow: 1 units from BOM5 (insufficient stock)
+2025-06-22 00:40:30,920 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0490_ST_Fruit_Blox_Shadow: -1 from BOM5 (new stock: -1)
+2025-06-22 00:40:30,931 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0014_MB_HBD_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,935 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0014_MB_HBD_Brown: -1 from TLCQ (new stock: 375)
+2025-06-22 00:40:30,944 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from BOM5 (insufficient stock)
+2025-06-22 00:40:30,948 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from BOM5 (new stock: -1)
+2025-06-22 00:40:30,957 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0014_MB_HBD_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,963 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0014_MB_HBD_Brown: -1 from TLCQ (new stock: 374)
+2025-06-22 00:40:30,971 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0305_MB_Crystle_17Notes_Transparent: 1 units from TLCQ
+2025-06-22 00:40:30,976 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0305_MB_Crystle_17Notes_Transparent: -1 from TLCQ (new stock: 1)
+2025-06-22 00:40:30,981 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:30,987 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 27)
+2025-06-22 00:40:30,995 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0240_SG_Wings_Red: 1 units from BLR8 (insufficient stock)
+2025-06-22 00:40:30,999 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0240_SG_Wings_Red: -1 from BLR8 (new stock: -1)
+2025-06-22 00:40:31,009 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0486_ST_Animal_Breathing_Otter_Brown: 1 units from BLR8 (insufficient stock)
+2025-06-22 00:40:31,013 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0486_ST_Animal_Breathing_Otter_Brown: -1 from BLR8 (new stock: -1)
+2025-06-22 00:40:31,024 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:31,029 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 60)
+2025-06-22 00:40:31,041 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:31,050 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 59)
+2025-06-22 00:40:31,065 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:31,071 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 26)
+2025-06-22 00:40:31,082 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0532_ST_Animal_Breathing_Rabbit_Grey: 1 units from TLCQ
+2025-06-22 00:40:31,089 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0532_ST_Animal_Breathing_Rabbit_Grey: -1 from TLCQ (new stock: 5)
+2025-06-22 00:40:31,096 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0487_ST_Animal_Breathing_Otter_Blue: 1 units from TLCQ
+2025-06-22 00:40:31,103 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0487_ST_Animal_Breathing_Otter_Blue: -1 from TLCQ (new stock: 73)
+2025-06-22 00:40:31,115 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from BOM7 (insufficient stock)
+2025-06-22 00:40:31,120 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from BOM7 (new stock: -1)
+2025-06-22 00:40:31,125 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0031_OT_StandingElephant_Grey: 1 units from TLCQ
+2025-06-22 00:40:31,128 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0031_OT_StandingElephant_Grey: -1 from TLCQ (new stock: 7)
+2025-06-22 00:40:31,140 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0419_ST_MineCraft_Creeper: 1 units from TLCQ
+2025-06-22 00:40:31,143 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0419_ST_MineCraft_Creeper: -1 from TLCQ (new stock: 23)
+2025-06-22 00:40:31,148 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0330_Wands_Harrypotter_Light: 1 units from TLCQ
+2025-06-22 00:40:31,154 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0330_Wands_Harrypotter_Light: -1 from TLCQ (new stock: 77)
+2025-06-22 00:40:31,159 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0015_MB_HBD_Black: 1 units from TLCQ
+2025-06-22 00:40:31,162 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0015_MB_HBD_Black: -1 from TLCQ (new stock: 329)
+2025-06-22 00:40:31,166 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0487_ST_Animal_Breathing_Otter_Blue: 1 units from TLCQ
+2025-06-22 00:40:31,170 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0487_ST_Animal_Breathing_Otter_Blue: -1 from TLCQ (new stock: 72)
+2025-06-22 00:40:31,177 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0191_MB_MHA2_Brown: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:31,181 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0191_MB_MHA2_Brown: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:31,187 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from CCU1 (insufficient stock)
+2025-06-22 00:40:31,190 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from CCU1 (new stock: -1)
+2025-06-22 00:40:31,195 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0512_ST_Animal_Cow_Plush: 1 units from TLCQ
+2025-06-22 00:40:31,198 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0512_ST_Animal_Cow_Plush: -1 from TLCQ (new stock: 4)
+2025-06-22 00:40:31,204 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0333_Wands_Dumbledore_Light: 1 units from TLCQ
+2025-06-22 00:40:31,207 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0333_Wands_Dumbledore_Light: -1 from TLCQ (new stock: 80)
+2025-06-22 00:40:31,211 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0240_SG_Wings_Red: 1 units from BOM5 (insufficient stock)
+2025-06-22 00:40:31,214 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0240_SG_Wings_Red: -1 from BOM5 (new stock: -1)
+2025-06-22 00:40:31,220 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0014_MB_HBD_Brown: 1 units from TLCQ
+2025-06-22 00:40:31,224 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0014_MB_HBD_Brown: -1 from TLCQ (new stock: 373)
+2025-06-22 00:40:31,228 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0031_OT_StandingElephant_Grey: 1 units from TLCQ
+2025-06-22 00:40:31,231 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0031_OT_StandingElephant_Grey: -1 from TLCQ (new stock: 6)
+2025-06-22 00:40:31,235 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0031_OT_StandingElephant_Grey: 1 units from TLCQ
+2025-06-22 00:40:31,241 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0031_OT_StandingElephant_Grey: -1 from TLCQ (new stock: 5)
+2025-06-22 00:40:31,244 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0031_OT_StandingElephant_Grey: 1 units from TLCQ
+2025-06-22 00:40:31,246 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0031_OT_StandingElephant_Grey: -1 from TLCQ (new stock: 4)
+2025-06-22 00:40:31,250 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0014_MB_HBD_Brown: 1 units from TLCQ
+2025-06-22 00:40:31,254 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0014_MB_HBD_Brown: -1 from TLCQ (new stock: 372)
+2025-06-22 00:40:31,259 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0292_OT_Dumbledore_wand: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:31,261 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0292_OT_Dumbledore_wand: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:31,265 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:31,272 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 25)
+2025-06-22 00:40:31,278 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0036_MB_HBD_White: 1 units from TLCQ
+2025-06-22 00:40:31,281 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0036_MB_HBD_White: -1 from TLCQ (new stock: 43)
+2025-06-22 00:40:31,293 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:31,296 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 24)
+2025-06-22 00:40:31,304 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:31,307 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 23)
+2025-06-22 00:40:31,313 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_O0055_OT_PrincessDigitalWatch_Blue: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:31,317 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0055_OT_PrincessDigitalWatch_Blue: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:31,327 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0543_ST_Animal_Breathing_Strawberry_Rabbit: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:31,331 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0543_ST_Animal_Breathing_Strawberry_Rabbit: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:31,338 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0476_ST_Minecraft_Zombie_Black: 1 units from TLCQ
+2025-06-22 00:40:31,342 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0476_ST_Minecraft_Zombie_Black: -1 from TLCQ (new stock: 15)
+2025-06-22 00:40:31,348 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0488_ST_Animal_Breathing_Stitch_Blue: 1 units from TLCQ
+2025-06-22 00:40:31,355 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0488_ST_Animal_Breathing_Stitch_Blue: -1 from TLCQ (new stock: 80)
+2025-06-22 00:40:31,362 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0502_ST_Minecraft_Pickaxe_Foam: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:31,366 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0502_ST_Minecraft_Pickaxe_Foam: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:31,376 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0489_ST_Fruit_Blox_Light: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:31,379 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0489_ST_Fruit_Blox_Light: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:31,389 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0491_ST_Fruit_Blox_Spirit: 1 units from BOM5 (insufficient stock)
+2025-06-22 00:40:31,394 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0491_ST_Fruit_Blox_Spirit: -1 from BOM5 (new stock: -1)
+2025-06-22 00:40:31,400 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0486_ST_Animal_Breathing_Otter_Brown: 1 units from BOM5 (insufficient stock)
+2025-06-22 00:40:31,405 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0486_ST_Animal_Breathing_Otter_Brown: -1 from BOM5 (new stock: -1)
+2025-06-22 00:40:31,411 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0486_ST_Animal_Breathing_Otter_Brown: 1 units from BOM7 (insufficient stock)
+2025-06-22 00:40:31,414 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0486_ST_Animal_Breathing_Otter_Brown: -1 from BOM7 (new stock: -1)
+2025-06-22 00:40:31,420 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0292_OT_Dumbledore_wand: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:31,427 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0292_OT_Dumbledore_wand: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:31,467 - INFO - INVENTORY | UPDATED | Processed 110 orders
+2025-06-22 00:40:31,470 - INFO - INVENTORY | UPDATED | Inventory updated successfully
+2025-06-22 00:40:31,485 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 110 records
+2025-06-22 00:40:31,493 - INFO - Processing file: raw_daily_reports\cste_meesho\cste_meesho.csv
+2025-06-22 00:40:31,494 - INFO - Detected format: .csv
+2025-06-22 00:40:31,504 - INFO - Successfully loaded data: 48 rows, 11 columns
+2025-06-22 00:40:31,511 - INFO - Cleaned data: (48, 11) -> (48, 10)
+2025-06-22 00:40:31,556 - INFO - MEMORY | LOADED | Data loaded from master: clean_data\sku_mappings_final_clean.csv
+2025-06-22 00:40:31,558 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status 1', 'status 2', 'image']
+2025-06-22 00:40:31,564 - INFO - MEMORY | LOADED | Data loaded from master: clean_data\combo_sku_clean.csv
+2025-06-22 00:40:31,568 - INFO - COMBO | INITIALIZED | Combo hashtable built with 375 entries
+2025-06-22 00:40:31,595 - INFO - MEMORY | LOADED | Data loaded from memory: memory\inventory_memory.csv
+2025-06-22 00:40:31,598 - INFO - MAPPER | HASHTABLE | Built hashtable with 4327 mappings
+2025-06-22 00:40:31,599 - INFO - SYSTEM | INITIALIZED | All components loaded successfully
+2025-06-22 00:40:31,601 - INFO - MAPPER | STARTED | Processing SKU mappings
+2025-06-22 00:40:31,605 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['reason for credit entry', 'sub order no', 'order date', 'customer state', 'product name', 'sku', 'size', 'quantity', 'supplier listed price (incl. gst + commission)', 'supplier discounted price (incl gst and commision)']
+2025-06-22 00:40:31,632 - INFO - MAPPER | COMPLETED | Processed 48 records
+2025-06-22 00:40:31,641 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0199_MB_MHA8_Brown: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:31,646 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0199_MB_MHA8_Brown: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:31,649 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0045_MB_LavienRose_Brown: 1 units from TLCQ
+2025-06-22 00:40:31,657 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0045_MB_LavienRose_Brown: -1 from TLCQ (new stock: 51)
+2025-06-22 00:40:31,662 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:31,665 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:31,674 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from BLR8 (insufficient stock)
+2025-06-22 00:40:31,676 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from BLR8 (new stock: -1)
+2025-06-22 00:40:31,680 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:31,684 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 22)
+2025-06-22 00:40:31,690 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from CCX1 (insufficient stock)
+2025-06-22 00:40:31,693 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from CCX1 (new stock: -1)
+2025-06-22 00:40:31,697 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from BOM5 (insufficient stock)
+2025-06-22 00:40:31,702 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from BOM5 (new stock: -1)
+2025-06-22 00:40:31,707 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0015_MB_HBD_Black: 1 units from TLCQ
+2025-06-22 00:40:31,710 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0015_MB_HBD_Black: -1 from TLCQ (new stock: 328)
+2025-06-22 00:40:31,724 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from DEL4 (insufficient stock)
+2025-06-22 00:40:31,729 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from DEL4 (new stock: -1)
+2025-06-22 00:40:31,742 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0044_MB_LaVienRose_Black: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:31,748 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0044_MB_LaVienRose_Black: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:31,756 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from BOM7 (insufficient stock)
+2025-06-22 00:40:31,763 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from BOM7 (new stock: -1)
+2025-06-22 00:40:31,774 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0240_SG_Wings_Red: 1 units from BOM7 (insufficient stock)
+2025-06-22 00:40:31,779 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0240_SG_Wings_Red: -1 from BOM7 (new stock: -1)
+2025-06-22 00:40:31,789 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from DEL5 (insufficient stock)
+2025-06-22 00:40:31,792 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from DEL5 (new stock: -1)
+2025-06-22 00:40:31,795 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from CCU1 (insufficient stock)
+2025-06-22 00:40:31,798 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from CCU1 (new stock: -1)
+2025-06-22 00:40:31,801 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0200_MB_MHLasaCasaDePapel_Brown: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:31,805 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0200_MB_MHLasaCasaDePapel_Brown: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:31,812 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0199_MB_MHA8_Brown: 1 units from BLR8 (insufficient stock)
+2025-06-22 00:40:31,814 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0199_MB_MHA8_Brown: -1 from BLR8 (new stock: -1)
+2025-06-22 00:40:31,821 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from CCX1 (insufficient stock)
+2025-06-22 00:40:31,823 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from CCX1 (new stock: -1)
+2025-06-22 00:40:31,828 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0330_Wands_Harrypotter_Light: 1 units from TLCQ
+2025-06-22 00:40:31,831 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0330_Wands_Harrypotter_Light: -1 from TLCQ (new stock: 76)
+2025-06-22 00:40:31,839 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from DEX3 (insufficient stock)
+2025-06-22 00:40:31,842 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from DEX3 (new stock: -1)
+2025-06-22 00:40:31,848 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from PNQ2 (insufficient stock)
+2025-06-22 00:40:31,855 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from PNQ2 (new stock: -1)
+2025-06-22 00:40:31,860 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0045_MB_LavienRose_Brown: 1 units from TLCQ
+2025-06-22 00:40:31,863 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0045_MB_LavienRose_Brown: -1 from TLCQ (new stock: 50)
+2025-06-22 00:40:31,869 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from DEL4 (insufficient stock)
+2025-06-22 00:40:31,873 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from DEL4 (new stock: -1)
+2025-06-22 00:40:31,878 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0059_MB_YouAreMySunshine_Black: 1 units from TLCQ
+2025-06-22 00:40:31,881 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0059_MB_YouAreMySunshine_Black: -1 from TLCQ (new stock: 1)
+2025-06-22 00:40:31,892 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0045_MB_LavienRose_Brown: 1 units from TLCQ
+2025-06-22 00:40:31,895 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0045_MB_LavienRose_Brown: -1 from TLCQ (new stock: 49)
+2025-06-22 00:40:31,898 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from DEL5 (insufficient stock)
+2025-06-22 00:40:31,904 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from DEL5 (new stock: -1)
+2025-06-22 00:40:31,908 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from DEX3 (insufficient stock)
+2025-06-22 00:40:31,910 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from DEX3 (new stock: -1)
+2025-06-22 00:40:31,914 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from PNQ3 (insufficient stock)
+2025-06-22 00:40:31,921 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from PNQ3 (new stock: -1)
+2025-06-22 00:40:31,924 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0359_Wands_Hermoine_light_SG: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:31,926 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0359_Wands_Hermoine_light_SG: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:31,930 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0434_ST_Pokemon_Bulbasour_Green: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:31,932 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0434_ST_Pokemon_Bulbasour_Green: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:31,938 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from SDED (insufficient stock)
+2025-06-22 00:40:31,941 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from SDED (new stock: -1)
+2025-06-22 00:40:31,944 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0199_MB_MHA8_Brown: 1 units from BOM5 (insufficient stock)
+2025-06-22 00:40:31,946 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0199_MB_MHA8_Brown: -1 from BOM5 (new stock: -1)
+2025-06-22 00:40:31,954 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:31,958 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 26)
+2025-06-22 00:40:31,962 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: 1 units from TLCQ
+2025-06-22 00:40:31,963 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0060_MB_YouAreMySunshine_Brown: -1 from TLCQ (new stock: 21)
+2025-06-22 00:40:31,976 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0157_SG_FireGlass_Green: 1 units from TLCQ
+2025-06-22 00:40:31,978 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ (new stock: 4)
+2025-06-22 00:40:31,981 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:31,987 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 25)
+2025-06-22 00:40:31,991 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0320_ST_StrawberryRed: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:31,993 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0320_ST_StrawberryRed: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:31,999 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0045_MB_LavienRose_Brown: 1 units from TLCQ
+2025-06-22 00:40:32,001 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0045_MB_LavienRose_Brown: -1 from TLCQ (new stock: 48)
+2025-06-22 00:40:32,007 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from SDEE (insufficient stock)
+2025-06-22 00:40:32,009 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from SDEE (new stock: -1)
+2025-06-22 00:40:32,019 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0430_Org_Compression_Kit_Blue: 1 units from TLCQ
+2025-06-22 00:40:32,024 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0430_Org_Compression_Kit_Blue: -1 from TLCQ (new stock: 21)
+2025-06-22 00:40:32,028 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0015_MB_HBD_Black: 1 units from TLCQ
+2025-06-22 00:40:32,030 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0015_MB_HBD_Black: -1 from TLCQ (new stock: 327)
+2025-06-22 00:40:32,033 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from XHJ9 (insufficient stock)
+2025-06-22 00:40:32,037 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from XHJ9 (new stock: -1)
+2025-06-22 00:40:32,040 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0045_MB_LavienRose_Brown: 1 units from TLCQ
+2025-06-22 00:40:32,042 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0045_MB_LavienRose_Brown: -1 from TLCQ (new stock: 47)
+2025-06-22 00:40:32,047 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0436_MB_Kalimba_8Notes_Heartshape: 1 units from TLCQ
+2025-06-22 00:40:32,050 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0436_MB_Kalimba_8Notes_Heartshape: -1 from TLCQ (new stock: 10)
+2025-06-22 00:40:32,055 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:32,057 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from BLR7 (new stock: -2)
+2025-06-22 00:40:32,061 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from PNQ2 (insufficient stock)
+2025-06-22 00:40:32,065 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from PNQ2 (new stock: -1)
+2025-06-22 00:40:32,072 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from BLR8 (insufficient stock)
+2025-06-22 00:40:32,075 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from BLR8 (new stock: -2)
+2025-06-22 00:40:32,079 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0484_ST_Animal_Kaonashi_Ghost_Black: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:32,083 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0484_ST_Animal_Kaonashi_Ghost_Black: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:32,087 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0397_Organizer_StorageBox_Blue: 1 units from TLCQ
+2025-06-22 00:40:32,091 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0397_Organizer_StorageBox_Blue: -1 from TLCQ (new stock: 52)
+2025-06-22 00:40:32,112 - INFO - INVENTORY | UPDATED | Processed 48 orders
+2025-06-22 00:40:32,113 - INFO - INVENTORY | UPDATED | Inventory updated successfully
+2025-06-22 00:40:32,128 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 48 records
+2025-06-22 00:40:32,140 - INFO - Processing file: raw_daily_reports\gl_fk\gl_fk.csv
+2025-06-22 00:40:32,144 - INFO - Detected format: .csv
+2025-06-22 00:40:32,163 - INFO - Successfully loaded data: 11 rows, 37 columns
+2025-06-22 00:40:32,170 - INFO - Cleaned data: (11, 37) -> (11, 34)
+2025-06-22 00:40:32,231 - INFO - MEMORY | LOADED | Data loaded from master: clean_data\sku_mappings_final_clean.csv
+2025-06-22 00:40:32,237 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status 1', 'status 2', 'image']
+2025-06-22 00:40:32,246 - INFO - MEMORY | LOADED | Data loaded from master: clean_data\combo_sku_clean.csv
+2025-06-22 00:40:32,249 - INFO - COMBO | INITIALIZED | Combo hashtable built with 375 entries
+2025-06-22 00:40:32,294 - INFO - MEMORY | LOADED | Data loaded from memory: memory\inventory_memory.csv
+2025-06-22 00:40:32,303 - INFO - MAPPER | HASHTABLE | Built hashtable with 4327 mappings
+2025-06-22 00:40:32,304 - INFO - SYSTEM | INITIALIZED | All components loaded successfully
+2025-06-22 00:40:32,309 - INFO - MAPPER | STARTED | Processing SKU mappings
+2025-06-22 00:40:32,314 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['ordered on', 'shipment id', 'order item id', 'order id', 'hsn code', 'order state', 'order type', 'fsn', 'sku', 'product', 'invoice no.', 'igst', 'invoice date (mm/dd/yy)', 'invoice amount', 'selling price per item', 'shipping and handling charges', 'quantity', 'price inc. fkmp contribution & subsidy', 'buyer name', 'ship to name', 'address line 1', 'address line 2', 'city', 'state', 'pin code', 'dispatch after date', 'dispatch by date', 'tracking id', 'package length (cm)', 'package breadth (cm)', 'package height (cm)', 'package weight (kg)', 'ready to make', 'with attachment']
+2025-06-22 00:40:32,327 - INFO - MAPPER | COMPLETED | Processed 11 records
+2025-06-22 00:40:32,340 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0204_MB_MHA12_Brown: 1 units from TLCQ
+2025-06-22 00:40:32,343 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0204_MB_MHA12_Brown: -1 from TLCQ (new stock: 15)
+2025-06-22 00:40:32,350 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0059_MB_YouAreMySunshine_Black: 1 units from TLCQ
+2025-06-22 00:40:32,356 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0059_MB_YouAreMySunshine_Black: -1 from TLCQ (new stock: 0)
+2025-06-22 00:40:32,364 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0059_MB_YouAreMySunshine_Black: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:32,372 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0059_MB_YouAreMySunshine_Black: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:32,376 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0017_MB_HP_Brown: 1 units from BOM5 (insufficient stock)
+2025-06-22 00:40:32,380 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0017_MB_HP_Brown: -1 from BOM5 (new stock: -2)
+2025-06-22 00:40:32,392 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0021_MB_Beatles_Black: 1 units from TLCQ
+2025-06-22 00:40:32,397 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0021_MB_Beatles_Black: -1 from TLCQ (new stock: 2)
+2025-06-22 00:40:32,408 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0044_MB_LaVienRose_Black: 1 units from BLR8 (insufficient stock)
+2025-06-22 00:40:32,411 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0044_MB_LaVienRose_Black: -1 from BLR8 (new stock: -1)
+2025-06-22 00:40:32,424 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0059_MB_YouAreMySunshine_Black: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:32,428 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0059_MB_YouAreMySunshine_Black: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:32,439 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0217_SG_ThugLife_Thin: 1 units from TLCQ
+2025-06-22 00:40:32,441 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0217_SG_ThugLife_Thin: -1 from TLCQ (new stock: 606)
+2025-06-22 00:40:32,449 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0240_SG_Wings_Red: 1 units from CCU1 (insufficient stock)
+2025-06-22 00:40:32,454 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0240_SG_Wings_Red: -1 from CCU1 (new stock: -1)
+2025-06-22 00:40:32,457 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0324_OT_Doll_White: 1 units from TLCQ
+2025-06-22 00:40:32,460 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0324_OT_Doll_White: -1 from TLCQ (new stock: 1)
+2025-06-22 00:40:32,463 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0217_SG_ThugLife_Thin: 1 units from TLCQ
+2025-06-22 00:40:32,465 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0217_SG_ThugLife_Thin: -1 from TLCQ (new stock: 605)
+2025-06-22 00:40:32,486 - INFO - INVENTORY | UPDATED | Processed 11 orders
+2025-06-22 00:40:32,486 - INFO - INVENTORY | UPDATED | Inventory updated successfully
+2025-06-22 00:40:32,499 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 11 records
+2025-06-22 00:40:32,505 - INFO - Processing file: raw_daily_reports\rudrav_meesho\rudrav_meesho.csv
+2025-06-22 00:40:32,507 - INFO - Detected format: .csv
+2025-06-22 00:40:32,518 - INFO - Successfully loaded data: 64 rows, 11 columns
+2025-06-22 00:40:32,525 - INFO - Cleaned data: (64, 11) -> (64, 10)
+2025-06-22 00:40:32,592 - INFO - MEMORY | LOADED | Data loaded from master: clean_data\sku_mappings_final_clean.csv
+2025-06-22 00:40:32,598 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status 1', 'status 2', 'image']
+2025-06-22 00:40:32,612 - INFO - MEMORY | LOADED | Data loaded from master: clean_data\combo_sku_clean.csv
+2025-06-22 00:40:32,615 - INFO - COMBO | INITIALIZED | Combo hashtable built with 375 entries
+2025-06-22 00:40:32,655 - INFO - MEMORY | LOADED | Data loaded from memory: memory\inventory_memory.csv
+2025-06-22 00:40:32,660 - INFO - MAPPER | HASHTABLE | Built hashtable with 4327 mappings
+2025-06-22 00:40:32,660 - INFO - SYSTEM | INITIALIZED | All components loaded successfully
+2025-06-22 00:40:32,662 - INFO - MAPPER | STARTED | Processing SKU mappings
+2025-06-22 00:40:32,668 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['reason for credit entry', 'sub order no', 'order date', 'customer state', 'product name', 'sku', 'size', 'quantity', 'supplier listed price (incl. gst + commission)', 'supplier discounted price (incl gst and commision)']
+2025-06-22 00:40:32,700 - INFO - MAPPER | COMPLETED | Processed 64 records
+2025-06-22 00:40:32,708 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:32,712 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 58)
+2025-06-22 00:40:32,716 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0442_CLT_AF_Goku_Big: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:32,721 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0442_CLT_AF_Goku_Big: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:32,728 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:32,731 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 24)
+2025-06-22 00:40:32,739 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:32,746 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 23)
+2025-06-22 00:40:32,751 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:32,757 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 57)
+2025-06-22 00:40:32,764 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0490_ST_Fruit_Blox_Shadow: 1 units from BOM7 (insufficient stock)
+2025-06-22 00:40:32,772 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0490_ST_Fruit_Blox_Shadow: -1 from BOM7 (new stock: -1)
+2025-06-22 00:40:32,781 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:32,788 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 22)
+2025-06-22 00:40:32,793 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:32,796 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 21)
+2025-06-22 00:40:32,804 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 2 units from TLCQ
+2025-06-22 00:40:32,808 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ (new stock: 19)
+2025-06-22 00:40:32,811 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:32,815 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 18)
+2025-06-22 00:40:32,822 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:32,826 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 17)
+2025-06-22 00:40:32,829 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:32,831 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 16)
+2025-06-22 00:40:32,837 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0454_ST_Animal_Garfield_Orange: 1 units from TLCQ
+2025-06-22 00:40:32,841 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0454_ST_Animal_Garfield_Orange: -1 from TLCQ (new stock: 5)
+2025-06-22 00:40:32,844 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:32,846 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 56)
+2025-06-22 00:40:32,852 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:32,855 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 15)
+2025-06-22 00:40:32,860 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0417_Organizer_StorageBox_SkyBlue: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:32,863 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0417_Organizer_StorageBox_SkyBlue: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:32,866 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 2 units from TLCQ
+2025-06-22 00:40:32,870 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ (new stock: 13)
+2025-06-22 00:40:32,875 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:32,879 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 12)
+2025-06-22 00:40:32,883 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0162_SG_FireGlass_MercuryPink: 1 units from TLCQ
+2025-06-22 00:40:32,888 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0162_SG_FireGlass_MercuryPink: -1 from TLCQ (new stock: 4)
+2025-06-22 00:40:32,892 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:32,897 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 11)
+2025-06-22 00:40:32,903 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0478_ST_Minecraft_Cow_Brown: 1 units from TLCQ
+2025-06-22 00:40:32,908 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0478_ST_Minecraft_Cow_Brown: -1 from TLCQ (new stock: 0)
+2025-06-22 00:40:32,917 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:32,921 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 10)
+2025-06-22 00:40:32,927 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0013_MB_HBD_Red: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:32,930 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0013_MB_HBD_Red: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:32,940 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:32,947 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 55)
+2025-06-22 00:40:32,955 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:32,960 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 9)
+2025-06-22 00:40:32,966 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0157_SG_FireGlass_Green: 1 units from TLCQ
+2025-06-22 00:40:32,974 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ (new stock: 3)
+2025-06-22 00:40:32,980 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0463_ST_Pokemon_Gengar: 1 units from TLCQ
+2025-06-22 00:40:32,988 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0463_ST_Pokemon_Gengar: -1 from TLCQ (new stock: 3)
+2025-06-22 00:40:33,001 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:33,004 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 8)
+2025-06-22 00:40:33,009 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from PNQ3 (insufficient stock)
+2025-06-22 00:40:33,013 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from PNQ3 (new stock: -1)
+2025-06-22 00:40:33,018 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:33,021 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 54)
+2025-06-22 00:40:33,026 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:33,031 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 7)
+2025-06-22 00:40:33,037 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:33,040 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 53)
+2025-06-22 00:40:33,047 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0157_SG_FireGlass_Green: 1 units from TLCQ
+2025-06-22 00:40:33,054 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ (new stock: 2)
+2025-06-22 00:40:33,059 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:33,062 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 6)
+2025-06-22 00:40:33,067 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0447_CLT_AF_Goku_SSJ: 1 units from TLCQ
+2025-06-22 00:40:33,070 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0447_CLT_AF_Goku_SSJ: -1 from TLCQ (new stock: 1)
+2025-06-22 00:40:33,075 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0417_Organizer_StorageBox_SkyBlue: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:33,078 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0417_Organizer_StorageBox_SkyBlue: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:33,082 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:33,086 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 52)
+2025-06-22 00:40:33,089 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0156_SG_FireGlass_Yellow: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:33,092 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0156_SG_FireGlass_Yellow: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:33,096 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_O0120_OT_DolphinBubbleMachine: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:33,099 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0120_OT_DolphinBubbleMachine: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:33,105 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0054_MB_Starwar_Black: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:33,116 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0054_MB_Starwar_Black: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:33,126 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:33,129 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 51)
+2025-06-22 00:40:33,133 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:33,137 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 5)
+2025-06-22 00:40:33,145 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0445_OT_Glue_Sand_Rubber_Monkey: 1 units from TLCQ
+2025-06-22 00:40:33,149 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0445_OT_Glue_Sand_Rubber_Monkey: -1 from TLCQ (new stock: 0)
+2025-06-22 00:40:33,154 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0294_OT_Harrypotter_new_wand: 1 units from TLCQ
+2025-06-22 00:40:33,157 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0294_OT_Harrypotter_new_wand: -1 from TLCQ (new stock: 0)
+2025-06-22 00:40:33,162 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0533_ST_Animal_Breathing_Koala_Grey: 1 units from TLCQ
+2025-06-22 00:40:33,166 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0533_ST_Animal_Breathing_Koala_Grey: -1 from TLCQ (new stock: 0)
+2025-06-22 00:40:33,171 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:33,175 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 50)
+2025-06-22 00:40:33,178 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0470_ST_Minecraft_Sword_Small: 1 units from TLCQ
+2025-06-22 00:40:33,180 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0470_ST_Minecraft_Sword_Small: -1 from TLCQ (new stock: 62)
+2025-06-22 00:40:33,187 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0205_MB_MHA10_Brown: 1 units from TLCQ
+2025-06-22 00:40:33,192 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0205_MB_MHA10_Brown: -1 from TLCQ (new stock: 12)
+2025-06-22 00:40:33,196 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from SDED (insufficient stock)
+2025-06-22 00:40:33,198 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from SDED (new stock: -1)
+2025-06-22 00:40:33,204 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0157_SG_FireGlass_Green: 1 units from TLCQ
+2025-06-22 00:40:33,209 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ (new stock: 1)
+2025-06-22 00:40:33,213 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:33,227 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 4)
+2025-06-22 00:40:33,290 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0085_MB_Titanic_Brown: 1 units from TLCQ
+2025-06-22 00:40:33,413 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0085_MB_Titanic_Brown: -1 from TLCQ (new stock: 58)
+2025-06-22 00:40:33,442 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:33,444 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 3)
+2025-06-22 00:40:33,452 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from SDEE (insufficient stock)
+2025-06-22 00:40:33,474 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from SDEE (new stock: -1)
+2025-06-22 00:40:33,479 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0111_HD_Rug_CircleFurmat_White: 1 units from TLCQ (insufficient stock)
+2025-06-22 00:40:33,482 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0111_HD_Rug_CircleFurmat_White: -1 from TLCQ (new stock: -1)
+2025-06-22 00:40:33,486 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:33,488 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 2)
+2025-06-22 00:40:33,492 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0020_MB_HP_Black: 1 units from TLCQ
+2025-06-22 00:40:33,495 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0020_MB_HP_Black: -1 from TLCQ (new stock: 49)
+2025-06-22 00:40:33,499 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from TLCQ
+2025-06-22 00:40:33,547 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from TLCQ (new stock: 1)
+2025-06-22 00:40:33,559 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from XHJ9 (insufficient stock)
+2025-06-22 00:40:33,562 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from XHJ9 (new stock: -1)
+2025-06-22 00:40:33,566 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0148_SG_ButterFly_RedGreen: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:33,570 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0148_SG_ButterFly_RedGreen: -1 from BLR7 (new stock: -2)
+2025-06-22 00:40:33,574 - INFO - INVENTORY | ASSIGNED | MSKU CSTE_0157_SG_FireGlass_Green: 1 units from TLCQ
+2025-06-22 00:40:33,576 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0157_SG_FireGlass_Green: -1 from TLCQ (new stock: 0)
+2025-06-22 00:40:33,581 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_O0390_OT_Toiletry_Bottles: 2 units from TLCQ (insufficient stock)
+2025-06-22 00:40:33,584 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -2 from TLCQ (new stock: -1)
+2025-06-22 00:40:33,588 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_0111_HD_Rug_CircleFurmat_White: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:33,591 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_0111_HD_Rug_CircleFurmat_White: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:33,596 - INFO - INVENTORY | BACKTRACK | MSKU CSTE_O0390_OT_Toiletry_Bottles: 1 units from BLR7 (insufficient stock)
+2025-06-22 00:40:33,598 - INFO - INVENTORY | STOCK_UPDATED | MSKU CSTE_O0390_OT_Toiletry_Bottles: -1 from BLR7 (new stock: -1)
+2025-06-22 00:40:33,622 - INFO - INVENTORY | UPDATED | Processed 64 orders
+2025-06-22 00:40:33,623 - INFO - INVENTORY | UPDATED | Inventory updated successfully
+2025-06-22 00:40:33,630 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 64 records
