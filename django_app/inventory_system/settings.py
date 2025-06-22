@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from decouple import config
 import os
 from pathlib import Path
+import logging
+#TODO: Set up logging configuration
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -136,3 +138,36 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CLEAN_DATA_PATH = os.path.join(BASE_DIR, config('CLEAN_DATA_PATH', default='../clean_data'))
 RAW_REPORTS_PATH = os.path.join(BASE_DIR, config('RAW_REPORTS_PATH', default='../raw_daily_reports'))
 SKU_MAPPER_PATH = os.path.join(BASE_DIR, config('SKU_MAPPER_PATH', default='../sku_mapper'))
+
+# Baserow API configuration
+BASEROW_BASE_URL = 'https://api.baserow.io'
+BASEROW_API_TOKEN = 'E1OvSUYfQeIHTWivnKgB6luIIiopkcNa'
+BASEROW_DATABASE_ID = '245164'  
+
+BASEROW_SKU_MAPPING_TABLE_ID = '581827'
+BASEROW_INVENTORY_TABLE_ID = '581833'  
+BASEROW_COMBO_TABLE_ID = '581839'
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR.parent, 'logs', 'baserow_sync.log'),
+        },
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'core.services.baserow_memory_manager': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}
