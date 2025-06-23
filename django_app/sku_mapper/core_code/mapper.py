@@ -169,6 +169,7 @@ class SKUMapper:
             self.logger.log_process("MAPPER", "ERROR", f"Failed to map SKU {sku}: {str(e)}")
             return None
     
+    #
     def process_sku_mappings(self, marketplace_filter: str = None):
         """Process entire dataframe and map all SKUs"""
         try:
@@ -177,12 +178,43 @@ class SKUMapper:
             # Normalize column names
             self.report_data_df = self.validator.normalize_column_names(self.report_data_df)
             
-            # Validate required columns
-            if 'msku' not in self.report_data_df.columns or self.report_data_df['msku'].isnull().all():
-                is_valid, error_msg = self.validator.validate_required_columns(self.report_data_df, ['sku'])
-                if not is_valid:
-                    self.logger.log_process("MAPPER", "ERROR", f"Validation failed: {error_msg}")
-                    return
+            # Check if MSKU column already exists with valid data
+            has_msku = 'msku' in self.report_data_df.columns
+            has_msku_data = has_msku and not self.report_data_df['msku'].isnull().all()
+            
+            if has_msku_data:
+                self.logger.log_process("MAPPER", "MSKU_EXISTS", 
+                                    f"MSKU column found with data, skipping SKU mapping")
+                
+                # Filter by marketplace if specified
+                if marketplace_filter:
+                    marketplace_col = self._get_marketplace_column()
+                    if marketplace_col and marketplace_col in self.report_data_df.columns:
+                        original_count = len(self.report_data_df)
+                        self.report_data_df = self.report_data_df[
+                            self.report_data_df[marketplace_col].str.upper() == marketplace_filter.upper()
+                        ]
+                        filtered_count = len(self.report_data_df)
+                        self.logger.log_process("MAPPER", "FILTERED", 
+                                            f"Filtered by marketplace {marketplace_filter}: {original_count} → {filtered_count}")
+                
+                # Use existing MSKU data
+                self.processed_df = self.report_data_df.dropna(subset=['msku'])
+                
+                # Check for any missing MSKUs
+                missing_msku_count = len(self.report_data_df[self.report_data_df['msku'].isnull()])
+                if missing_msku_count > 0:
+                    self.logger.log_process("MAPPER", "MISSING_MSKU", 
+                                        f"Found {missing_msku_count} records with missing MSKU")
+                
+                self.logger.log_process("MAPPER", "COMPLETED", f"Processed {len(self.processed_df)} records")
+                return
+            
+            # If no MSKU data, validate SKU column exists for mapping
+            is_valid, error_msg = self.validator.validate_required_columns(self.report_data_df, ['sku'])
+            if not is_valid:
+                self.logger.log_process("MAPPER", "ERROR", f"Validation failed: {error_msg}")
+                return
             
             # Filter by marketplace if specified
             if marketplace_filter:
@@ -194,22 +226,21 @@ class SKUMapper:
                     ]
                     filtered_count = len(self.report_data_df)
                     self.logger.log_process("MAPPER", "FILTERED", 
-                                          f"Filtered by marketplace {marketplace_filter}: {original_count} → {filtered_count}")
+                                        f"Filtered by marketplace {marketplace_filter}: {original_count} → {filtered_count}")
             
             # Map SKUs to MSKUs
-            if 'msku' not in self.report_data_df.columns or self.report_data_df['msku'].isnull().all():
-                marketplace_col = self._get_marketplace_column()
-                
-                if marketplace_col and marketplace_col in self.report_data_df.columns:
-                    # Use marketplace context for mapping
-                    self.report_data_df['msku'] = self.report_data_df.apply(
-                        lambda row: self.map_sku_with_combo_check(row['sku'], row[marketplace_col]), axis=1
-                    )
-                else:
-                    # Map without marketplace context
-                    self.report_data_df['msku'] = self.report_data_df['sku'].apply(
-                        lambda sku: self.map_sku_with_combo_check(sku, marketplace_filter)
-                    )
+            marketplace_col = self._get_marketplace_column()
+            
+            if marketplace_col and marketplace_col in self.report_data_df.columns:
+                # Use marketplace context for mapping
+                self.report_data_df['msku'] = self.report_data_df.apply(
+                    lambda row: self.map_sku_with_combo_check(row['sku'], row[marketplace_col]), axis=1
+                )
+            else:
+                # Map without marketplace context
+                self.report_data_df['msku'] = self.report_data_df['sku'].apply(
+                    lambda sku: self.map_sku_with_combo_check(sku, marketplace_filter)
+                )
             
             # Identify unmapped SKUs
             self.unmapped_skus = self.report_data_df[self.report_data_df['msku'].isnull()]['sku'].unique().tolist()
@@ -224,7 +255,9 @@ class SKUMapper:
             
         except Exception as e:
             self.logger.log_process("MAPPER", "ERROR", f"Failed to process mappings: {str(e)}")
-    
+            import traceback
+        self.logger.log_process("MAPPER", "DEBUG", f"Full error: {traceback.format_exc()}")
+
     def _get_marketplace_column(self) -> str:
         """Get the marketplace column name from the dataframe"""
         marketplace_columns = ['panels', 'panel', 'marketplace', 'source']

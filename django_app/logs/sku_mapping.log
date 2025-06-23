@@ -1685,3 +1685,457 @@
 2025-06-23 09:56:42,562 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
 2025-06-23 09:56:42,567 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 594)
 2025-06-23 09:56:42,568 - INFO - INVENTORY | UPDATED | Inventory updated successfully
+2025-06-23 10:01:02,496 - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmpblcxn0r5_cste_amazon.csv
+2025-06-23 10:01:02,497 - INFO - Detected format: .csv
+2025-06-23 10:01:02,523 - INFO - Successfully loaded data: 317 rows, 15 columns
+2025-06-23 10:01:02,534 - INFO - Cleaned data: (317, 15) -> (317, 11)
+2025-06-23 10:01:02,544 - INFO - DJANGO | CONNECTED | Django ORM connection established
+2025-06-23 10:01:02,544 - INFO - SYSTEM | DJANGO_MODE | Initializing with Django ORM
+2025-06-23 10:01:02,987 - INFO - DJANGO | LOADED | SKU mappings loaded: 2905 records
+2025-06-23 10:01:03,462 - INFO - DJANGO | LOADED | Combo data loaded: 360 combos
+2025-06-23 10:01:25,026 - INFO - DJANGO | LOADED | Inventory data loaded: 1013 products
+2025-06-23 10:01:25,029 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status', 'marketplace_price', 'product_name', 'created_at', 'updated_at']
+2025-06-23 10:01:25,031 - INFO - COMBO | INITIALIZED | Combo hashtable built with 360 entries
+2025-06-23 10:01:25,358 - INFO - MAPPER | HASHTABLE | Built hashtable with 5225 mappings
+2025-06-23 10:01:25,360 - INFO - SYSTEM | INITIALIZED | All components loaded successfully (Django mode)
+2025-06-23 10:01:25,360 - INFO - MAPPER | STARTED | Processing SKU mappings (marketplace: CSTE_AMAZON)
+2025-06-23 10:01:25,362 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['date', 'fnsku', 'asin', 'msku', 'title', 'event type', 'quantity', 'fulfillment center', 'disposition', 'country', 'date and time']
+2025-06-23 10:01:25,363 - INFO - MAPPER | ERROR | Failed to process mappings: 'sku'
+2025-06-23 10:01:25,364 - INFO - OUTPUT | ERROR | No processed data available
+2025-06-23 10:01:25,499 - WARNING - Bad Request: /web/
+2025-06-23 10:08:35,670 - INFO - C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\django_app\sku_mapper\core_code\mapper.py changed, reloading.
+2025-06-23 10:08:59,243 - INFO - DJANGO | CONNECTED | Django ORM connection established
+2025-06-23 10:08:59,243 - INFO - SYSTEM | DJANGO_MODE | Initializing with Django ORM
+2025-06-23 10:08:59,523 - INFO - DJANGO | LOADED | SKU mappings loaded: 2905 records
+2025-06-23 10:08:59,922 - INFO - DJANGO | LOADED | Combo data loaded: 360 combos
+2025-06-23 10:09:20,758 - INFO - DJANGO | LOADED | Inventory data loaded: 1013 products
+2025-06-23 10:09:20,761 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status', 'marketplace_price', 'product_name', 'created_at', 'updated_at']
+2025-06-23 10:09:20,763 - INFO - COMBO | INITIALIZED | Combo hashtable built with 360 entries
+2025-06-23 10:09:21,003 - INFO - MAPPER | HASHTABLE | Built hashtable with 5225 mappings
+2025-06-23 10:09:21,004 - INFO - SYSTEM | INITIALIZED | All components loaded successfully (Django mode)
+2025-06-23 10:09:21,004 - INFO - MAPPER | STARTED | Processing SKU mappings (marketplace: CSTE_AMAZON)
+2025-06-23 10:09:21,006 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['date', 'fnsku', 'asin', 'msku', 'title', 'event type', 'quantity', 'fulfillment center', 'disposition', 'country', 'date and time']
+2025-06-23 10:09:21,007 - INFO - MAPPER | MSKU_EXISTS | MSKU column found with data, skipping SKU mapping
+2025-06-23 10:09:21,010 - INFO - MAPPER | COMPLETED | Processed 317 records
+2025-06-23 10:09:21,016 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 317 records
+2025-06-23 10:09:21,032 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:21,036 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:21,050 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:21,060 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:23,592 - INFO - [SUCCESS] Synced inventory for CSTE_O0446_OT_Glue_Sand_Rubber_Pig to Airtable
+2025-06-23 10:09:23,607 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0446_OT_Glue_Sand_Rubber_Pig @ TLCQ: 1 (new: 2)
+2025-06-23 10:09:29,649 - INFO - [SUCCESS] Synced inventory for CSTE_0541_ST_Animal_Breathing_Fox to Airtable
+2025-06-23 10:09:29,665 - INFO - DJANGO | STOCK_UPDATED | CSTE_0541_ST_Animal_Breathing_Fox @ TLCQ: 1 (new: 6)
+2025-06-23 10:09:31,927 - INFO - [SUCCESS] Synced inventory for CSTE_O0442_OT_Squeeze_White to Airtable
+2025-06-23 10:09:31,946 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0442_OT_Squeeze_White @ TLCQ: 1 (new: 1)
+2025-06-23 10:09:34,768 - INFO - [SUCCESS] Synced inventory for CSTE_O0443_OT_Squeeze_Yellow to Airtable
+2025-06-23 10:09:34,774 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0443_OT_Squeeze_Yellow @ TLCQ: 1 (new: 2)
+2025-06-23 10:09:39,279 - INFO - [SUCCESS] Synced inventory for CSTE_O0443_OT_Squeeze_Yellow to Airtable
+2025-06-23 10:09:39,282 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0443_OT_Squeeze_Yellow @ TLCQ: 1 (new: 3)
+2025-06-23 10:09:41,609 - INFO - [SUCCESS] Synced inventory for CSTE_O0444_OT_Squeeze_Purple to Airtable
+2025-06-23 10:09:41,614 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0444_OT_Squeeze_Purple @ TLCQ: 1 (new: -1)
+2025-06-23 10:09:45,799 - INFO - [SUCCESS] Synced inventory for CSTE_0226_SG_Square/Big_Black to Airtable
+2025-06-23 10:09:45,802 - INFO - DJANGO | STOCK_UPDATED | CSTE_0226_SG_Square/Big_Black @ TLCQ: 1 (new: 12)
+2025-06-23 10:09:45,804 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:45,806 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:45,808 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:47,904 - INFO - [SUCCESS] Synced inventory for CSTE_0502_ST_Minecraft_Pickaxe_Foam to Airtable
+2025-06-23 10:09:47,910 - INFO - DJANGO | STOCK_UPDATED | CSTE_0502_ST_Minecraft_Pickaxe_Foam @ TLCQ: 1 (new: -4)
+2025-06-23 10:09:50,018 - INFO - [SUCCESS] Synced inventory for CSTE_0502_ST_Minecraft_Pickaxe_Foam to Airtable
+2025-06-23 10:09:50,026 - INFO - DJANGO | STOCK_UPDATED | CSTE_0502_ST_Minecraft_Pickaxe_Foam @ TLCQ: 1 (new: -3)
+2025-06-23 10:09:52,057 - INFO - [SUCCESS] Synced inventory for CSTE_0491_ST_Fruit_Blox_Spirit to Airtable
+2025-06-23 10:09:52,066 - INFO - DJANGO | STOCK_UPDATED | CSTE_0491_ST_Fruit_Blox_Spirit @ TLCQ: 1 (new: -3)
+2025-06-23 10:09:54,175 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:09:54,179 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: -4)
+2025-06-23 10:09:54,181 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,183 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,184 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,186 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,188 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,191 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,192 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,194 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,197 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,199 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,201 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,202 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,205 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,207 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,210 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,212 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,213 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,214 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:54,216 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:56,331 - INFO - [SUCCESS] Synced inventory for CSTE_0330_Wands_Harrypotter_Light to Airtable
+2025-06-23 10:09:56,336 - INFO - DJANGO | STOCK_UPDATED | CSTE_0330_Wands_Harrypotter_Light @ TLCQ: 1 (new: 78)
+2025-06-23 10:09:56,338 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:56,342 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:09:58,424 - INFO - [SUCCESS] Synced inventory for CSTE_0333_Wands_Dumbledore_Light to Airtable
+2025-06-23 10:09:58,428 - INFO - DJANGO | STOCK_UPDATED | CSTE_0333_Wands_Dumbledore_Light @ TLCQ: 1 (new: 81)
+2025-06-23 10:10:00,492 - INFO - [SUCCESS] Synced inventory for CSTE_0333_Wands_Dumbledore_Light to Airtable
+2025-06-23 10:10:00,502 - INFO - DJANGO | STOCK_UPDATED | CSTE_0333_Wands_Dumbledore_Light @ TLCQ: 1 (new: 82)
+2025-06-23 10:10:02,551 - INFO - [SUCCESS] Synced inventory for CSTE_0333_Wands_Dumbledore_Light to Airtable
+2025-06-23 10:10:02,554 - INFO - DJANGO | STOCK_UPDATED | CSTE_0333_Wands_Dumbledore_Light @ TLCQ: 2 (new: 84)
+2025-06-23 10:10:02,556 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:02,558 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:02,559 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:02,561 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:02,563 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:02,566 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:04,719 - INFO - [SUCCESS] Synced inventory for CSTE_0293_OT_Voldemort_wand to Airtable
+2025-06-23 10:10:04,724 - INFO - DJANGO | STOCK_UPDATED | CSTE_0293_OT_Voldemort_wand @ TLCQ: 1 (new: 49)
+2025-06-23 10:10:06,741 - INFO - [SUCCESS] Synced inventory for CSTE_0291_OT_Hermoine_wand to Airtable
+2025-06-23 10:10:06,748 - INFO - DJANGO | STOCK_UPDATED | CSTE_0291_OT_Hermoine_wand @ TLCQ: 1 (new: 34)
+2025-06-23 10:10:08,813 - INFO - [SUCCESS] Synced inventory for CSTE_0291_OT_Hermoine_wand to Airtable
+2025-06-23 10:10:08,818 - INFO - DJANGO | STOCK_UPDATED | CSTE_0291_OT_Hermoine_wand @ TLCQ: 1 (new: 35)
+2025-06-23 10:10:11,271 - INFO - [SUCCESS] Synced inventory for CSTE_0291_OT_Hermoine_wand to Airtable
+2025-06-23 10:10:11,282 - INFO - DJANGO | STOCK_UPDATED | CSTE_0291_OT_Hermoine_wand @ TLCQ: 1 (new: 36)
+2025-06-23 10:10:13,496 - INFO - [SUCCESS] Synced inventory for CSTE_0295_OT_Snape_wand to Airtable
+2025-06-23 10:10:13,501 - INFO - DJANGO | STOCK_UPDATED | CSTE_0295_OT_Snape_wand @ TLCQ: 1 (new: 54)
+2025-06-23 10:10:13,502 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:13,505 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:13,508 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:13,511 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:13,513 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:13,516 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:13,517 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:13,519 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:15,676 - INFO - [SUCCESS] Synced inventory for CSTE_O0446_OT_Glue_Sand_Rubber_Pig to Airtable
+2025-06-23 10:10:15,682 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0446_OT_Glue_Sand_Rubber_Pig @ TLCQ: 1 (new: 3)
+2025-06-23 10:10:17,812 - INFO - [SUCCESS] Synced inventory for CSTE_0541_ST_Animal_Breathing_Fox to Airtable
+2025-06-23 10:10:17,817 - INFO - DJANGO | STOCK_UPDATED | CSTE_0541_ST_Animal_Breathing_Fox @ TLCQ: 1 (new: 7)
+2025-06-23 10:10:20,055 - INFO - [SUCCESS] Synced inventory for CSTE_O0444_OT_Squeeze_Purple to Airtable
+2025-06-23 10:10:20,060 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0444_OT_Squeeze_Purple @ TLCQ: 1 (new: 0)
+2025-06-23 10:10:20,062 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:20,064 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:20,069 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:20,073 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:20,074 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:20,075 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:20,076 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:20,078 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:20,079 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:20,082 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:22,149 - INFO - [SUCCESS] Synced inventory for CSTE_0502_ST_Minecraft_Pickaxe_Foam to Airtable
+2025-06-23 10:10:22,155 - INFO - DJANGO | STOCK_UPDATED | CSTE_0502_ST_Minecraft_Pickaxe_Foam @ TLCQ: 1 (new: -2)
+2025-06-23 10:10:24,251 - INFO - [SUCCESS] Synced inventory for CSTE_0502_ST_Minecraft_Pickaxe_Foam to Airtable
+2025-06-23 10:10:24,256 - INFO - DJANGO | STOCK_UPDATED | CSTE_0502_ST_Minecraft_Pickaxe_Foam @ TLCQ: 1 (new: -1)
+2025-06-23 10:10:26,725 - INFO - [SUCCESS] Synced inventory for CSTE_0502_ST_Minecraft_Pickaxe_Foam to Airtable
+2025-06-23 10:10:26,733 - INFO - DJANGO | STOCK_UPDATED | CSTE_0502_ST_Minecraft_Pickaxe_Foam @ TLCQ: 1 (new: 0)
+2025-06-23 10:10:28,986 - INFO - [SUCCESS] Synced inventory for CSTE_0491_ST_Fruit_Blox_Spirit to Airtable
+2025-06-23 10:10:28,993 - INFO - DJANGO | STOCK_UPDATED | CSTE_0491_ST_Fruit_Blox_Spirit @ TLCQ: 1 (new: -2)
+2025-06-23 10:10:31,592 - INFO - [SUCCESS] Synced inventory for CSTE_0491_ST_Fruit_Blox_Spirit to Airtable
+2025-06-23 10:10:31,601 - INFO - DJANGO | STOCK_UPDATED | CSTE_0491_ST_Fruit_Blox_Spirit @ TLCQ: 1 (new: -1)
+2025-06-23 10:10:33,663 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:10:33,672 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: -3)
+2025-06-23 10:10:35,746 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:10:35,753 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: -2)
+2025-06-23 10:10:37,941 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:10:37,944 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: -1)
+2025-06-23 10:10:40,668 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:10:40,677 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: 0)
+2025-06-23 10:10:44,013 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:10:44,019 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: 1)
+2025-06-23 10:10:46,806 - INFO - [SUCCESS] Synced inventory for CSTE_0480_ST_Minecraft_TNT_Block to Airtable
+2025-06-23 10:10:46,816 - INFO - DJANGO | STOCK_UPDATED | CSTE_0480_ST_Minecraft_TNT_Block @ TLCQ: 1 (new: 4)
+2025-06-23 10:10:49,224 - INFO - [SUCCESS] Synced inventory for CSTE_0485_ST_Animal_Kawaii_Penguin to Airtable
+2025-06-23 10:10:49,229 - INFO - DJANGO | STOCK_UPDATED | CSTE_0485_ST_Animal_Kawaii_Penguin @ TLCQ: 1 (new: 2)
+2025-06-23 10:10:51,422 - INFO - [SUCCESS] Synced inventory for CSTE_0477_ST_Minecraft_Spider_Blue to Airtable
+2025-06-23 10:10:51,429 - INFO - DJANGO | STOCK_UPDATED | CSTE_0477_ST_Minecraft_Spider_Blue @ TLCQ: 1 (new: 0)
+2025-06-23 10:10:53,566 - INFO - [SUCCESS] Synced inventory for CSTE_0478_ST_Minecraft_Cow_Brown to Airtable
+2025-06-23 10:10:53,573 - INFO - DJANGO | STOCK_UPDATED | CSTE_0478_ST_Minecraft_Cow_Brown @ TLCQ: 1 (new: 2)
+2025-06-23 10:10:53,576 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,577 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,580 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,581 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,583 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,584 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,587 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,590 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,593 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,595 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,597 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,598 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,600 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,601 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,602 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,605 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,607 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,610 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,612 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,613 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,614 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,616 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,618 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:53,619 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:55,901 - INFO - [SUCCESS] Synced inventory for CSTE_0330_Wands_Harrypotter_Light to Airtable
+2025-06-23 10:10:55,905 - INFO - DJANGO | STOCK_UPDATED | CSTE_0330_Wands_Harrypotter_Light @ TLCQ: 1 (new: 79)
+2025-06-23 10:10:58,507 - INFO - [SUCCESS] Synced inventory for CSTE_0330_Wands_Harrypotter_Light to Airtable
+2025-06-23 10:10:58,514 - INFO - DJANGO | STOCK_UPDATED | CSTE_0330_Wands_Harrypotter_Light @ TLCQ: 1 (new: 80)
+2025-06-23 10:10:58,518 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:58,522 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:10:58,525 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:00,921 - INFO - [SUCCESS] Synced inventory for CSTE_0322_ST_Axolotl_Blue to Airtable
+2025-06-23 10:11:00,926 - INFO - DJANGO | STOCK_UPDATED | CSTE_0322_ST_Axolotl_Blue @ TLCQ: 1 (new: 1)
+2025-06-23 10:11:03,304 - INFO - [SUCCESS] Synced inventory for CSTE_0306_MB_Sabrina_8Notes_Brown to Airtable
+2025-06-23 10:11:03,307 - INFO - DJANGO | STOCK_UPDATED | CSTE_0306_MB_Sabrina_8Notes_Brown @ TLCQ: 1 (new: 15)
+2025-06-23 10:11:05,513 - INFO - [SUCCESS] Synced inventory for CSTE_0291_OT_Hermoine_wand to Airtable
+2025-06-23 10:11:05,517 - INFO - DJANGO | STOCK_UPDATED | CSTE_0291_OT_Hermoine_wand @ TLCQ: 1 (new: 37)
+2025-06-23 10:11:07,602 - INFO - [SUCCESS] Synced inventory for CSTE_0291_OT_Hermoine_wand to Airtable
+2025-06-23 10:11:07,606 - INFO - DJANGO | STOCK_UPDATED | CSTE_0291_OT_Hermoine_wand @ TLCQ: 1 (new: 38)
+2025-06-23 10:11:09,764 - INFO - [SUCCESS] Synced inventory for CSTE_0295_OT_Snape_wand to Airtable
+2025-06-23 10:11:09,769 - INFO - DJANGO | STOCK_UPDATED | CSTE_0295_OT_Snape_wand @ TLCQ: 1 (new: 55)
+2025-06-23 10:11:11,828 - INFO - [SUCCESS] Synced inventory for CSTE_0295_OT_Snape_wand to Airtable
+2025-06-23 10:11:11,833 - INFO - DJANGO | STOCK_UPDATED | CSTE_0295_OT_Snape_wand @ TLCQ: 1 (new: 56)
+2025-06-23 10:11:11,836 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,838 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,841 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,843 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,847 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,849 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,850 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,851 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,852 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,853 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,857 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,859 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,862 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,864 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,865 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,867 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,867 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:11,869 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:13,979 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:11:13,984 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: 2)
+2025-06-23 10:11:16,008 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 10:11:16,012 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: 1 (new: 0)
+2025-06-23 10:11:18,143 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 10:11:18,149 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: 1 (new: 1)
+2025-06-23 10:11:23,047 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 10:11:23,053 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: 1 (new: 2)
+2025-06-23 10:11:26,154 - INFO - [SUCCESS] Synced inventory for CSTE_0482_ST_Animal_Kitty_Kuromi_Black to Airtable
+2025-06-23 10:11:26,158 - INFO - DJANGO | STOCK_UPDATED | CSTE_0482_ST_Animal_Kitty_Kuromi_Black @ TLCQ: 1 (new: 5)
+2025-06-23 10:11:26,160 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,162 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,164 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,167 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,169 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,171 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,173 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,175 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,176 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,179 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,184 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,187 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,188 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:26,189 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:28,391 - INFO - [SUCCESS] Synced inventory for CSTE_O0395_OT_SG_Case_BunnyPink to Airtable
+2025-06-23 10:11:28,400 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0395_OT_SG_Case_BunnyPink @ TLCQ: 1 (new: 0)
+2025-06-23 10:11:28,402 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:28,403 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:28,406 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:30,447 - INFO - [SUCCESS] Synced inventory for CSTE_0330_Wands_Harrypotter_Light to Airtable
+2025-06-23 10:11:30,451 - INFO - DJANGO | STOCK_UPDATED | CSTE_0330_Wands_Harrypotter_Light @ TLCQ: 1 (new: 81)
+2025-06-23 10:11:30,453 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:32,455 - INFO - [SUCCESS] Synced inventory for CSTE_0333_Wands_Dumbledore_Light to Airtable
+2025-06-23 10:11:32,462 - INFO - DJANGO | STOCK_UPDATED | CSTE_0333_Wands_Dumbledore_Light @ TLCQ: 1 (new: 85)
+2025-06-23 10:11:34,630 - INFO - [SUCCESS] Synced inventory for CSTE_0333_Wands_Dumbledore_Light to Airtable
+2025-06-23 10:11:34,638 - INFO - DJANGO | STOCK_UPDATED | CSTE_0333_Wands_Dumbledore_Light @ TLCQ: 1 (new: 86)
+2025-06-23 10:11:34,642 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:34,646 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:36,703 - INFO - [SUCCESS] Synced inventory for CSTE_0251_SG_ButterFly_LightgreenPink to Airtable
+2025-06-23 10:11:36,711 - INFO - DJANGO | STOCK_UPDATED | CSTE_0251_SG_ButterFly_LightgreenPink @ TLCQ: 1 (new: 1)
+2025-06-23 10:11:38,702 - INFO - [SUCCESS] Synced inventory for CSTE_0322_ST_Axolotl_Blue to Airtable
+2025-06-23 10:11:38,709 - INFO - DJANGO | STOCK_UPDATED | CSTE_0322_ST_Axolotl_Blue @ TLCQ: 1 (new: 2)
+2025-06-23 10:11:40,981 - INFO - [SUCCESS] Synced inventory for CSTE_0291_OT_Hermoine_wand to Airtable
+2025-06-23 10:11:40,987 - INFO - DJANGO | STOCK_UPDATED | CSTE_0291_OT_Hermoine_wand @ TLCQ: 1 (new: 39)
+2025-06-23 10:11:43,052 - INFO - [SUCCESS] Synced inventory for CSTE_0291_OT_Hermoine_wand to Airtable
+2025-06-23 10:11:43,059 - INFO - DJANGO | STOCK_UPDATED | CSTE_0291_OT_Hermoine_wand @ TLCQ: 2 (new: 41)
+2025-06-23 10:11:45,605 - INFO - [SUCCESS] Synced inventory for CSTE_0295_OT_Snape_wand to Airtable
+2025-06-23 10:11:45,611 - INFO - DJANGO | STOCK_UPDATED | CSTE_0295_OT_Snape_wand @ TLCQ: 1 (new: 57)
+2025-06-23 10:11:45,614 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:45,618 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:45,620 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:45,621 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:45,622 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:45,624 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:45,626 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:45,628 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:45,630 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:48,545 - INFO - [SUCCESS] Synced inventory for CSTE_0544_ST_Animal_Breathing_Sloth_Grey to Airtable
+2025-06-23 10:11:48,552 - INFO - DJANGO | STOCK_UPDATED | CSTE_0544_ST_Animal_Breathing_Sloth_Grey @ TLCQ: 1 (new: 6)
+2025-06-23 10:11:48,554 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:48,556 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:48,559 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:48,562 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:52,432 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:11:52,440 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: 3)
+2025-06-23 10:11:54,547 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 10:11:54,557 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: 1 (new: 3)
+2025-06-23 10:11:56,717 - INFO - [SUCCESS] Synced inventory for CSTE_0482_ST_Animal_Kitty_Kuromi_Black to Airtable
+2025-06-23 10:11:56,727 - INFO - DJANGO | STOCK_UPDATED | CSTE_0482_ST_Animal_Kitty_Kuromi_Black @ TLCQ: 1 (new: 6)
+2025-06-23 10:11:56,729 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,732 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,734 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,736 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,740 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,742 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,743 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,746 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,746 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,748 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,749 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,751 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,753 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,755 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:56,757 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:58,947 - INFO - [SUCCESS] Synced inventory for CSTE_O0395_OT_SG_Case_BunnyPink to Airtable
+2025-06-23 10:11:58,957 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0395_OT_SG_Case_BunnyPink @ TLCQ: 1 (new: 1)
+2025-06-23 10:11:58,962 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:11:58,964 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:01,122 - INFO - [SUCCESS] Synced inventory for CSTE_0330_Wands_Harrypotter_Light to Airtable
+2025-06-23 10:12:01,130 - INFO - DJANGO | STOCK_UPDATED | CSTE_0330_Wands_Harrypotter_Light @ TLCQ: 1 (new: 82)
+2025-06-23 10:12:03,488 - INFO - [SUCCESS] Synced inventory for CSTE_0330_Wands_Harrypotter_Light to Airtable
+2025-06-23 10:12:03,491 - INFO - DJANGO | STOCK_UPDATED | CSTE_0330_Wands_Harrypotter_Light @ TLCQ: 1 (new: 83)
+2025-06-23 10:12:03,492 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:03,494 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:03,497 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:03,500 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:03,503 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:03,506 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:03,508 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:03,509 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:03,510 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:05,644 - INFO - [SUCCESS] Synced inventory for CSTE_O0446_OT_Glue_Sand_Rubber_Pig to Airtable
+2025-06-23 10:12:05,652 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0446_OT_Glue_Sand_Rubber_Pig @ TLCQ: 1 (new: 4)
+2025-06-23 10:12:08,476 - INFO - [SUCCESS] Synced inventory for CSTE_O0445_OT_Glue_Sand_Rubber_Monkey to Airtable
+2025-06-23 10:12:08,483 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0445_OT_Glue_Sand_Rubber_Monkey @ TLCQ: 1 (new: 2)
+2025-06-23 10:12:08,484 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:08,486 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:08,489 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:08,491 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:08,492 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:08,495 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:10,679 - INFO - [SUCCESS] Synced inventory for CSTE_0502_ST_Minecraft_Pickaxe_Foam to Airtable
+2025-06-23 10:12:10,685 - INFO - DJANGO | STOCK_UPDATED | CSTE_0502_ST_Minecraft_Pickaxe_Foam @ TLCQ: 1 (new: 1)
+2025-06-23 10:12:12,746 - INFO - [SUCCESS] Synced inventory for CSTE_0502_ST_Minecraft_Pickaxe_Foam to Airtable
+2025-06-23 10:12:12,751 - INFO - DJANGO | STOCK_UPDATED | CSTE_0502_ST_Minecraft_Pickaxe_Foam @ TLCQ: 1 (new: 2)
+2025-06-23 10:12:14,919 - INFO - [SUCCESS] Synced inventory for CSTE_0491_ST_Fruit_Blox_Spirit to Airtable
+2025-06-23 10:12:14,923 - INFO - DJANGO | STOCK_UPDATED | CSTE_0491_ST_Fruit_Blox_Spirit @ TLCQ: 1 (new: 0)
+2025-06-23 10:12:17,886 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:12:17,890 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: 4)
+2025-06-23 10:12:20,174 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:12:20,177 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: 5)
+2025-06-23 10:12:22,324 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 10:12:22,328 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: 1 (new: 4)
+2025-06-23 10:12:25,927 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 10:12:25,932 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: 1 (new: 5)
+2025-06-23 10:12:28,119 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 10:12:28,122 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: 1 (new: 6)
+2025-06-23 10:12:32,105 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 10:12:32,116 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: 1 (new: 7)
+2025-06-23 10:12:34,115 - INFO - [SUCCESS] Synced inventory for CSTE_0482_ST_Animal_Kitty_Kuromi_Black to Airtable
+2025-06-23 10:12:34,120 - INFO - DJANGO | STOCK_UPDATED | CSTE_0482_ST_Animal_Kitty_Kuromi_Black @ TLCQ: 1 (new: 7)
+2025-06-23 10:12:36,217 - INFO - [SUCCESS] Synced inventory for CSTE_0482_ST_Animal_Kitty_Kuromi_Black to Airtable
+2025-06-23 10:12:36,221 - INFO - DJANGO | STOCK_UPDATED | CSTE_0482_ST_Animal_Kitty_Kuromi_Black @ TLCQ: 1 (new: 8)
+2025-06-23 10:12:38,316 - INFO - [SUCCESS] Synced inventory for CSTE_0519_ST_Animal_Sitting_Duck_Flower to Airtable
+2025-06-23 10:12:38,327 - INFO - DJANGO | STOCK_UPDATED | CSTE_0519_ST_Animal_Sitting_Duck_Flower @ TLCQ: 1 (new: 1)
+2025-06-23 10:12:38,330 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:38,333 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:38,336 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:38,339 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:38,342 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:38,344 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:38,346 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:38,349 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:38,355 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:38,360 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:38,364 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:40,565 - INFO - [SUCCESS] Synced inventory for CSTE_0330_Wands_Harrypotter_Light to Airtable
+2025-06-23 10:12:40,575 - INFO - DJANGO | STOCK_UPDATED | CSTE_0330_Wands_Harrypotter_Light @ TLCQ: 1 (new: 84)
+2025-06-23 10:12:40,577 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:42,861 - INFO - [SUCCESS] Synced inventory for CSTE_0333_Wands_Dumbledore_Light to Airtable
+2025-06-23 10:12:42,866 - INFO - DJANGO | STOCK_UPDATED | CSTE_0333_Wands_Dumbledore_Light @ TLCQ: 1 (new: 87)
+2025-06-23 10:12:45,090 - INFO - [SUCCESS] Synced inventory for CSTE_0301_MB_Mahogany_21Notes_Brown to Airtable
+2025-06-23 10:12:45,095 - INFO - DJANGO | STOCK_UPDATED | CSTE_0301_MB_Mahogany_21Notes_Brown @ TLCQ: 1 (new: 31)
+2025-06-23 10:12:47,292 - INFO - [SUCCESS] Synced inventory for CSTE_0293_OT_Voldemort_wand to Airtable
+2025-06-23 10:12:47,301 - INFO - DJANGO | STOCK_UPDATED | CSTE_0293_OT_Voldemort_wand @ TLCQ: 1 (new: 50)
+2025-06-23 10:12:49,474 - INFO - [SUCCESS] Synced inventory for CSTE_0295_OT_Snape_wand to Airtable
+2025-06-23 10:12:49,480 - INFO - DJANGO | STOCK_UPDATED | CSTE_0295_OT_Snape_wand @ TLCQ: 1 (new: 58)
+2025-06-23 10:12:51,650 - INFO - [SUCCESS] Synced inventory for CSTE_0295_OT_Snape_wand to Airtable
+2025-06-23 10:12:51,656 - INFO - DJANGO | STOCK_UPDATED | CSTE_0295_OT_Snape_wand @ TLCQ: 1 (new: 59)
+2025-06-23 10:12:51,658 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:51,660 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,002 - INFO - [SUCCESS] Synced inventory for CSTE_0213_SG_ButterFly_Black to Airtable
+2025-06-23 10:12:54,006 - INFO - DJANGO | STOCK_UPDATED | CSTE_0213_SG_ButterFly_Black @ TLCQ: 1 (new: 1)
+2025-06-23 10:12:54,009 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,010 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,011 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,012 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,013 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,015 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,016 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,018 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,019 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,020 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,021 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,023 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:54,024 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:12:56,710 - INFO - [SUCCESS] Synced inventory for CSTE_0491_ST_Fruit_Blox_Spirit to Airtable
+2025-06-23 10:12:56,715 - INFO - DJANGO | STOCK_UPDATED | CSTE_0491_ST_Fruit_Blox_Spirit @ TLCQ: 1 (new: 1)
+2025-06-23 10:12:58,889 - INFO - [SUCCESS] Synced inventory for CSTE_0491_ST_Fruit_Blox_Spirit to Airtable
+2025-06-23 10:12:58,894 - INFO - DJANGO | STOCK_UPDATED | CSTE_0491_ST_Fruit_Blox_Spirit @ TLCQ: 1 (new: 2)
+2025-06-23 10:13:00,950 - INFO - [SUCCESS] Synced inventory for CSTE_0491_ST_Fruit_Blox_Spirit to Airtable
+2025-06-23 10:13:00,955 - INFO - DJANGO | STOCK_UPDATED | CSTE_0491_ST_Fruit_Blox_Spirit @ TLCQ: 1 (new: 3)
+2025-06-23 10:13:03,022 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:13:03,044 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: 6)
+2025-06-23 10:13:05,381 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:13:05,387 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: 7)
+2025-06-23 10:13:11,333 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:13:11,336 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: 8)
+2025-06-23 10:13:13,369 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 10:13:13,407 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: 1 (new: 9)
+2025-06-23 10:13:13,422 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,428 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,443 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,450 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,458 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,485 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,599 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,616 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,652 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,656 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,663 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,668 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,670 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:13,672 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:16,171 - INFO - [SUCCESS] Synced inventory for CSTE_0330_Wands_Harrypotter_Light to Airtable
+2025-06-23 10:13:16,176 - INFO - DJANGO | STOCK_UPDATED | CSTE_0330_Wands_Harrypotter_Light @ TLCQ: 1 (new: 85)
+2025-06-23 10:13:16,177 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:22,822 - INFO - [SUCCESS] Synced inventory for CSTE_0333_Wands_Dumbledore_Light to Airtable
+2025-06-23 10:13:22,827 - INFO - DJANGO | STOCK_UPDATED | CSTE_0333_Wands_Dumbledore_Light @ TLCQ: 1 (new: 88)
+2025-06-23 10:13:26,731 - INFO - [SUCCESS] Synced inventory for CSTE_0333_Wands_Dumbledore_Light to Airtable
+2025-06-23 10:13:26,737 - INFO - DJANGO | STOCK_UPDATED | CSTE_0333_Wands_Dumbledore_Light @ TLCQ: 1 (new: 89)
+2025-06-23 10:13:26,740 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:26,743 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:26,747 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:26,754 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:26,758 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:26,759 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:29,578 - INFO - [SUCCESS] Synced inventory for CSTE_0251_SG_ButterFly_LightgreenPink to Airtable
+2025-06-23 10:13:29,585 - INFO - DJANGO | STOCK_UPDATED | CSTE_0251_SG_ButterFly_LightgreenPink @ TLCQ: 1 (new: 2)
+2025-06-23 10:13:31,798 - INFO - [SUCCESS] Synced inventory for CSTE_0322_ST_Axolotl_Blue to Airtable
+2025-06-23 10:13:31,807 - INFO - DJANGO | STOCK_UPDATED | CSTE_0322_ST_Axolotl_Blue @ TLCQ: 1 (new: 3)
+2025-06-23 10:13:35,668 - INFO - [SUCCESS] Synced inventory for CSTE_0291_OT_Hermoine_wand to Airtable
+2025-06-23 10:13:35,672 - INFO - DJANGO | STOCK_UPDATED | CSTE_0291_OT_Hermoine_wand @ TLCQ: 1 (new: 42)
+2025-06-23 10:13:35,674 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:35,679 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:37,758 - INFO - [SUCCESS] Synced inventory for CSTE_0213_SG_ButterFly_Black to Airtable
+2025-06-23 10:13:37,767 - INFO - DJANGO | STOCK_UPDATED | CSTE_0213_SG_ButterFly_Black @ TLCQ: 1 (new: 2)
+2025-06-23 10:13:37,770 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:37,775 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:37,777 - INFO - DJANGO | ERROR | Failed to update stock: Product matching query does not exist.
+2025-06-23 10:13:40,043 - INFO - [SUCCESS] Synced inventory for CSTE_0322_ST_Axolotl_Blue to Airtable
+2025-06-23 10:13:40,053 - INFO - DJANGO | STOCK_UPDATED | CSTE_0322_ST_Axolotl_Blue @ TLCQ: 1 (new: 4)
+2025-06-23 10:13:40,054 - INFO - INVENTORY | UPDATED | Inventory updated successfully
+2025-06-23 10:13:46,351 - INFO - C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\django_app\web\views.py changed, reloading.

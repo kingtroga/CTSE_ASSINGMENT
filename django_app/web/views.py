@@ -183,7 +183,8 @@ def process_sales_data(request):
                 'CSTE_FK', 
                 'CSTE_MEESHO',
                 'GL_FK',
-                'RUDRAV_MEESHO'
+                'RUDRAV_MEESHO',
+                'MISC'
             ]
         })
     
