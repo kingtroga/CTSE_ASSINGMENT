@@ -1987,3 +1987,32 @@ INFO 2025-06-23 16:38:45,441 airtable_sync 7932 4168 [SUCCESS] Synced inventory 
 INFO 2025-06-23 16:38:48,132 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
 INFO 2025-06-23 16:38:50,645 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_O0324_OT_Doll_White to Airtable
 INFO 2025-06-23 16:38:53,449 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+INFO 2025-06-23 16:53:14,491 airtable_sync 23548 22656 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 16:53:17,191 airtable_sync 16924 9040 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:01:16,691 airtable_sync 14504 21948 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:01:20,644 airtable_sync 17104 17608 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:01:58,965 airtable_sync 21736 4608 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:02:03,166 airtable_sync 21132 25940 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:02:58,821 airtable_sync 17900 16960 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:03:13,795 airtable_sync 8292 9576 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:03:49,234 airtable_sync 9568 13316 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:04:11,094 airtable_sync 11628 23528 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:05:12,149 airtable_sync 26676 23152 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:05:42,175 airtable_sync 12248 11764 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:05:44,974 airtable_sync 25568 16080 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:06:21,373 airtable_sync 19420 12100 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:06:24,055 airtable_sync 21540 27472 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:07:01,441 airtable_sync 13524 20568 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:07:05,611 airtable_sync 25940 12688 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:08:53,788 airtable_sync 26964 19568 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:09:58,650 airtable_sync 25628 25272 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:10:01,464 airtable_sync 20584 18140 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:10:25,578 airtable_sync 19144 16036 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:10:29,411 airtable_sync 10144 4608 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:12:56,739 airtable_sync 14124 15584 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:13:09,248 airtable_sync 10624 17076 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:14:25,038 airtable_sync 2544 18752 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:18:39,949 airtable_sync 19440 7772 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:19:38,547 airtable_sync 12404 17284 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:20:18,018 airtable_sync 26628 11116 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:20:45,348 airtable_sync 13392 18448 [SUCCESS]  Airtable connection validated successfully
