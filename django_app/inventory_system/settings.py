@@ -42,8 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Third party
-    'rest_framework',
-    'corsheaders',
     'django_crontab',
 
     # Local apps

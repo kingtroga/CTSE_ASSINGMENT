@@ -2025,3 +2025,19 @@ INFO 2025-06-23 17:35:33,553 airtable_sync 7228 15104 [SUCCESS]  Airtable connec
 INFO 2025-06-23 17:35:35,375 airtable_sync 7832 18448 [SUCCESS]  Airtable connection validated successfully
 INFO 2025-06-23 17:36:53,919 airtable_sync 14556 12292 [SUCCESS]  Airtable connection validated successfully
 INFO 2025-06-23 17:37:11,459 airtable_sync 6088 9336 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:50:52,615 airtable_sync 9480 27308 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:50:54,611 airtable_sync 20248 24648 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:52:37,273 airtable_sync 24784 27240 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:52:38,972 airtable_sync 26456 6864 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:55:06,880 airtable_sync 18844 16356 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 17:56:30,554 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_0204_MB_MHA12_Brown to Airtable
+INFO 2025-06-23 17:56:33,276 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+INFO 2025-06-23 17:56:36,818 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+INFO 2025-06-23 17:56:41,396 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 17:56:45,439 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_0021_MB_Beatles_Black to Airtable
+INFO 2025-06-23 17:56:47,877 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_0044_MB_LaVienRose_Black to Airtable
+INFO 2025-06-23 17:56:50,339 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+INFO 2025-06-23 17:56:53,258 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+INFO 2025-06-23 17:56:55,704 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
+INFO 2025-06-23 17:56:58,116 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_O0324_OT_Doll_White to Airtable
+INFO 2025-06-23 17:57:00,796 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
