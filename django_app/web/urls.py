@@ -1,6 +1,7 @@
-# django_app/web/urls.py
+# django_app/web/urls.py - ADD these new URL patterns
 from django.urls import path
 from . import views
+from . import smart_assistant  # Import the new smart_assistant module
 
 app_name = 'web'
 
@@ -19,4 +20,8 @@ urlpatterns = [
     
     # Get unmapped SKUs
     path('unmapped/', views.get_unmapped_skus, name='get_unmapped_skus'),
+    
+    # NEW: Smart Assistant URLs
+    path('assistant/', smart_assistant.smart_assistant, name='smart_assistant'),
+    path('assistant/suggestions/', smart_assistant.get_query_suggestions, name='query_suggestions'),
 ]

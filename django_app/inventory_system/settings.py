@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-change-me')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', "b404-102-91-104-212.ngrok-free.app", ]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', "e270-102-91-104-49.ngrok-free.app", ]
 
 
 # Application definition
@@ -181,6 +181,8 @@ AIRTABLE_TABLES = {
 LOGS_DIR = BASE_DIR / 'logs'
 LOGS_DIR.mkdir(exist_ok=True)
 
+GEMINI_API_KEY = config('GEMINI_API_KEY')
+
 
 # Logging configuration with dynamic path
 LOGGING = {
@@ -222,3 +224,8 @@ LOGGING = {
         },
     },
 }
+
+
+# Security settings for SQL execution
+SMART_ASSISTANT_MAX_ROWS = 1000  # Limit query results
+SMART_ASSISTANT_TIMEOUT = 30     # Query timeout in seconds

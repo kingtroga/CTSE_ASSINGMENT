@@ -1,183 +1,167 @@
-#!/usr/bin/env python3
-"""
-Simple Airtable API Test
-Just run: python test_airtable.py
-"""
-
 import requests
 import json
+import os
+import time
 
-# Your credentials (from your .env)
-BASE_ID = 'appLt31NqOLXcv3V1'
-ACCESS_TOKEN = 'patRWURHXsrBYtayJ.0715b57665e5e586019b4c2b820243ecfb73ca041126b2c7d774521f9d6b9d41'
+# --- Configuration ---
+# IMPORTANT: Replace "YOUR_API_KEY" with your actual Google AI Studio API key.
+# It's highly recommended to use an environment variable for security:
+# os.environ["GOOGLE_API_KEY"] = "YOUR_API_KEY"
+API_KEY = "AIzaSyBwckwrS6ay0x-7FbaZKmEnujGtCdXIX-U" 
 
-def test_airtable_connection():
-    """Test basic connection to Airtable"""
-    print("🔍 Testing Airtable connection...")
-    
-    # Headers for API request
+# Choose a model that is typically free tier friendly
+MODEL_NAME = 'gemini-1.5-flash' 
+API_ENDPOINT = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL_NAME}:generateContent?key={API_KEY}"
+
+# Free tier limits (approximate, always check official documentation)
+RPM_LIMIT = 15  # Requests per Minute
+RPD_LIMIT = 1500 # Requests per Day
+TPM_LIMIT = 1_000_000 # Tokens per Minute (input + output)
+
+# --- Initialize ---
+# Conversation history will be maintained manually
+conversation_history = []
+
+# Variables to track usage for free tier monitoring
+request_count_minute = 0
+request_count_day = 0
+token_count_minute = 0 
+
+start_time_minute = time.time()
+start_time_day = time.time()
+
+print(f"Welcome to the Gemini Chatbot (Model: {MODEL_NAME}) using requests!")
+print("Type 'exit' to end the conversation.")
+print("Type 'stats' to see your current usage for this session.")
+print("\n--- Starting Conversation ---")
+
+def send_gemini_request(messages, generation_config=None):
+    """Sends a request to the Gemini API using requests library."""
+    payload = {
+        "contents": messages
+    }
+    if generation_config:
+        payload["generationConfig"] = generation_config
+
     headers = {
-        'Authorization': f'Bearer {ACCESS_TOKEN}',
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
     }
-    
-    try:
-        # Test 1: Check if we can access the base
-        print(f"📡 Connecting to base: {BASE_ID}")
-        
-        # Try to get base metadata (list of tables)
-        url = f"https://api.airtable.com/v0/meta/bases/{BASE_ID}/tables"
-        response = requests.get(url, headers=headers)
-        
-        if response.status_code == 200:
-            print("✅ Connection successful!")
-            
-            # Show available tables
-            data = response.json()
-            tables = data.get('tables', [])
-            
-            print(f"\n📋 Found {len(tables)} tables in your base:")
-            for table in tables:
-                print(f"   - {table['name']} (ID: {table['id']})")
-            
-            return True, tables
-            
-        elif response.status_code == 401:
-            print("❌ Authentication failed - check your token")
-            return False, None
-            
-        elif response.status_code == 403:
-            print("❌ Permission denied - token needs schema.bases:read scope")
-            return False, None
-            
-        elif response.status_code == 404:
-            print("❌ Base not found - check your BASE_ID")
-            return False, None
-            
-        else:
-            print(f"❌ Unexpected error: {response.status_code}")
-            print(f"Response: {response.text}")
-            return False, None
-            
-    except Exception as e:
-        print(f"💥 Connection error: {e}")
-        return False, None
 
-def test_table_access(table_name="Table 1"):
-    """Test reading from a specific table"""
-    print(f"\n🔍 Testing table access: {table_name}")
-    
+    try:
+        response = requests.post(API_ENDPOINT, headers=headers, data=json.dumps(payload))
+        response.raise_for_status() # Raise an HTTPError for bad responses (4xx or 5xx)
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"HTTP Request failed: {e}")
+        if response.status_code == 429:
+            raise Exception("RESOURCE_EXHAUSTED: Rate limit exceeded.")
+        raise Exception(f"API Error: {response.status_code} - {response.text}")
+
+def count_tokens_request(text_to_count):
+    """Estimates tokens using the countTokens API."""
+    count_endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL_NAME}:countTokens?key={API_KEY}"
+    payload = {
+        "contents": [{"parts": [{"text": text_to_count}]}]
+    }
     headers = {
-        'Authorization': f'Bearer {ACCESS_TOKEN}',
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
     }
-    
     try:
-        # Try to read first few records from table
-        url = f"https://api.airtable.com/v0/{BASE_ID}/{table_name}?maxRecords=3"
-        response = requests.get(url, headers=headers)
-        
-        if response.status_code == 200:
-            data = response.json()
-            records = data.get('records', [])
-            
-            print(f"✅ Successfully read {len(records)} records from '{table_name}'")
-            
-            if records:
-                print("\n📄 Sample record structure:")
-                first_record = records[0]
-                fields = first_record.get('fields', {})
-                for field_name, value in fields.items():
-                    print(f"   - {field_name}: {type(value).__name__}")
-            
-            return True
-            
-        elif response.status_code == 404:
-            print(f"❌ Table '{table_name}' not found")
-            return False
-            
-        else:
-            print(f"❌ Error accessing table: {response.status_code}")
-            return False
-            
-    except Exception as e:
-        print(f"💥 Table access error: {e}")
-        return False
+        response = requests.post(count_endpoint, headers=headers, data=json.dumps(payload))
+        response.raise_for_status()
+        return response.json().get("totalTokens", 0)
+    except requests.exceptions.RequestException as e:
+        print(f"Token count request failed: {e}")
+        return 0 # Return 0 tokens on error for this utility function
 
-def test_create_record(table_name="Table 1"):
-    """Test creating a simple record"""
-    print(f"\n🔍 Testing record creation in: {table_name}")
+while True:
+    user_input = input("You: ")
+
+    # Reset minute counters if a minute has passed
+    if time.time() - start_time_minute >= 60:
+        request_count_minute = 0
+        token_count_minute = 0
+        start_time_minute = time.time()
+
+    if user_input.lower() == 'exit':
+        break
+    elif user_input.lower() == 'stats':
+        elapsed_day_hours = (time.time() - start_time_day) / 3600
+        print(f"\n--- Session Stats ---")
+        print(f"Requests this minute: {request_count_minute}/{RPM_LIMIT}")
+        print(f"Tokens this minute: {token_count_minute}/{TPM_LIMIT}")
+        print(f"Requests today (session): {request_count_day}/{RPD_LIMIT} (elapsed: {elapsed_day_hours:.2f} hours)")
+        print(f"---------------------\n")
+        continue
+
+    # Prepare message for the API call
+    # The Gemini API expects messages in a specific format for chat history
+    # Role 'user' for user input, 'model' for bot output
+    new_user_message = {"role": "user", "parts": [{"text": user_input}]}
     
-    headers = {
-        'Authorization': f'Bearer {ACCESS_TOKEN}',
-        'Content-Type': 'application/json'
-    }
-    
-    # Simple test record
-    test_data = {
-        "fields": {
-            "sku": "Test Record - Django Sync",
-            "status": "ACTIVE"
-        }
-    }
-    
+    # Add new user message to the history for the current request
+    current_request_messages = conversation_history + [new_user_message]
+
     try:
-        url = f"https://api.airtable.com/v0/{BASE_ID}/{table_name}"
-        response = requests.post(url, headers=headers, json=test_data)
+        # Estimate input tokens
+        # Note: This is an estimation. The actual token count is done by the API.
+        # For full chat history, you'd ideally count the combined text of all messages
+        # in `current_request_messages`. For simplicity here, we'll estimate from user input.
+        # A more accurate way would be to send a `countTokens` request for the full `current_request_messages`.
+        input_tokens = count_tokens_request(user_input) 
+
+        if token_count_minute + input_tokens >= TPM_LIMIT:
+             print(f"Bot: Warning: Approaching TPM limit ({TPM_LIMIT}). Input tokens ({input_tokens}) might exceed limit this minute. Please wait.")
+             time.sleep(5) 
+             continue 
+
+        if request_count_minute >= RPM_LIMIT:
+            print(f"Bot: Warning: Approaching RPM limit ({RPM_LIMIT}). Please wait a moment.")
+            time.sleep(5) 
+            continue
         
-        if response.status_code == 200:
-            data = response.json()
-            record_id = data.get('id')
-            print(f"✅ Successfully created test record: {record_id}")
+        if request_count_day >= RPD_LIMIT:
+            print(f"Bot: Warning: Approaching RPD limit ({RPD_LIMIT}). You might hit daily limit soon.")
             
-            # Clean up - delete the test record
-            delete_url = f"{url}/{record_id}"
-            delete_response = requests.delete(delete_url, headers=headers)
-            
-            if delete_response.status_code == 200:
-                print("🧹 Test record cleaned up")
-            
-            return True
-            
-        elif response.status_code == 422:
-            print("❌ Validation error - check field names match your table")
-            print(f"Response: {response.text}")
-            return False
-            
-        else:
-            print(f"❌ Create error: {response.status_code}")
-            print(f"Response: {response.text}")
-            return False
-            
+        # Send the full conversation history to the API
+        api_response_json = send_gemini_request(current_request_messages)
+
+        # Extract the text from the response
+        model_response_text = ""
+        if "candidates" in api_response_json and len(api_response_json["candidates"]) > 0:
+            candidate = api_response_json["candidates"][0]
+            if "content" in candidate and "parts" in candidate["content"] and len(candidate["content"]["parts"]) > 0:
+                model_response_text = candidate["content"]["parts"][0].get("text", "")
+        
+        if not model_response_text:
+            print("Bot: (No text response from model, or response was empty.)")
+            # Check for safety ratings if no text content
+            if "promptFeedback" in api_response_json and "safetyRatings" in api_response_json["promptFeedback"]:
+                for rating in api_response_json["promptFeedback"]["safetyRatings"]:
+                    if rating["blocked"] == True:
+                        print(f"Bot: Note: Response was blocked due to safety settings for category: {rating['category']}")
+            continue # Don't add empty response to history
+
+        # Add user and model message to conversation history
+        conversation_history.append(new_user_message)
+        conversation_history.append({"role": "model", "parts": [{"text": model_response_text}]})
+
+        # Count actual output tokens (after getting response)
+        output_tokens = count_tokens_request(model_response_text)
+
+        request_count_minute += 1
+        request_count_day += 1
+        token_count_minute += input_tokens + output_tokens # Sum of estimated input and actual output
+
+        print(f"Bot: {model_response_text}")
+
     except Exception as e:
-        print(f"💥 Create record error: {e}")
-        return False
+        print(f"An error occurred: {e}")
+        if "RESOURCE_EXHAUSTED" in str(e):
+            print("You likely hit a rate limit. Please wait a bit before trying again.")
+            time.sleep(10) # Longer wait for rate limit errors
+        else:
+            print("Please try again.")
 
-def main():
-    """Run all tests"""
-    print("🚀 Airtable API Test Suite")
-    print("=" * 40)
-    
-    # Test 1: Basic connection
-    success, tables = test_airtable_connection()
-    
-    if not success:
-        print("\n❌ Basic connection failed. Fix this first!")
-        return
-    
-    # Test 2: Try to access first table if any exist
-    if tables:
-        first_table = tables[0]['name']
-        test_table_access(first_table)
-        test_create_record(first_table)
-    
-    print("\n" + "=" * 40)
-    print("🎉 Test complete!")
-    print("\nNext steps:")
-    print("1. If all tests passed - your connection works!")
-    print("2. Create your tables: SKU_Mappings, Inventory, Combo_Products")
-    print("3. Run the Django sync command")
-    print("\n😴 Now go watch your film and sleep! This is working.")
-
-if __name__ == "__main__":
-    main()
+print("\nConversation ended. Goodbye!")
+print(f"Total requests in this session: {request_count_day}")

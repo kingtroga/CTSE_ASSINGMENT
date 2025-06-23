@@ -1,0 +1,1362 @@
+{% extends 'web/base.html' %}
+
+{% block title %}Smart Assistant - WMS{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Chart container styles - Responsive */
+    .chart-container {
+        position: relative;
+        height: 300px;
+        margin: 1rem 0;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        border-radius: 12px;
+        padding: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (min-width: 768px) {
+        .chart-container {
+            height: 400px;
+            padding: 1rem;
+        }
+    }
+    
+    /* Query input enhancements - Mobile optimized */
+    .query-input {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    @media (min-width: 768px) {
+        .query-input {
+            border-radius: 16px;
+            font-size: 1.125rem;
+        }
+    }
+    
+    .query-input:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        background: #ffffff;
+    }
+    
+    /* Query input container - Mobile adjustments */
+    .query-container {
+        position: relative;
+    }
+    
+    .query-actions {
+        position: absolute;
+        bottom: 0.75rem;
+        right: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    @media (min-width: 768px) {
+        .query-actions {
+            bottom: 1rem;
+            right: 1rem;
+            gap: 0.75rem;
+        }
+    }
+    
+    /* Mobile-friendly suggestion button */
+    .suggestions-btn {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        transition: all 0.2s ease;
+    }
+    
+    .suggestions-btn:hover {
+        background: rgba(102, 126, 234, 0.1);
+        border-color: #667eea;
+    }
+    
+    /* Submit button - Mobile responsive */
+    .submit-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border-radius: 8px;
+    }
+    
+    @media (min-width: 768px) {
+        .submit-btn {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 9999px;
+        }
+    }
+    
+    /* Results table styling - Mobile scrollable */
+    .results-table {
+        overflow-x: auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+    
+    .results-table table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px; /* Prevent table from being too cramped */
+    }
+    
+    .results-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        font-weight: 600;
+        padding: 0.5rem;
+        text-align: left;
+        border-bottom: 2px solid #e2e8f0;
+        font-size: 0.875rem;
+        white-space: nowrap;
+    }
+    
+    @media (min-width: 768px) {
+        .results-table th {
+            padding: 0.75rem;
+            font-size: 1rem;
+        }
+    }
+    
+    .results-table td {
+        padding: 0.5rem;
+        border-bottom: 1px solid #e2e8f0;
+        font-size: 0.875rem;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    @media (min-width: 768px) {
+        .results-table td {
+            padding: 0.75rem;
+            font-size: 1rem;
+            max-width: none;
+            white-space: normal;
+        }
+    }
+    
+    .results-table tbody tr:hover {
+        background-color: #f8fafc;
+    }
+    
+    /* Suggestion cards - Mobile optimized */
+    .suggestion-card {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 0.75rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        transform: translateY(0);
+        font-size: 0.875rem;
+        line-height: 1.4;
+    }
+    
+    @media (min-width: 768px) {
+        .suggestion-card {
+            border-radius: 12px;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+    }
+    
+    .suggestion-card:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.1);
+        border-color: #667eea;
+    }
+    
+    @media (min-width: 768px) {
+        .suggestion-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    }
+    
+    /* Loading animation */
+    .loading-spinner {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid #667eea;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    
+    @media (min-width: 768px) {
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border-width: 3px;
+        }
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    /* Chart type selector - Mobile responsive */
+    .chart-type-selector {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    @media (min-width: 640px) {
+        .chart-type-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+    }
+    
+    .chart-type-btn {
+        padding: 0.5rem 0.75rem;
+        border: 2px solid #e2e8f0;
+        border-radius: 6px;
+        background: white;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-align: center;
+        white-space: nowrap;
+    }
+    
+    @media (min-width: 768px) {
+        .chart-type-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+        }
+    }
+    
+    .chart-type-btn.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-color: #667eea;
+    }
+    
+    .chart-type-btn:hover:not(.active) {
+        border-color: #667eea;
+        background-color: #f0f4ff;
+    }
+    
+    /* Export buttons - Mobile responsive */
+    .export-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    @media (min-width: 640px) {
+        .export-actions {
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+    }
+    
+    .export-btn {
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-align: center;
+        transition: all 0.2s ease;
+    }
+    
+    @media (min-width: 768px) {
+        .export-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+    }
+    
+    /* Message containers - Mobile optimized */
+    .message-container {
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+    }
+    
+    @media (min-width: 768px) {
+        .message-container {
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+    }
+    
+    /* Visualization header - Mobile responsive */
+    .viz-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+        .viz-header {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    
+    /* Query summary expandable section - Mobile friendly */
+    .query-summary {
+        background: #dbeafe;
+        border: 1px solid #bfdbfe;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+        .query-summary {
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+    
+    .query-summary details summary {
+        cursor: pointer;
+        font-size: 0.75rem;
+        color: #2563eb;
+        margin-top: 0.5rem;
+    }
+    
+    @media (min-width: 768px) {
+        .query-summary details summary {
+            font-size: 0.875rem;
+        }
+    }
+    
+    .query-summary pre {
+        margin-top: 0.5rem;
+        font-size: 0.625rem;
+        background: #bfdbfe;
+        padding: 0.5rem;
+        border-radius: 4px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    @media (min-width: 768px) {
+        .query-summary pre {
+            font-size: 0.75rem;
+            padding: 0.75rem;
+            border-radius: 6px;
+        }
+    }
+    
+    /* Suggestions panel - Mobile optimized */
+    .suggestions-panel {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        border: 1px solid #e5e7eb;
+        margin-bottom: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+        .suggestions-panel {
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+    
+    .suggestions-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+        .suggestions-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .suggestions-grid {
+            gap: 1.5rem;
+        }
+    }
+    
+    /* Header responsive adjustments */
+    .page-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+        .page-header {
+            margin-bottom: 2rem;
+        }
+    }
+    
+    .page-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+        .page-title {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .page-title {
+            font-size: 2.5rem;
+        }
+    }
+    
+    .page-description {
+        font-size: 0.875rem;
+        color: #6b7280;
+        max-width: 100%;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+    
+    @media (min-width: 768px) {
+        .page-description {
+            font-size: 1rem;
+            max-width: 48rem;
+            line-height: 1.6;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .page-description {
+            font-size: 1.125rem;
+        }
+    }
+    
+    /* Container responsive padding - Fixed overflow */
+    .main-container {
+        width: 100%;
+        max-width: 72rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        overflow-x: hidden; /* Prevent horizontal overflow */
+        box-sizing: border-box;
+    }
+    
+    @media (min-width: 640px) {
+        .main-container {
+            padding: 0 1.5rem;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .main-container {
+            padding: 0 2rem;
+        }
+    }
+    
+    /* Prevent any child elements from causing overflow */
+    * {
+        box-sizing: border-box;
+    }
+    
+    /* Ensure body and html don't overflow */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    /* Fix specific overflow issues */
+    .chart-container, 
+    .results-table, 
+    .suggestions-panel,
+    .query-summary,
+    .message-container {
+        max-width: 100%;
+        overflow-x: auto;
+        box-sizing: border-box;
+    }
+    
+    /* Ensure pre elements don't cause overflow */
+    pre {
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    
+    /* Fix canvas overflow */
+    canvas {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="main-container">
+    <!-- Header -->
+    <div class="page-header">
+        <h1 class="page-title gradient-bg bg-clip-text text-transparent">
+            🤖 Smart Assistant
+        </h1>
+        <p class="page-description">
+            Ask questions about your inventory, sales, and warehouse operations in natural language. 
+            I'll analyze your data and create visualizations to help you make informed decisions.
+        </p>
+    </div>
+
+    <!-- Query Input Section -->
+    <div class="mb-6">
+        <div class="query-container">
+            <textarea 
+                id="query-input" 
+                class="query-input w-full px-4 py-4 resize-none focus:outline-none placeholder-gray-400"
+                placeholder="Ask me anything about your inventory, sales, or operations...
+
+Examples:
+• Show me top 10 products by stock
+• Which products are low on stock?
+• Total sales by marketplace this month
+• Inventory movements today"
+                rows="4"></textarea>
+            
+            <div class="query-actions">
+                <button 
+                    id="suggestions-btn"
+                    class="suggestions-btn"
+                    onclick="toggleSuggestions()"
+                    title="Show example queries">
+                    💡
+                </button>
+                
+                <button 
+                    id="submit-btn"
+                    onclick="submitQuery()"
+                    class="submit-btn gradient-btn text-white hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
+                    <span id="submit-text">Analyze</span>
+                    <span id="submit-spinner" class="loading-spinner hidden"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Areas -->
+    <div id="error-message" class="hidden message-container bg-red-50 border border-red-200 text-red-700">
+        <div class="flex">
+            <div class="flex-shrink-0">❌</div>
+            <div class="ml-3">
+                <p class="text-sm font-medium">Error</p>
+                <p class="text-sm" id="error-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="success-message" class="hidden message-container bg-green-50 border border-green-200 text-green-700">
+        <div class="flex">
+            <div class="flex-shrink-0">✅</div>
+            <div class="ml-3">
+                <p class="text-sm font-medium">Success</p>
+                <p class="text-sm" id="success-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Query Suggestions (Initially Hidden) -->
+    <div id="suggestions-panel" class="hidden suggestions-panel">
+        <h3 class="text-lg font-semibold text-gray-800 mb-4">💡 Try these example queries:</h3>
+        <div id="suggestions-content" class="suggestions-grid">
+            <!-- Suggestions will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="results-section" class="hidden">
+        <!-- Query Summary -->
+        <div class="query-summary">
+            <div class="flex items-start">
+                <div class="flex-shrink-0">🔍</div>
+                <div class="ml-3 flex-1">
+                    <p class="text-sm font-medium text-blue-800">Query Analysis</p>
+                    <p class="text-sm text-blue-700" id="query-summary"></p>
+                    <details class="mt-2">
+                        <summary class="text-blue-600 hover:text-blue-800">View Generated SQL</summary>
+                        <pre><code id="generated-sql"></code></pre>
+                    </details>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart Type Selector -->
+        <div id="chart-controls" class="hidden">
+            <div class="viz-header">
+                <h3 class="text-lg font-semibold text-gray-800">📊 Visualization</h3>
+                <div class="chart-type-selector">
+                    <button class="chart-type-btn" data-type="table">📋 Table</button>
+                    <button class="chart-type-btn" data-type="bar">📊 Bar Chart</button>
+                    <button class="chart-type-btn" data-type="line">📈 Line Chart</button>
+                    <button class="chart-type-btn" data-type="pie">🥧 Pie Chart</button>
+                    <button class="chart-type-btn" data-type="scatter">🔸 Scatter Plot</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart Container -->
+        <div id="chart-container" class="chart-container hidden">
+            <canvas id="data-chart"></canvas>
+        </div>
+
+        <!-- Data Table -->
+        <div id="table-container" class="results-table">
+            <table id="results-table">
+                <thead id="table-header"></thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+
+        <!-- Export Options -->
+        <div class="export-actions">
+            <button 
+                id="export-csv-btn"
+                onclick="exportToCSV()"
+                class="export-btn gradient-btn-secondary text-white hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
+                📥 Export CSV
+            </button>
+            <button 
+                id="export-chart-btn"
+                onclick="exportChart()"
+                class="export-btn gradient-btn text-white hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
+                📸 Save Chart
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+{{ block.super }}
+
+<!-- Chart.js Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+
+<script>
+// Global variables
+let currentData = null;
+let currentChart = null;
+let currentChartType = 'table';
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', function() {
+    loadSuggestions();
+    
+    // Setup chart type selector
+    document.querySelectorAll('.chart-type-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const chartType = this.dataset.type;
+            switchChartType(chartType);
+        });
+    });
+    
+    // Setup enter key for query input
+    document.getElementById('query-input').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            submitQuery();
+        }
+    });
+    
+    // Close suggestions when clicking outside
+    document.addEventListener('click', function(e) {
+        const suggestionsPanel = document.getElementById('suggestions-panel');
+        const suggestionsBtn = document.getElementById('suggestions-btn');
+        
+        if (!suggestionsPanel.contains(e.target) && !suggestionsBtn.contains(e.target)) {
+            if (!suggestionsPanel.classList.contains('hidden')) {
+                suggestionsPanel.classList.add('hidden');
+            }
+        }
+    });
+});
+
+// Load query suggestions
+async function loadSuggestions() {
+    try {
+        const response = await fetch('/web/assistant/suggestions/');
+        const result = await response.json();
+        
+        if (result.success) {
+            displaySuggestions(result.suggestions);
+        }
+    } catch (error) {
+        console.error('Error loading suggestions:', error);
+    }
+}
+
+// Display suggestions in the UI
+function displaySuggestions(suggestions) {
+    const container = document.getElementById('suggestions-content');
+    container.innerHTML = '';
+    
+    suggestions.forEach(category => {
+        const categoryDiv = document.createElement('div');
+        categoryDiv.className = 'space-y-2';
+        
+        const categoryTitle = document.createElement('h4');
+        categoryTitle.className = 'font-medium text-gray-700 mb-2';
+        categoryTitle.textContent = category.category;
+        categoryDiv.appendChild(categoryTitle);
+        
+        category.queries.forEach(query => {
+            const queryCard = document.createElement('div');
+            queryCard.className = 'suggestion-card text-gray-600';
+            queryCard.textContent = query;
+            queryCard.onclick = () => selectSuggestion(query);
+            categoryDiv.appendChild(queryCard);
+        });
+        
+        container.appendChild(categoryDiv);
+    });
+}
+
+// Select a suggestion
+function selectSuggestion(query) {
+    document.getElementById('query-input').value = query;
+    toggleSuggestions();
+    submitQuery();
+}
+
+// Toggle suggestions panel
+function toggleSuggestions() {
+    const panel = document.getElementById('suggestions-panel');
+    panel.classList.toggle('hidden');
+}
+
+// Submit query to the assistant
+async function submitQuery() {
+    const queryInput = document.getElementById('query-input');
+    const query = queryInput.value.trim();
+    
+    if (!query) {
+        showError('Please enter a query');
+        return;
+    }
+    
+    // Show loading state
+    setLoadingState(true);
+    hideMessages();
+    hideResults();
+    
+    try {
+        const response = await fetchWithCSRF('/web/assistant/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ query: query })
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            currentData = result;
+            displayResults(result);
+            showSuccess(`Found ${result.row_count} results for your query`);
+        } else {
+            showError(result.error || 'Failed to process query');
+        }
+        
+    } catch (error) {
+        console.error('Error submitting query:', error);
+        showError('Network error. Please try again.');
+    } finally {
+        setLoadingState(false);
+    }
+}
+
+// Display query results
+function displayResults(data) {
+    document.getElementById('results-section').classList.remove('hidden');
+    
+    // Update query summary
+    document.getElementById('query-summary').textContent = data.user_query;
+    document.getElementById('generated-sql').textContent = data.sql_query;
+    
+    // Show chart controls if we have data
+    if (data.data && data.data.length > 0) {
+        document.getElementById('chart-controls').classList.remove('hidden');
+        
+        // Set the suggested chart type as active
+        const suggestedType = data.chart_type || 'table';
+        switchChartType(suggestedType);
+    } else {
+        // Only show table for empty results
+        switchChartType('table');
+    }
+    
+    // Scroll to results on mobile
+    if (window.innerWidth < 768) {
+        document.getElementById('results-section').scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
+// Switch between different chart types
+function switchChartType(chartType) {
+    currentChartType = chartType;
+    
+    // Update active button
+    document.querySelectorAll('.chart-type-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.type === chartType) {
+            btn.classList.add('active');
+        }
+    });
+    
+    // Show/hide containers
+    const chartContainer = document.getElementById('chart-container');
+    const tableContainer = document.getElementById('table-container');
+    
+    if (chartType === 'table') {
+        chartContainer.classList.add('hidden');
+        tableContainer.classList.remove('hidden');
+        displayTable();
+    } else {
+        tableContainer.classList.add('hidden');
+        chartContainer.classList.remove('hidden');
+        displayChart(chartType);
+    }
+}
+
+// Display data as table
+function displayTable() {
+    if (!currentData || !currentData.data) return;
+    
+    const table = document.getElementById('results-table');
+    const thead = document.getElementById('table-header');
+    const tbody = document.getElementById('table-body');
+    
+    // Clear existing content
+    thead.innerHTML = '';
+    tbody.innerHTML = '';
+    
+    if (currentData.data.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="100%" class="text-center text-gray-500 py-8">No data found</td></tr>';
+        return;
+    }
+    
+    // Create header
+    const headerRow = document.createElement('tr');
+    currentData.columns.forEach(col => {
+        const th = document.createElement('th');
+        th.textContent = col.replace(/_/g, ' ').toUpperCase();
+        headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+    
+    // Create rows
+    currentData.data.forEach(row => {
+        const tr = document.createElement('tr');
+        currentData.columns.forEach(col => {
+            const td = document.createElement('td');
+            let value = row[col];
+            
+            // Format values
+            if (typeof value === 'number') {
+                if (Number.isInteger(value)) {
+                    td.textContent = value.toLocaleString();
+                } else {
+                    td.textContent = value.toFixed(2);
+                }
+            } else if (value === null || value === undefined) {
+                td.textContent = '-';
+                td.className = 'text-gray-400';
+            } else {
+                td.textContent = value;
+                // Add title attribute for mobile truncated text
+                if (window.innerWidth < 768) {
+                    td.title = value;
+                }
+            }
+            
+            tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+    });
+}
+
+// Display data as chart
+function displayChart(chartType) {
+    if (!currentData || !currentData.data || currentData.data.length === 0) return;
+    
+    const ctx = document.getElementById('data-chart');
+    
+    // Destroy existing chart
+    if (currentChart) {
+        currentChart.destroy();
+    }
+    
+    const chartData = prepareChartData(chartType);
+    const chartConfig = {
+        type: chartType === 'scatter' ? 'scatter' : chartType,
+        data: chartData,
+        options: getChartOptions(chartType)
+    };
+    
+    currentChart = new Chart(ctx, chartConfig);
+}
+
+// Prepare data for different chart types
+function prepareChartData(chartType) {
+    const data = currentData.data;
+    const columns = currentData.columns;
+    
+    // Find numeric and text columns
+    const numericColumns = columns.filter(col => {
+        const sample = data[0] && data[0][col];
+        return typeof sample === 'number';
+    });
+    
+    const textColumns = columns.filter(col => {
+        const sample = data[0] && data[0][col];
+        return typeof sample === 'string';
+    });
+    
+    let labels, datasets;
+    
+    switch (chartType) {
+        case 'bar':
+        case 'line':
+            // Use first text column as labels, numeric columns as data
+            const labelColumn = textColumns[0] || columns[0];
+            labels = data.map(row => {
+                let label = row[labelColumn];
+                // Truncate long labels on mobile
+                if (window.innerWidth < 768 && typeof label === 'string' && label.length > 10) {
+                    return label.substring(0, 10) + '...';
+                }
+                return label;
+            });
+            
+            datasets = numericColumns.slice(0, 5).map((col, index) => ({
+                label: col.replace(/_/g, ' ').toUpperCase(),
+                data: data.map(row => row[col] || 0),
+                backgroundColor: getChartColor(index, 0.7),
+                borderColor: getChartColor(index, 1),
+                borderWidth: 2,
+                fill: chartType === 'line' ? false : true
+            }));
+            break;
+            
+        case 'pie':
+            // Use first text column as labels, first numeric column as data
+            const labelCol = textColumns[0] || columns[0];
+            const valueCol = numericColumns[0] || columns[1];
+            
+            labels = data.slice(0, 10).map(row => {
+                let label = row[labelCol];
+                // Truncate long labels for pie chart
+                if (typeof label === 'string' && label.length > 15) {
+                    return label.substring(0, 15) + '...';
+                }
+                return label;
+            });
+            const values = data.slice(0, 10).map(row => row[valueCol] || 0);
+            
+            datasets = [{
+                data: values,
+                backgroundColor: labels.map((_, index) => getChartColor(index, 0.7)),
+                borderColor: labels.map((_, index) => getChartColor(index, 1)),
+                borderWidth: 2
+            }];
+            break;
+            
+        case 'scatter':
+            // Use first two numeric columns
+            const xCol = numericColumns[0];
+            const yCol = numericColumns[1];
+            
+            if (!xCol || !yCol) {
+                // Fallback to bar chart if not enough numeric columns
+                return prepareChartData('bar');
+            }
+            
+            datasets = [{
+                label: `${yCol} vs ${xCol}`,
+                data: data.map(row => ({
+                    x: row[xCol] || 0,
+                    y: row[yCol] || 0
+                })),
+                backgroundColor: getChartColor(0, 0.7),
+                borderColor: getChartColor(0, 1),
+                borderWidth: 2
+            }];
+            labels = [];
+            break;
+            
+        default:
+            labels = [];
+            datasets = [];
+    }
+    
+    return { labels, datasets };
+}
+
+// Get chart options based on type
+function getChartOptions(chartType) {
+    const isMobile = window.innerWidth < 768;
+    
+    const baseOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: isMobile ? 'bottom' : 'top',
+                labels: {
+                    usePointStyle: true,
+                    padding: isMobile ? 10 : 20,
+                    font: {
+                        size: isMobile ? 10 : 12
+                    },
+                    boxWidth: isMobile ? 10 : 12
+                }
+            },
+            tooltip: {
+                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                titleColor: 'white',
+                bodyColor: 'white',
+                borderColor: '#667eea',
+                borderWidth: 1,
+                titleFont: {
+                    size: isMobile ? 12 : 14
+                },
+                bodyFont: {
+                    size: isMobile ? 11 : 13
+                }
+            }
+        }
+    };
+    
+    switch (chartType) {
+        case 'line':
+            return {
+                ...baseOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                            font: {
+                                size: isMobile ? 10 : 12
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                            font: {
+                                size: isMobile ? 10 : 12
+                            },
+                            maxRotation: isMobile ? 45 : 0
+                        }
+                    }
+                }
+            };
+            
+        case 'bar':
+            return {
+                ...baseOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                            font: {
+                                size: isMobile ? 10 : 12
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: {
+                                size: isMobile ? 10 : 12
+                            },
+                            maxRotation: isMobile ? 45 : 0
+                        }
+                    }
+                }
+            };
+            
+        case 'pie':
+            return {
+                ...baseOptions,
+                plugins: {
+                    ...baseOptions.plugins,
+                    legend: {
+                        position: isMobile ? 'bottom' : 'right',
+                        labels: {
+                            usePointStyle: true,
+                            padding: isMobile ? 10 : 20,
+                            font: {
+                                size: isMobile ? 10 : 12
+                            },
+                            generateLabels: function(chart) {
+                                const data = chart.data;
+                                if (data.labels.length && data.datasets.length) {
+                                    return data.labels.map((label, i) => {
+                                        const value = data.datasets[0].data[i];
+                                        let displayLabel = label;
+                                        
+                                        // Further truncate for mobile
+                                        if (isMobile && typeof label === 'string' && label.length > 10) {
+                                            displayLabel = label.substring(0, 10) + '...';
+                                        }
+                                        
+                                        return {
+                                            text: `${displayLabel}: ${value}`,
+                                            fillStyle: data.datasets[0].backgroundColor[i],
+                                            strokeStyle: data.datasets[0].borderColor[i],
+                                            lineWidth: data.datasets[0].borderWidth,
+                                            hidden: false,
+                                            index: i
+                                        };
+                                    });
+                                }
+                                return [];
+                            }
+                        }
+                    }
+                }
+            };
+            
+        case 'scatter':
+            return {
+                ...baseOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                            font: {
+                                size: isMobile ? 10 : 12
+                            }
+                        }
+                    },
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                            font: {
+                                size: isMobile ? 10 : 12
+                            }
+                        }
+                    }
+                }
+            };
+            
+        default:
+            return baseOptions;
+    }
+}
+
+// Get color for chart elements
+function getChartColor(index, alpha = 1) {
+    const colors = [
+        `rgba(102, 126, 234, ${alpha})`,  // Primary blue
+        `rgba(118, 75, 162, ${alpha})`,   // Purple
+        `rgba(34, 197, 94, ${alpha})`,    // Green
+        `rgba(239, 68, 68, ${alpha})`,    // Red
+        `rgba(245, 158, 11, ${alpha})`,   // Orange
+        `rgba(6, 182, 212, ${alpha})`,    // Cyan
+        `rgba(168, 85, 247, ${alpha})`,   // Violet
+        `rgba(236, 72, 153, ${alpha})`,   // Pink
+    ];
+    return colors[index % colors.length];
+}
+
+// Export functions
+function exportToCSV() {
+    if (!currentData || !currentData.data) return;
+    
+    // Create CSV content
+    const headers = currentData.columns.join(',');
+    const rows = currentData.data.map(row => 
+        currentData.columns.map(col => {
+            let value = row[col];
+            if (typeof value === 'string' && value.includes(',')) {
+                value = `"${value}"`; // Escape commas
+            }
+            return value || '';
+        }).join(',')
+    );
+    
+    const csvContent = [headers, ...rows].join('\n');
+    
+    // Download file
+    const blob = new Blob([csvContent], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `query_results_${new Date().toISOString().split('T')[0]}.csv`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+}
+
+function exportChart() {
+    if (!currentChart) {
+        showError('No chart available to export');
+        return;
+    }
+    
+    try {
+        const url = currentChart.toBase64Image();
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `chart_${new Date().toISOString().split('T')[0]}.png`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    } catch (error) {
+        showError('Failed to export chart');
+    }
+}
+
+// Utility functions
+function setLoadingState(loading) {
+    const submitBtn = document.getElementById('submit-btn');
+    const submitText = document.getElementById('submit-text');
+    const submitSpinner = document.getElementById('submit-spinner');
+    
+    if (loading) {
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        submitText.textContent = 'Analyzing...';
+        submitSpinner.classList.remove('hidden');
+    } else {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        submitText.textContent = 'Analyze';
+        submitSpinner.classList.add('hidden');
+    }
+}
+
+function hideResults() {
+    document.getElementById('results-section').classList.add('hidden');
+}
+
+function showError(message) {
+    const errorDiv = document.getElementById('error-message');
+    const errorText = document.getElementById('error-text');
+    const successDiv = document.getElementById('success-message');
+    
+    errorText.textContent = message;
+    errorDiv.classList.remove('hidden');
+    successDiv.classList.add('hidden');
+    
+    // Scroll to error message on mobile
+    if (window.innerWidth < 768) {
+        errorDiv.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'center'
+        });
+    }
+}
+
+function showSuccess(message) {
+    const successDiv = document.getElementById('success-message');
+    const successText = document.getElementById('success-text');
+    const errorDiv = document.getElementById('error-message');
+    
+    successText.textContent = message;
+    successDiv.classList.remove('hidden');
+    errorDiv.classList.add('hidden');
+}
+
+function hideMessages() {
+    document.getElementById('error-message').classList.add('hidden');
+    document.getElementById('success-message').classList.add('hidden');
+}
+
+// Handle window resize for responsive chart updates
+window.addEventListener('resize', function() {
+    if (currentChart) {
+        // Update chart options for new screen size
+        const newOptions = getChartOptions(currentChartType);
+        currentChart.options = newOptions;
+        currentChart.update('resize');
+    }
+});
+
+// Add touch event handling for mobile
+if ('ontouchstart' in window) {
+    // Add touch feedback for buttons
+    document.addEventListener('touchstart', function(e) {
+        if (e.target.matches('.suggestion-card, .chart-type-btn, .export-btn')) {
+            e.target.style.transform = 'scale(0.98)';
+        }
+    });
+    
+    document.addEventListener('touchend', function(e) {
+        if (e.target.matches('.suggestion-card, .chart-type-btn, .export-btn')) {
+            setTimeout(() => {
+                e.target.style.transform = '';
+            }, 100);
+        }
+    });
+}
+</script>
+{% endblock %}

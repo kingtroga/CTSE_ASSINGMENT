@@ -1,491 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WMS - Sales Data Processor</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+{% extends 'web/base.html' %}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+{% block title %}WMS - Sales Data Processor{% endblock %}
 
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            width: 100%;
-        }
+{% block content %}
+<!-- Header Section -->
+<div class="text-center mb-8 sm:mb-10">
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-3">
+        🏪 WMS Sales Processor
+    </h1>
+    <p class="text-gray-600 text-lg sm:text-xl">
+        Upload your sales data and select marketplace to get outbound orders
+    </p>
+</div>
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .header h1 {
-            color: #333;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        .upload-section {
-            border: 3px dashed #e0e0e0;
-            border-radius: 15px;
-            padding: 40px;
-            text-align: center;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .upload-section:hover {
-            border-color: #667eea;
-            background: #f8f9ff;
-        }
-
-        .upload-section.dragover {
-            border-color: #667eea;
-            background: #f0f4ff;
-            transform: scale(1.02);
-        }
-
-        .upload-icon {
-            font-size: 4rem;
-            color: #667eea;
-            margin-bottom: 20px;
-        }
-
-        .upload-text {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .upload-subtext {
-            color: #888;
-            font-size: 0.9rem;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .form-group select {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group select:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .process-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            border-radius: 10px;
-            cursor: pointer;
-            width: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        .process-btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .process-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .results-section {
-            margin-top: 30px;
-            padding: 20px;
-            background: #f8f9ff;
-            border-radius: 10px;
-            display: none;
-        }
-
-        .results-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .results-title {
-            font-size: 1.3rem;
-            color: #333;
-            font-weight: 600;
-        }
-
-        .download-btn {
-            background: #28a745;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .stat-card {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        .stat-number {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #667eea;
-        }
-
-        .stat-label {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .loading {
-            display: none;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .loading-spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid #667eea;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 15px;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .error-message {
-            background: #f8d7da;
-            color: #721c24;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 15px;
-            display: none;
-        }
-
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 15px;
-            display: none;
-        }
-
-        .warning-message {
-            background: #fff3cd;
-            color: #856404;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 15px;
-            display: none;
-            border-left: 5px solid #ffc107;
-        }
-
-        .warning-message strong {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 1.1rem;
-        }
-
-        .sync-status {
-            background: #e7f3ff;
-            border: 1px solid #b3d9ff;
-            padding: 12px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            display: none;
-            align-items: center;
-        }
-
-        .sync-indicator {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 8px;
-            animation: pulse 2s infinite;
-        }
-
-        .sync-indicator.syncing {
-            background: #ffc107;
-        }
-
-        .sync-indicator.completed {
-            background: #28a745;
-            animation: none;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-
-        .log-viewer {
-            background: #1e1e1e;
-            border-radius: 10px;
-            margin-top: 20px;
-            max-height: 400px;
-            overflow: hidden;
-            border: 1px solid #333;
-        }
-
-        .log-header {
-            background: #2d2d2d;
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #333;
-        }
-
-        .log-header h4 {
-            color: #fff;
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        .toggle-logs-btn {
-            background: #444;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
-
-        .toggle-logs-btn:hover {
-            background: #555;
-        }
-
-        .log-content {
-            height: 350px;
-            overflow-y: auto;
-            padding: 10px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.8rem;
-            line-height: 1.4;
-        }
-
-        .log-entry {
-            margin-bottom: 3px;
-            padding: 2px 5px;
-            border-radius: 3px;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-
-        .log-entry.info {
-            color: #87ceeb;
-        }
-
-        .log-entry.success {
-            color: #90ee90;
-            background: rgba(144, 238, 144, 0.1);
-        }
-
-        .log-entry.error {
-            color: #ff6b6b;
-            background: rgba(255, 107, 107, 0.1);
-        }
-
-        .log-entry.warning {
-            color: #ffd700;
-            background: rgba(255, 215, 0, 0.1);
-        }
-
-        .log-timestamp {
-            color: #888;
-            font-size: 0.7rem;
-        }
-
-        .log-component {
-            color: #ff79c6;
-            font-weight: bold;
-        }
-
-        .log-source {
-            color: #8be9fd;
-            font-style: italic;
-        }
-
-        #file-input {
-            display: none;
-        }
-
-        .file-info {
-            margin-top: 15px;
-            padding: 10px;
-            background: #e3f2fd;
-            border-radius: 5px;
-            display: none;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>🏪 WMS Sales Processor</h1>
-            <p>Upload your sales data and select marketplace to get outbound orders</p>
+<!-- Upload Form -->
+<form id="upload-form" enctype="multipart/form-data" class="space-y-6">
+    {% csrf_token %}
+    
+    <!-- File Upload Section -->
+    <div class="border-3 border-dashed border-gray-300 rounded-2xl p-8 sm:p-12 lg:p-16 text-center transition-all duration-300 cursor-pointer hover:border-primary-500 hover:bg-primary-50 group" 
+         id="upload-area">
+        <div class="text-6xl sm:text-7xl text-primary-500 mb-4 group-hover:scale-110 transition-transform duration-300">
+            📁
         </div>
-
-        <form id="upload-form" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="upload-section" id="upload-area">
-                <div class="upload-icon">📁</div>
-                <div class="upload-text">Drag & drop your sales file here</div>
-                <div class="upload-subtext">or click to browse (CSV, Excel, TSV supported)</div>
-                <input type="file" id="file-input" name="sales_file" accept=".csv,.xlsx,.xls,.tsv">
-            </div>
-
-            <div class="file-info" id="file-info">
-                <strong>Selected file:</strong> <span id="file-name"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="marketplace">Select Marketplace:</label>
-                <select id="marketplace" name="marketplace" required>
-                    <option value="">Choose marketplace...</option>
-                    {% for marketplace in marketplaces %}
-                    <option value="{{ marketplace }}">{{ marketplace }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-
-            <button type="submit" class="process-btn" id="process-btn" disabled>
-                Process Sales Data
-            </button>
-        </form>
-
-        <div class="loading" id="loading">
-            <div class="loading-spinner"></div>
-            <p>Processing your data...</p>
+        <div class="text-xl sm:text-2xl text-gray-700 mb-3 font-medium">
+            Drag & drop your sales file here
         </div>
-
-        <div class="error-message" id="error-message"></div>
-        <div class="success-message" id="success-message"></div>
-        <div class="warning-message" id="warning-message"></div>
-
-        <div class="sync-status" id="sync-status">
-            <span class="sync-indicator syncing" id="sync-indicator"></span>
-            <span id="sync-text">Updating inventory in background... Please keep this page open.</span>
+        <div class="text-gray-500 text-sm sm:text-base">
+            or click to browse (CSV, Excel, TSV supported)
         </div>
+        <input type="file" id="file-input" name="sales_file" accept=".csv,.xlsx,.xls,.tsv" class="hidden">
+    </div>
 
-        <div class="log-viewer" id="log-viewer" style="display: none;">
-            <div class="log-header">
-                <h4>📊 Processing Logs</h4>
-                <button class="toggle-logs-btn" id="toggle-logs-btn">Hide Logs</button>
-            </div>
-            <div class="log-content" id="log-content">
-                <!-- Real-time logs will appear here -->
-            </div>
-        </div>
-
-        <div class="results-section" id="results-section">
-            <div class="results-header">
-                <div class="results-title">Processing Results</div>
-                <button class="download-btn" id="download-btn">Download CSV</button>
-            </div>
-
-            <div class="stats-grid" id="stats-grid">
-                <!-- Stats will be populated by JavaScript -->
-            </div>
-
-            <div id="unmapped-skus" style="display: none;">
-                <h4>Unmapped SKUs (Review Required):</h4>
-                <div id="unmapped-list"></div>
+    <!-- File Info Display -->
+    <div class="hidden bg-blue-50 border border-blue-200 rounded-lg p-4" id="file-info">
+        <div class="flex items-center space-x-3">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <div>
+                <strong class="text-blue-800">Selected file:</strong> 
+                <span id="file-name" class="text-blue-700"></span>
             </div>
         </div>
     </div>
 
-    <script>
-        // Global variables
-        let selectedFile = null;
-        let processedData = null;
-        let backgroundSyncActive = false;
-        let eventSource = null;
-        let currentSessionId = null;
+    <!-- Marketplace Selection -->
+    <div class="space-y-2">
+        <label for="marketplace" class="block text-sm font-semibold text-gray-700 mb-2">
+            Select Marketplace:
+        </label>
+        <select id="marketplace" name="marketplace" required 
+                class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl text-base transition-colors duration-200 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200">
+            <option value="">Choose marketplace...</option>
+            {% for marketplace in marketplaces %}
+            <option value="{{ marketplace }}">{{ marketplace }}</option>
+            {% endfor %}
+        </select>
+    </div>
 
-        // DOM elements
-        const uploadArea = document.getElementById('upload-area');
-        const fileInput = document.getElementById('file-input');
-        const fileInfo = document.getElementById('file-info');
-        const fileName = document.getElementById('file-name');
-        const marketplace = document.getElementById('marketplace');
-        const processBtn = document.getElementById('process-btn');
-        const form = document.getElementById('upload-form');
-        const loading = document.getElementById('loading');
-        const errorMessage = document.getElementById('error-message');
-        const successMessage = document.getElementById('success-message');
-        const warningMessage = document.getElementById('warning-message');
-        const syncStatus = document.getElementById('sync-status');
-        const syncIndicator = document.getElementById('sync-indicator');
-        const syncText = document.getElementById('sync-text');
-        const resultsSection = document.getElementById('results-section');
-        const statsGrid = document.getElementById('stats-grid');
-        const downloadBtn = document.getElementById('download-btn');
-        const logViewer = document.getElementById('log-viewer');
-        const logContent = document.getElementById('log-content');
-        const toggleLogsBtn = document.getElementById('toggle-logs-btn');
+    <!-- Submit Button -->
+    <button type="submit" 
+            class="w-full gradient-btn text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-200 transform hover:-translate-y-1 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none" 
+            id="process-btn" 
+            disabled>
+        Process Sales Data
+    </button>
+</form>
 
+<!-- Loading State -->
+<div class="hidden text-center py-8" id="loading">
+    <div class="inline-block w-12 h-12 border-4 border-primary-200 border-t-primary-600 rounded-full animate-spin-slow mb-4"></div>
+    <p class="text-gray-600 text-lg">Processing your data...</p>
+</div>
+
+<!-- Message Areas -->
+<div class="hidden bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg mt-4" id="error-message"></div>
+<div class="hidden bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg mt-4" id="success-message"></div>
+<div class="hidden bg-yellow-50 border border-yellow-200 text-yellow-800 px-4 py-3 rounded-lg mt-4 border-l-4 border-l-yellow-400" id="warning-message"></div>
+
+<!-- Sync Status -->
+<div class="hidden bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4 items-center space-x-3" id="sync-status">
+    <span class="w-3 h-3 bg-yellow-400 rounded-full pulse-custom" id="sync-indicator"></span>
+    <span id="sync-text" class="text-blue-800">Updating inventory in background... Please keep this page open.</span>
+</div>
+
+<!-- Log Viewer -->
+<div class="hidden bg-gray-900 rounded-xl mt-6 overflow-hidden border border-gray-700" id="log-viewer">
+    <!-- Log Header -->
+    <div class="bg-gray-800 px-4 py-3 flex justify-between items-center border-b border-gray-700">
+        <h4 class="text-white font-medium flex items-center space-x-2">
+            <span>📊</span>
+            <span>Processing Logs</span>
+        </h4>
+        <button class="bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-sm transition-colors duration-200" 
+                id="toggle-logs-btn">
+            Hide Logs
+        </button>
+    </div>
+    
+    <!-- Log Content -->
+    <div class="h-80 overflow-y-auto p-4 font-mono text-sm leading-relaxed" id="log-content">
+        <!-- Real-time logs will appear here -->
+    </div>
+</div>
+
+<!-- Results Section -->
+<div class="hidden mt-8 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-200" id="results-section">
+    <!-- Results Header -->
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 space-y-3 sm:space-y-0">
+        <div class="text-xl font-semibold text-gray-800">Processing Results</div>
+        <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 transform hover:-translate-y-0.5" 
+                id="download-btn">
+            Download CSV
+        </button>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6" id="stats-grid">
+        <!-- Stats will be populated by JavaScript -->
+    </div>
+
+    <!-- Unmapped SKUs -->
+    <div class="hidden" id="unmapped-skus">
+        <h4 class="text-lg font-semibold text-gray-800 mb-3">Unmapped SKUs (Review Required):</h4>
+        <div id="unmapped-list" class="flex flex-wrap gap-2">
+            <!-- Unmapped SKUs will be populated here -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+{{ block.super }}
+
+<script>
+    // Upload form specific variables
+    let selectedFile = null;
+    let processedData = null;
+    let backgroundSyncActive = false;
+    let eventSource = null;
+    let currentSessionId = null;
+
+    // DOM elements specific to upload form
+    const uploadArea = document.getElementById('upload-area');
+    const fileInput = document.getElementById('file-input');
+    const fileInfo = document.getElementById('file-info');
+    const fileName = document.getElementById('file-name');
+    const marketplace = document.getElementById('marketplace');
+    const processBtn = document.getElementById('process-btn');
+    const form = document.getElementById('upload-form');
+    const syncStatus = document.getElementById('sync-status');
+    const syncIndicator = document.getElementById('sync-indicator');
+    const syncText = document.getElementById('sync-text');
+    const resultsSection = document.getElementById('results-section');
+    const statsGrid = document.getElementById('stats-grid');
+    const downloadBtn = document.getElementById('download-btn');
+    const logViewer = document.getElementById('log-viewer');
+    const logContent = document.getElementById('log-content');
+    const toggleLogsBtn = document.getElementById('toggle-logs-btn');
+
+    // Initialize upload form functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeUploadForm();
+    });
+
+    function initializeUploadForm() {
         // File upload handling
         uploadArea.addEventListener('click', () => fileInput.click());
         uploadArea.addEventListener('dragover', handleDragOver);
@@ -495,329 +175,309 @@
         marketplace.addEventListener('change', updateSubmitButton);
         toggleLogsBtn.addEventListener('click', toggleLogViewer);
 
-        function handleDragOver(e) {
-            e.preventDefault();
-            uploadArea.classList.add('dragover');
-        }
-
-        function handleDragLeave(e) {
-            e.preventDefault();
-            uploadArea.classList.remove('dragover');
-        }
-
-        function handleDrop(e) {
-            e.preventDefault();
-            uploadArea.classList.remove('dragover');
-            
-            const files = e.dataTransfer.files;
-            if (files.length > 0) {
-                fileInput.files = files;
-                handleFileSelect();
-            }
-        }
-
-        function handleFileSelect() {
-            const file = fileInput.files[0];
-            if (file) {
-                selectedFile = file;
-                fileName.textContent = file.name;
-                fileInfo.style.display = 'block';
-                updateSubmitButton();
-            }
-        }
-
-        function updateSubmitButton() {
-            processBtn.disabled = !(selectedFile && marketplace.value);
-        }
-
         // Form submission
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            if (!selectedFile || !marketplace.value) {
-                showError('Please select a file and marketplace');
-                return;
-            }
-
-            const formData = new FormData();
-            // Get CSRF token from the form
-            const csrfTokenElement = document.querySelector('[name=csrfmiddlewaretoken]');
-            if (csrfTokenElement) {
-                formData.append('csrfmiddlewaretoken', csrfTokenElement.value);
-            }
-            formData.append('sales_file', selectedFile);
-            formData.append('marketplace', marketplace.value);
-
-            try {
-                showLoading(true);
-                hideMessages();
-                
-                // Show log viewer immediately
-                logViewer.style.display = 'block';
-                
-                // Add initial log entry
-                addLogEntry({
-                    timestamp: new Date().toLocaleTimeString(),
-                    source: 'system',
-                    component: 'SYSTEM',
-                    level: 'info',
-                    message: 'Uploading file and starting processing...'
-                });
-
-                const response = await fetch('{% url "web:process_sales_data" %}', {
-                    method: 'POST',
-                    body: formData
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                const result = await response.json();
-
-                if (result.success) {
-                    processedData = result.data;
-                    currentSessionId = result.session_id;
-                    
-                    // Start real-time log streaming
-                    startLogStreaming(currentSessionId);
-                    
-                    // Show success message
-                    showSuccess(result.message);
-                    
-                    // Show warning about background sync
-                    if (result.background_sync && result.warning) {
-                        showWarning(result.warning);
-                        startBackgroundSyncIndicator();
-                    }
-                    
-                    // Display results immediately
-                    displayResults(result.data);
-                    
-                } else {
-                    showError(result.error || 'Processing failed');
-                }
-
-            } catch (error) {
-                showError('Network error: ' + error.message);
-                addLogEntry({
-                    timestamp: new Date().toLocaleTimeString(),
-                    source: 'system',
-                    component: 'SYSTEM',
-                    level: 'error',
-                    message: 'Network error: ' + error.message
-                });
-            } finally {
-                showLoading(false);
-            }
-        });
-
-        // Background sync indicator
-        function startLogStreaming(sessionId) {
-            if (eventSource) {
-                eventSource.close();
-            }
-            
-            // Show log viewer
-            logViewer.style.display = 'block';
-            
-            // Initialize EventSource for Server-Sent Events
-            eventSource = new EventSource(`{% url 'web:stream_logs' '0' %}`.replace('0', sessionId));
-            
-            eventSource.onmessage = function(event) {
-                try {
-                    const logData = JSON.parse(event.data);
-                    
-                    if (logData.type === 'heartbeat') {
-                        return; // Ignore heartbeat messages
-                    }
-                    
-                    addLogEntry(logData);
-                    
-                } catch (error) {
-                    console.error('Error parsing log data:', error);
-                }
-            };
-            
-            eventSource.onerror = function(event) {
-                console.error('EventSource error:', event);
-                // Attempt to reconnect after 3 seconds
-                setTimeout(() => {
-                    if (backgroundSyncActive) {
-                        startLogStreaming(sessionId);
-                    }
-                }, 3000);
-            };
-        }
-
-        function addLogEntry(logData) {
-            const logEntry = document.createElement('div');
-            logEntry.className = `log-entry ${logData.level.toLowerCase()}`;
-            
-            let componentText = '';
-            if (logData.component) {
-                componentText = `[${logData.component}] `;
-            }
-            
-            let sourceText = '';
-            if (logData.source && logData.source !== 'system') {
-                sourceText = `(${logData.source}) `;
-            }
-            
-            logEntry.innerHTML = `
-                <span class="log-timestamp">${logData.timestamp}</span> 
-                <span class="log-source">${sourceText}</span>
-                <span class="log-component">${componentText}</span>
-                ${logData.message}
-            `;
-            
-            logContent.appendChild(logEntry);
-            
-            // Auto-scroll to bottom
-            logContent.scrollTop = logContent.scrollHeight;
-            
-            // Check for completion messages
-            if (logData.message.includes('Background inventory sync completed')) {
-                stopBackgroundSyncIndicator();
-            }
-            
-            if (logData.message.includes('Background sync failed')) {
-                stopBackgroundSyncIndicator();
-                showError('Background inventory sync failed. Please check logs.');
-            }
-            
-            // Limit log entries to prevent memory issues
-            const maxEntries = 200;
-            if (logContent.children.length > maxEntries) {
-                logContent.removeChild(logContent.firstChild);
-            }
-        }
-
-        function toggleLogViewer() {
-            const isVisible = logViewer.style.display !== 'none';
-            if (isVisible) {
-                logViewer.style.display = 'none';
-                toggleLogsBtn.textContent = 'Show Logs';
-            } else {
-                logViewer.style.display = 'block';
-                toggleLogsBtn.textContent = 'Hide Logs';
-            }
-        }
-        function startBackgroundSyncIndicator() {
-            backgroundSyncActive = true;
-            syncStatus.style.display = 'flex';
-            syncIndicator.className = 'sync-indicator syncing';
-            syncText.textContent = 'Updating inventory in background... Please keep this page open.';
-        }
-
-        function stopBackgroundSyncIndicator() {
-            backgroundSyncActive = false;
-            syncIndicator.className = 'sync-indicator completed';
-            syncText.textContent = 'Background inventory sync completed!';
-            
-            // Close EventSource
-            if (eventSource) {
-                eventSource.close();
-                eventSource = null;
-            }
-            
-            // Hide sync status after 3 seconds
-            setTimeout(() => {
-                syncStatus.style.display = 'none';
-            }, 3000);
-        }
-
-        // Warn user before closing if sync is active
-        window.addEventListener('beforeunload', (e) => {
-            if (backgroundSyncActive) {
-                const message = 'Inventory update is still in progress. Are you sure you want to leave?';
-                e.returnValue = message;
-                return message;
-            }
-        });
+        form.addEventListener('submit', handleFormSubmit);
 
         // Download functionality
-        downloadBtn.addEventListener('click', () => {
-            if (processedData && processedData.csv_content) {
-                const blob = new Blob([processedData.csv_content], { type: 'text/csv' });
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = processedData.filename;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                window.URL.revokeObjectURL(url);
-            }
-        });
+        downloadBtn.addEventListener('click', handleDownload);
 
-        // Utility functions
-        function showLoading(show) {
-            loading.style.display = show ? 'block' : 'none';
-            processBtn.disabled = show;
+        // Warn user before closing if sync is active
+        window.addEventListener('beforeunload', handleBeforeUnload);
+    }
+
+    // File drag and drop handlers
+    function handleDragOver(e) {
+        e.preventDefault();
+        uploadArea.classList.add('border-primary-500', 'bg-primary-50', 'scale-105');
+    }
+
+    function handleDragLeave(e) {
+        e.preventDefault();
+        uploadArea.classList.remove('border-primary-500', 'bg-primary-50', 'scale-105');
+    }
+
+    function handleDrop(e) {
+        e.preventDefault();
+        uploadArea.classList.remove('border-primary-500', 'bg-primary-50', 'scale-105');
+        
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+            fileInput.files = files;
+            handleFileSelect();
+        }
+    }
+
+    function handleFileSelect() {
+        const file = fileInput.files[0];
+        if (file) {
+            selectedFile = file;
+            fileName.textContent = file.name;
+            fileInfo.classList.remove('hidden');
+            updateSubmitButton();
+        }
+    }
+
+    function updateSubmitButton() {
+        processBtn.disabled = !(selectedFile && marketplace.value);
+    }
+
+    // Form submission handler
+    async function handleFormSubmit(e) {
+        e.preventDefault();
+        
+        if (!selectedFile || !marketplace.value) {
+            showError('Please select a file and marketplace');
+            return;
         }
 
-        function showError(message) {
-            errorMessage.textContent = message;
-            errorMessage.style.display = 'block';
-            successMessage.style.display = 'none';
-            warningMessage.style.display = 'none';
+        const formData = new FormData();
+        const csrfTokenElement = document.querySelector('[name=csrfmiddlewaretoken]');
+        if (csrfTokenElement) {
+            formData.append('csrfmiddlewaretoken', csrfTokenElement.value);
         }
+        formData.append('sales_file', selectedFile);
+        formData.append('marketplace', marketplace.value);
 
-        function showSuccess(message) {
-            successMessage.textContent = message;
-            successMessage.style.display = 'block';
-            errorMessage.style.display = 'none';
-        }
-
-        function showWarning(message) {
-            warningMessage.innerHTML = `<strong>⚠️ Important:</strong> ${message}`;
-            warningMessage.style.display = 'block';
-        }
-
-        function hideMessages() {
-            errorMessage.style.display = 'none';
-            successMessage.style.display = 'none';
-            warningMessage.style.display = 'none';
-        }
-
-        function displayResults(data) {
-            const summary = data.summary;
+        try {
+            showLoading(true);
+            hideMessages();
             
-            // Create stats cards
-            statsGrid.innerHTML = `
-                <div class="stat-card">
-                    <div class="stat-number">${summary.total_rows_processed}</div>
-                    <div class="stat-label">Records Processed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">${summary.unmapped_skus_count}</div>
-                    <div class="stat-label">Unmapped SKUs</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">${summary.success_rate.toFixed(1)}%</div>
-                    <div class="stat-label">Success Rate</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">${marketplace.value}</div>
-                    <div class="stat-label">Marketplace</div>
-                </div>
-            `;
+            // Show log viewer immediately
+            logViewer.classList.remove('hidden');
+            
+            // Add initial log entry
+            addLogEntry({
+                timestamp: new Date().toLocaleTimeString(),
+                source: 'system',
+                component: 'SYSTEM',
+                level: 'info',
+                message: 'Uploading file and starting processing...'
+            });
 
-            // Show unmapped SKUs if any
-            if (summary.unmapped_skus_count > 0) {
-                const unmappedDiv = document.getElementById('unmapped-skus');
-                const unmappedList = document.getElementById('unmapped-list');
-                
-                unmappedList.innerHTML = summary.unmapped_skus.map(sku => 
-                    `<span style="background: #fff3cd; padding: 2px 6px; margin: 2px; border-radius: 3px; display: inline-block;">${sku}</span>`
-                ).join('');
-                
-                unmappedDiv.style.display = 'block';
+            const response = await fetch('{% url "web:process_sales_data" %}', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
 
-            resultsSection.style.display = 'block';
+            const result = await response.json();
+
+            if (result.success) {
+                processedData = result.data;
+                currentSessionId = result.session_id;
+                
+                // Start real-time log streaming
+                startLogStreaming(currentSessionId);
+                
+                // Show success message
+                showSuccess(result.message);
+                
+                // Show warning about background sync
+                if (result.background_sync && result.warning) {
+                    showWarning(result.warning);
+                    startBackgroundSyncIndicator();
+                }
+                
+                // Display results immediately
+                displayResults(result.data);
+                
+            } else {
+                showError(result.error || 'Processing failed');
+            }
+
+        } catch (error) {
+            showError('Network error: ' + error.message);
+            addLogEntry({
+                timestamp: new Date().toLocaleTimeString(),
+                source: 'system',
+                component: 'SYSTEM',
+                level: 'error',
+                message: 'Network error: ' + error.message
+            });
+        } finally {
+            showLoading(false);
         }
-    </script>
-</body>
-</html>
+    }
+
+    // Log streaming functionality
+    function startLogStreaming(sessionId) {
+        if (eventSource) {
+            eventSource.close();
+        }
+        
+        // Show log viewer
+        logViewer.classList.remove('hidden');
+        
+        // Initialize EventSource for Server-Sent Events
+        eventSource = new EventSource(`{% url 'web:stream_logs' '0' %}`.replace('0', sessionId));
+        
+        eventSource.onmessage = function(event) {
+            try {
+                const logData = JSON.parse(event.data);
+                
+                if (logData.type === 'heartbeat') {
+                    return; // Ignore heartbeat messages
+                }
+                
+                addLogEntry(logData);
+                
+            } catch (error) {
+                console.error('Error parsing log data:', error);
+            }
+        };
+        
+        eventSource.onerror = function(event) {
+            console.error('EventSource error:', event);
+            // Attempt to reconnect after 3 seconds
+            setTimeout(() => {
+                if (backgroundSyncActive) {
+                    startLogStreaming(sessionId);
+                }
+            }, 3000);
+        };
+    }
+
+    function addLogEntry(logData) {
+        const logEntry = document.createElement('div');
+        const levelColors = {
+            info: 'text-blue-300',
+            success: 'text-green-300 bg-green-900/20',
+            error: 'text-red-300 bg-red-900/20',
+            warning: 'text-yellow-300 bg-yellow-900/20'
+        };
+        
+        logEntry.className = `mb-1 p-2 rounded ${levelColors[logData.level.toLowerCase()] || 'text-gray-300'}`;
+        
+        let componentText = '';
+        if (logData.component) {
+            componentText = `[${logData.component}] `;
+        }
+        
+        let sourceText = '';
+        if (logData.source && logData.source !== 'system') {
+            sourceText = `(${logData.source}) `;
+        }
+        
+        logEntry.innerHTML = `
+            <span class="text-gray-500 text-xs">${logData.timestamp}</span> 
+            <span class="text-cyan-400 italic">${sourceText}</span>
+            <span class="text-pink-400 font-bold">${componentText}</span>
+            <span>${logData.message}</span>
+        `;
+        
+        logContent.appendChild(logEntry);
+        
+        // Auto-scroll to bottom
+        logContent.scrollTop = logContent.scrollHeight;
+        
+        // Check for completion messages
+        if (logData.message.includes('Background inventory sync completed')) {
+            stopBackgroundSyncIndicator();
+        }
+        
+        if (logData.message.includes('Background sync failed')) {
+            stopBackgroundSyncIndicator();
+            showError('Background inventory sync failed. Please check logs.');
+        }
+        
+        // Limit log entries to prevent memory issues
+        const maxEntries = 200;
+        if (logContent.children.length > maxEntries) {
+            logContent.removeChild(logContent.firstChild);
+        }
+    }
+
+    // Background sync indicators
+    function startBackgroundSyncIndicator() {
+        backgroundSyncActive = true;
+        syncStatus.classList.remove('hidden');
+        syncStatus.classList.add('flex');
+        syncIndicator.className = 'w-3 h-3 bg-yellow-400 rounded-full pulse-custom';
+        syncText.textContent = 'Updating inventory in background... Please keep this page open.';
+    }
+
+    function stopBackgroundSyncIndicator() {
+        backgroundSyncActive = false;
+        syncIndicator.className = 'w-3 h-3 bg-green-500 rounded-full';
+        syncText.textContent = 'Background inventory sync completed!';
+        
+        // Close EventSource
+        if (eventSource) {
+            eventSource.close();
+            eventSource = null;
+        }
+        
+        // Hide sync status after 3 seconds
+        setTimeout(() => {
+            syncStatus.classList.add('hidden');
+            syncStatus.classList.remove('flex');
+        }, 3000);
+    }
+
+    // Download handler
+    function handleDownload() {
+        if (processedData && processedData.csv_content) {
+            const blob = new Blob([processedData.csv_content], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = processedData.filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+    }
+
+    // Before unload handler
+    function handleBeforeUnload(e) {
+        if (backgroundSyncActive) {
+            const message = 'Inventory update is still in progress. Are you sure you want to leave?';
+            e.returnValue = message;
+            return message;
+        }
+    }
+
+    // Results display
+    function displayResults(data) {
+        const summary = data.summary;
+        
+        // Create stats cards with responsive design
+        statsGrid.innerHTML = `
+            <div class="bg-white p-4 rounded-lg text-center shadow-sm border border-gray-200">
+                <div class="text-2xl sm:text-3xl font-bold text-primary-600 mb-1">${summary.total_rows_processed}</div>
+                <div class="text-gray-600 text-sm font-medium">Records Processed</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center shadow-sm border border-gray-200">
+                <div class="text-2xl sm:text-3xl font-bold text-orange-600 mb-1">${summary.unmapped_skus_count}</div>
+                <div class="text-gray-600 text-sm font-medium">Unmapped SKUs</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center shadow-sm border border-gray-200">
+                <div class="text-2xl sm:text-3xl font-bold text-green-600 mb-1">${summary.success_rate.toFixed(1)}%</div>
+                <div class="text-gray-600 text-sm font-medium">Success Rate</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center shadow-sm border border-gray-200">
+                <div class="text-2xl sm:text-3xl font-bold text-purple-600 mb-1">${marketplace.value}</div>
+                <div class="text-gray-600 text-sm font-medium">Marketplace</div>
+            </div>
+        `;
+
+        // Show unmapped SKUs if any
+        if (summary.unmapped_skus_count > 0) {
+            const unmappedDiv = document.getElementById('unmapped-skus');
+            const unmappedList = document.getElementById('unmapped-list');
+            
+            unmappedList.innerHTML = summary.unmapped_skus.map(sku => 
+                `<span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium border border-yellow-200">${sku}</span>`
+            ).join('');
+            
+            unmappedDiv.classList.remove('hidden');
+        }
+
+        resultsSection.classList.remove('hidden');
+    }
+</script>
+{% endblock %}

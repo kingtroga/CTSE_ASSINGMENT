@@ -96,3 +96,19 @@
 2025-06-23 12:25:15,210 - FlexibleInputProcessor - INFO - Detected format: .csv
 2025-06-23 12:25:15,238 - FlexibleInputProcessor - INFO - Successfully loaded data: 64 rows, 11 columns
 2025-06-23 12:25:15,257 - FlexibleInputProcessor - INFO - Cleaned data: (64, 11) -> (64, 10)
+2025-06-23 13:42:58,707 - FlexibleInputProcessor - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmpytwq3oxr_rudrav_meesho.csv
+2025-06-23 13:42:58,708 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-23 13:42:58,740 - FlexibleInputProcessor - INFO - Successfully loaded data: 64 rows, 11 columns
+2025-06-23 13:42:58,763 - FlexibleInputProcessor - INFO - Cleaned data: (64, 11) -> (64, 10)
+2025-06-23 13:58:22,291 - FlexibleInputProcessor - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmp9gzdaety_gl_fk.csv
+2025-06-23 13:58:22,298 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-23 13:58:22,459 - FlexibleInputProcessor - INFO - Successfully loaded data: 11 rows, 37 columns
+2025-06-23 13:58:22,529 - FlexibleInputProcessor - INFO - Cleaned data: (11, 37) -> (11, 34)
+2025-06-23 13:59:06,698 - FlexibleInputProcessor - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmpugadn9f5_gl_fk.csv
+2025-06-23 13:59:06,708 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-23 13:59:06,800 - FlexibleInputProcessor - INFO - Successfully loaded data: 11 rows, 37 columns
+2025-06-23 13:59:06,835 - FlexibleInputProcessor - INFO - Cleaned data: (11, 37) -> (11, 34)
+2025-06-23 14:04:00,460 - FlexibleInputProcessor - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmp1imn1plz_gl_fk.csv
+2025-06-23 14:04:00,473 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-23 14:04:00,549 - FlexibleInputProcessor - INFO - Successfully loaded data: 11 rows, 37 columns
+2025-06-23 14:04:00,558 - FlexibleInputProcessor - INFO - Cleaned data: (11, 37) -> (11, 34)

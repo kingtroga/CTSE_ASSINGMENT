@@ -2489,3 +2489,424 @@
 2025-06-23 12:30:29,123 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -2)
 2025-06-23 12:30:29,124 - INFO - INVENTORY | UPDATED | Inventory updated successfully
 2025-06-23 12:32:30,328 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-23 13:42:58,775 - INFO - DJANGO | CONNECTED | Django ORM connection established
+2025-06-23 13:42:58,777 - INFO - SYSTEM | DJANGO_MODE | Initializing with Django ORM
+2025-06-23 13:42:59,120 - INFO - DJANGO | LOADED | SKU mappings loaded: 2905 records
+2025-06-23 13:42:59,699 - INFO - DJANGO | LOADED | Combo data loaded: 360 combos
+2025-06-23 13:43:19,653 - INFO - DJANGO | LOADED | Inventory data loaded: 1013 products
+2025-06-23 13:43:19,664 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status', 'marketplace_price', 'product_name', 'created_at', 'updated_at']
+2025-06-23 13:43:19,667 - INFO - COMBO | INITIALIZED | Combo hashtable built with 360 entries
+2025-06-23 13:43:19,939 - INFO - MAPPER | HASHTABLE | Built hashtable with 5225 mappings
+2025-06-23 13:43:19,940 - INFO - SYSTEM | INITIALIZED | All components loaded successfully (Django mode)
+2025-06-23 13:43:19,941 - INFO - MAPPER | STARTED | Processing SKU mappings (marketplace: GL_FK)
+2025-06-23 13:43:19,942 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['reason for credit entry', 'sub order no', 'order date', 'customer state', 'product name', 'sku', 'size', 'quantity', 'supplier listed price (incl. gst + commission)', 'supplier discounted price (incl gst and commision)']
+2025-06-23 13:43:20,014 - INFO - MAPPER | COMPLETED | Processed 64 records
+2025-06-23 13:43:20,015 - INFO - MAPPER | DEBUG | Full error: NoneType: None
+
+2025-06-23 13:43:20,022 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 64 records
+2025-06-23 13:43:24,616 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 13:43:24,617 - INFO - [SUCCESS] Inventory change for CSTE_0020_MB_HP_Black synced to Airtable
+2025-06-23 13:43:24,618 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 48)
+2025-06-23 13:43:55,969 - INFO - [SUCCESS] Synced inventory for CSTE_0442_CLT_AF_Goku_Big to Airtable
+2025-06-23 13:43:55,970 - INFO - [SUCCESS] Inventory change for CSTE_0442_CLT_AF_Goku_Big synced to Airtable
+2025-06-23 13:43:55,970 - INFO - DJANGO | STOCK_UPDATED | CSTE_0442_CLT_AF_Goku_Big @ TLCQ: -1 (new: -2)
+2025-06-23 13:43:58,135 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:43:58,137 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:43:58,137 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -3)
+2025-06-23 13:44:00,215 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:00,216 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:00,216 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -4)
+2025-06-23 13:44:02,297 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 13:44:02,298 - INFO - [SUCCESS] Inventory change for CSTE_0020_MB_HP_Black synced to Airtable
+2025-06-23 13:44:02,298 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 47)
+2025-06-23 13:44:04,545 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 13:44:04,547 - INFO - [SUCCESS] Inventory change for CSTE_0490_ST_Fruit_Blox_Shadow synced to Airtable
+2025-06-23 13:44:04,549 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: -1 (new: 7)
+2025-06-23 13:44:06,985 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:06,986 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:06,987 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -5)
+2025-06-23 13:44:09,324 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:09,325 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:09,325 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -6)
+2025-06-23 13:44:11,389 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:11,390 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:11,390 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -2 (new: -8)
+2025-06-23 13:44:13,567 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:13,568 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:13,568 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -9)
+2025-06-23 13:44:15,776 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:15,776 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:15,778 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -10)
+2025-06-23 13:44:17,967 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:17,968 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:17,968 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -11)
+2025-06-23 13:44:20,155 - INFO - [SUCCESS] Synced inventory for CSTE_0454_ST_Animal_Garfield_Orange to Airtable
+2025-06-23 13:44:20,156 - INFO - [SUCCESS] Inventory change for CSTE_0454_ST_Animal_Garfield_Orange synced to Airtable
+2025-06-23 13:44:20,158 - INFO - DJANGO | STOCK_UPDATED | CSTE_0454_ST_Animal_Garfield_Orange @ TLCQ: -1 (new: 4)
+2025-06-23 13:44:22,381 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 13:44:22,381 - INFO - [SUCCESS] Inventory change for CSTE_0020_MB_HP_Black synced to Airtable
+2025-06-23 13:44:22,382 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 46)
+2025-06-23 13:44:24,771 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:24,772 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:24,772 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -12)
+2025-06-23 13:44:26,920 - INFO - [SUCCESS] Synced inventory for CSTE_0417_Organizer_StorageBox_SkyBlue to Airtable
+2025-06-23 13:44:26,920 - INFO - [SUCCESS] Inventory change for CSTE_0417_Organizer_StorageBox_SkyBlue synced to Airtable
+2025-06-23 13:44:26,921 - INFO - DJANGO | STOCK_UPDATED | CSTE_0417_Organizer_StorageBox_SkyBlue @ TLCQ: -1 (new: -3)
+2025-06-23 13:44:29,128 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:29,128 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:29,129 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -2 (new: -14)
+2025-06-23 13:44:31,239 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:31,240 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:31,241 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -15)
+2025-06-23 13:44:33,448 - INFO - [SUCCESS] Synced inventory for CSTE_0162_SG_FireGlass_MercuryPink to Airtable
+2025-06-23 13:44:33,449 - INFO - [SUCCESS] Inventory change for CSTE_0162_SG_FireGlass_MercuryPink synced to Airtable
+2025-06-23 13:44:33,449 - INFO - DJANGO | STOCK_UPDATED | CSTE_0162_SG_FireGlass_MercuryPink @ TLCQ: -1 (new: 3)
+2025-06-23 13:44:35,504 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:35,505 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:35,505 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -16)
+2025-06-23 13:44:37,547 - INFO - [SUCCESS] Synced inventory for CSTE_0478_ST_Minecraft_Cow_Brown to Airtable
+2025-06-23 13:44:37,548 - INFO - [SUCCESS] Inventory change for CSTE_0478_ST_Minecraft_Cow_Brown synced to Airtable
+2025-06-23 13:44:37,548 - INFO - DJANGO | STOCK_UPDATED | CSTE_0478_ST_Minecraft_Cow_Brown @ TLCQ: -1 (new: 0)
+2025-06-23 13:44:39,642 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:39,643 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:39,644 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -17)
+2025-06-23 13:44:41,953 - INFO - [SUCCESS] Synced inventory for CSTE_0013_MB_HBD_Red to Airtable
+2025-06-23 13:44:41,954 - INFO - [SUCCESS] Inventory change for CSTE_0013_MB_HBD_Red synced to Airtable
+2025-06-23 13:44:41,955 - INFO - DJANGO | STOCK_UPDATED | CSTE_0013_MB_HBD_Red @ TLCQ: -1 (new: -3)
+2025-06-23 13:44:44,082 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 13:44:44,083 - INFO - [SUCCESS] Inventory change for CSTE_0020_MB_HP_Black synced to Airtable
+2025-06-23 13:44:44,083 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 45)
+2025-06-23 13:44:46,136 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:46,137 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:46,137 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -18)
+2025-06-23 13:44:48,312 - INFO - [SUCCESS] Synced inventory for CSTE_0157_SG_FireGlass_Green to Airtable
+2025-06-23 13:44:48,313 - INFO - [SUCCESS] Inventory change for CSTE_0157_SG_FireGlass_Green synced to Airtable
+2025-06-23 13:44:48,314 - INFO - DJANGO | STOCK_UPDATED | CSTE_0157_SG_FireGlass_Green @ TLCQ: -1 (new: -1)
+2025-06-23 13:44:50,672 - INFO - [SUCCESS] Synced inventory for CSTE_0463_ST_Pokemon_Gengar to Airtable
+2025-06-23 13:44:50,678 - INFO - [SUCCESS] Inventory change for CSTE_0463_ST_Pokemon_Gengar synced to Airtable
+2025-06-23 13:44:50,678 - INFO - DJANGO | STOCK_UPDATED | CSTE_0463_ST_Pokemon_Gengar @ TLCQ: -1 (new: 2)
+2025-06-23 13:44:53,053 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:53,055 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:53,055 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -19)
+2025-06-23 13:44:55,223 - INFO - [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+2025-06-23 13:44:55,224 - INFO - [SUCCESS] Inventory change for CSTE_0148_SG_ButterFly_RedGreen synced to Airtable
+2025-06-23 13:44:55,225 - INFO - DJANGO | STOCK_UPDATED | CSTE_0148_SG_ButterFly_RedGreen @ TLCQ: -1 (new: -19)
+2025-06-23 13:44:57,410 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 13:44:57,410 - INFO - [SUCCESS] Inventory change for CSTE_0020_MB_HP_Black synced to Airtable
+2025-06-23 13:44:57,410 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 44)
+2025-06-23 13:44:59,612 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:44:59,613 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:44:59,613 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -20)
+2025-06-23 13:45:01,770 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 13:45:01,772 - INFO - [SUCCESS] Inventory change for CSTE_0020_MB_HP_Black synced to Airtable
+2025-06-23 13:45:01,773 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 43)
+2025-06-23 13:45:04,200 - INFO - [SUCCESS] Synced inventory for CSTE_0157_SG_FireGlass_Green to Airtable
+2025-06-23 13:45:04,200 - INFO - [SUCCESS] Inventory change for CSTE_0157_SG_FireGlass_Green synced to Airtable
+2025-06-23 13:45:04,200 - INFO - DJANGO | STOCK_UPDATED | CSTE_0157_SG_FireGlass_Green @ TLCQ: -1 (new: -2)
+2025-06-23 13:45:06,307 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:45:06,307 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:45:06,307 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -21)
+2025-06-23 13:45:08,441 - INFO - [SUCCESS] Synced inventory for CSTE_0447_CLT_AF_Goku_SSJ to Airtable
+2025-06-23 13:45:08,441 - INFO - [SUCCESS] Inventory change for CSTE_0447_CLT_AF_Goku_SSJ synced to Airtable
+2025-06-23 13:45:08,442 - INFO - DJANGO | STOCK_UPDATED | CSTE_0447_CLT_AF_Goku_SSJ @ TLCQ: -1 (new: 0)
+2025-06-23 13:45:10,726 - INFO - [SUCCESS] Synced inventory for CSTE_0417_Organizer_StorageBox_SkyBlue to Airtable
+2025-06-23 13:45:10,728 - INFO - [SUCCESS] Inventory change for CSTE_0417_Organizer_StorageBox_SkyBlue synced to Airtable
+2025-06-23 13:45:10,728 - INFO - DJANGO | STOCK_UPDATED | CSTE_0417_Organizer_StorageBox_SkyBlue @ TLCQ: -1 (new: -4)
+2025-06-23 13:45:13,101 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 13:45:13,102 - INFO - [SUCCESS] Inventory change for CSTE_0020_MB_HP_Black synced to Airtable
+2025-06-23 13:45:13,102 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 42)
+2025-06-23 13:45:15,214 - INFO - [SUCCESS] Synced inventory for CSTE_0156_SG_FireGlass_Yellow to Airtable
+2025-06-23 13:45:15,215 - INFO - [SUCCESS] Inventory change for CSTE_0156_SG_FireGlass_Yellow synced to Airtable
+2025-06-23 13:45:15,215 - INFO - DJANGO | STOCK_UPDATED | CSTE_0156_SG_FireGlass_Yellow @ TLCQ: -1 (new: -2)
+2025-06-23 13:45:17,890 - INFO - [SUCCESS] Synced inventory for CSTE_O0120_OT_DolphinBubbleMachine to Airtable
+2025-06-23 13:45:17,891 - INFO - [SUCCESS] Inventory change for CSTE_O0120_OT_DolphinBubbleMachine synced to Airtable
+2025-06-23 13:45:17,891 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0120_OT_DolphinBubbleMachine @ TLCQ: -1 (new: -2)
+2025-06-23 13:45:28,426 - INFO - [SUCCESS] Synced inventory for CSTE_0054_MB_Starwar_Black to Airtable
+2025-06-23 13:45:28,427 - INFO - [SUCCESS] Inventory change for CSTE_0054_MB_Starwar_Black synced to Airtable
+2025-06-23 13:45:28,427 - INFO - DJANGO | STOCK_UPDATED | CSTE_0054_MB_Starwar_Black @ TLCQ: -1 (new: -3)
+2025-06-23 13:45:39,588 - ERROR - Airtable API error: HTTPSConnectionPool(host='api.airtable.com', port=443): Max retries exceeded with url: /v0/appLt31NqOLXcv3V1/Inventory?filterByFormula=%7Bmsku%7D%3D%27CSTE_0020_MB_HP_Black%27 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000206AC98C2E0>: Failed to resolve 'api.airtable.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-23 13:45:39,588 - ERROR - Error finding record by msku=CSTE_0020_MB_HP_Black: HTTPSConnectionPool(host='api.airtable.com', port=443): Max retries exceeded with url: /v0/appLt31NqOLXcv3V1/Inventory?filterByFormula=%7Bmsku%7D%3D%27CSTE_0020_MB_HP_Black%27 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000206AC98C2E0>: Failed to resolve 'api.airtable.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-23 13:45:42,614 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 13:45:42,615 - INFO - [SUCCESS] Inventory change for CSTE_0020_MB_HP_Black synced to Airtable
+2025-06-23 13:45:42,615 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 41)
+2025-06-23 13:45:46,847 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:45:46,847 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:45:46,848 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -22)
+2025-06-23 13:45:50,029 - INFO - [SUCCESS] Synced inventory for CSTE_O0445_OT_Glue_Sand_Rubber_Monkey to Airtable
+2025-06-23 13:45:50,030 - INFO - [SUCCESS] Inventory change for CSTE_O0445_OT_Glue_Sand_Rubber_Monkey synced to Airtable
+2025-06-23 13:45:50,030 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0445_OT_Glue_Sand_Rubber_Monkey @ TLCQ: -1 (new: 0)
+2025-06-23 13:46:34,340 - ERROR - Airtable API error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-06-23 13:46:34,342 - ERROR - [ERROR] Failed to sync inventory for CSTE_0294_OT_Harrypotter_new_wand: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-06-23 13:46:34,344 - ERROR - [ERROR] Failed to sync inventory for CSTE_0294_OT_Harrypotter_new_wand: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-06-23 13:46:34,346 - INFO - DJANGO | STOCK_UPDATED | CSTE_0294_OT_Harrypotter_new_wand @ TLCQ: -1 (new: -1)
+2025-06-23 13:46:45,643 - ERROR - Airtable API error: HTTPSConnectionPool(host='api.airtable.com', port=443): Max retries exceeded with url: /v0/appLt31NqOLXcv3V1/Inventory?filterByFormula=%7Bmsku%7D%3D%27CSTE_0533_ST_Animal_Breathing_Koala_Grey%27 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000206ACF791E0>: Failed to resolve 'api.airtable.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-23 13:46:45,644 - ERROR - Error finding record by msku=CSTE_0533_ST_Animal_Breathing_Koala_Grey: HTTPSConnectionPool(host='api.airtable.com', port=443): Max retries exceeded with url: /v0/appLt31NqOLXcv3V1/Inventory?filterByFormula=%7Bmsku%7D%3D%27CSTE_0533_ST_Animal_Breathing_Koala_Grey%27 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000206ACF791E0>: Failed to resolve 'api.airtable.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-23 13:46:56,750 - ERROR - Airtable API error: HTTPSConnectionPool(host='api.airtable.com', port=443): Max retries exceeded with url: /v0/appLt31NqOLXcv3V1/Inventory (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000206AC8DF250>: Failed to resolve 'api.airtable.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-23 13:46:56,751 - ERROR - [ERROR] Failed to sync inventory for CSTE_0533_ST_Animal_Breathing_Koala_Grey: HTTPSConnectionPool(host='api.airtable.com', port=443): Max retries exceeded with url: /v0/appLt31NqOLXcv3V1/Inventory (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000206AC8DF250>: Failed to resolve 'api.airtable.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-23 13:46:56,752 - ERROR - [ERROR] Failed to sync inventory for CSTE_0533_ST_Animal_Breathing_Koala_Grey: HTTPSConnectionPool(host='api.airtable.com', port=443): Max retries exceeded with url: /v0/appLt31NqOLXcv3V1/Inventory (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000206AC8DF250>: Failed to resolve 'api.airtable.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-23 13:46:56,753 - INFO - DJANGO | STOCK_UPDATED | CSTE_0533_ST_Animal_Breathing_Koala_Grey @ TLCQ: -1 (new: -1)
+2025-06-23 13:47:07,910 - ERROR - Airtable API error: HTTPSConnectionPool(host='api.airtable.com', port=443): Max retries exceeded with url: /v0/appLt31NqOLXcv3V1/Inventory?filterByFormula=%7Bmsku%7D%3D%27CSTE_0020_MB_HP_Black%27 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000206ACF78070>: Failed to resolve 'api.airtable.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-23 13:47:07,914 - ERROR - Error finding record by msku=CSTE_0020_MB_HP_Black: HTTPSConnectionPool(host='api.airtable.com', port=443): Max retries exceeded with url: /v0/appLt31NqOLXcv3V1/Inventory?filterByFormula=%7Bmsku%7D%3D%27CSTE_0020_MB_HP_Black%27 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000206ACF78070>: Failed to resolve 'api.airtable.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-23 13:47:19,033 - ERROR - Airtable API error: HTTPSConnectionPool(host='api.airtable.com', port=443): Max retries exceeded with url: /v0/appLt31NqOLXcv3V1/Inventory (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000206ACF7BD00>: Failed to resolve 'api.airtable.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-23 13:47:19,038 - ERROR - [ERROR] Failed to sync inventory for CSTE_0020_MB_HP_Black: HTTPSConnectionPool(host='api.airtable.com', port=443): Max retries exceeded with url: /v0/appLt31NqOLXcv3V1/Inventory (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000206ACF7BD00>: Failed to resolve 'api.airtable.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-23 13:47:19,040 - ERROR - [ERROR] Failed to sync inventory for CSTE_0020_MB_HP_Black: HTTPSConnectionPool(host='api.airtable.com', port=443): Max retries exceeded with url: /v0/appLt31NqOLXcv3V1/Inventory (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000206ACF7BD00>: Failed to resolve 'api.airtable.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-23 13:47:19,041 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 40)
+2025-06-23 13:47:24,319 - INFO - [SUCCESS] Synced inventory for CSTE_0470_ST_Minecraft_Sword_Small to Airtable
+2025-06-23 13:47:24,321 - INFO - [SUCCESS] Inventory change for CSTE_0470_ST_Minecraft_Sword_Small synced to Airtable
+2025-06-23 13:47:24,322 - INFO - DJANGO | STOCK_UPDATED | CSTE_0470_ST_Minecraft_Sword_Small @ TLCQ: -1 (new: 61)
+2025-06-23 13:47:26,834 - INFO - [SUCCESS] Synced inventory for CSTE_0205_MB_MHA10_Brown to Airtable
+2025-06-23 13:47:26,834 - INFO - [SUCCESS] Inventory change for CSTE_0205_MB_MHA10_Brown synced to Airtable
+2025-06-23 13:47:26,836 - INFO - DJANGO | STOCK_UPDATED | CSTE_0205_MB_MHA10_Brown @ TLCQ: -1 (new: 11)
+2025-06-23 13:47:29,626 - INFO - [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+2025-06-23 13:47:29,639 - INFO - [SUCCESS] Inventory change for CSTE_0148_SG_ButterFly_RedGreen synced to Airtable
+2025-06-23 13:47:29,641 - INFO - DJANGO | STOCK_UPDATED | CSTE_0148_SG_ButterFly_RedGreen @ TLCQ: -1 (new: -20)
+2025-06-23 13:47:32,672 - INFO - [SUCCESS] Synced inventory for CSTE_0157_SG_FireGlass_Green to Airtable
+2025-06-23 13:47:32,675 - INFO - [SUCCESS] Inventory change for CSTE_0157_SG_FireGlass_Green synced to Airtable
+2025-06-23 13:47:32,676 - INFO - DJANGO | STOCK_UPDATED | CSTE_0157_SG_FireGlass_Green @ TLCQ: -1 (new: -3)
+2025-06-23 13:47:35,054 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:47:35,055 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:47:35,056 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -23)
+2025-06-23 13:47:38,542 - INFO - [SUCCESS] Synced inventory for CSTE_0085_MB_Titanic_Brown to Airtable
+2025-06-23 13:47:38,544 - INFO - [SUCCESS] Inventory change for CSTE_0085_MB_Titanic_Brown synced to Airtable
+2025-06-23 13:47:38,544 - INFO - DJANGO | STOCK_UPDATED | CSTE_0085_MB_Titanic_Brown @ TLCQ: -1 (new: 57)
+2025-06-23 13:47:40,834 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:47:40,836 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:47:40,837 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -24)
+2025-06-23 13:47:43,068 - INFO - [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+2025-06-23 13:47:43,069 - INFO - [SUCCESS] Inventory change for CSTE_0148_SG_ButterFly_RedGreen synced to Airtable
+2025-06-23 13:47:43,069 - INFO - DJANGO | STOCK_UPDATED | CSTE_0148_SG_ButterFly_RedGreen @ TLCQ: -1 (new: -21)
+2025-06-23 13:47:45,192 - INFO - [SUCCESS] Synced inventory for CSTE_0111_HD_Rug_CircleFurmat_White to Airtable
+2025-06-23 13:47:45,193 - INFO - [SUCCESS] Inventory change for CSTE_0111_HD_Rug_CircleFurmat_White synced to Airtable
+2025-06-23 13:47:45,194 - INFO - DJANGO | STOCK_UPDATED | CSTE_0111_HD_Rug_CircleFurmat_White @ TLCQ: -1 (new: -3)
+2025-06-23 13:47:50,932 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:47:50,935 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:47:50,936 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -25)
+2025-06-23 13:47:53,338 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 13:47:53,339 - INFO - [SUCCESS] Inventory change for CSTE_0020_MB_HP_Black synced to Airtable
+2025-06-23 13:47:53,339 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 39)
+2025-06-23 13:48:02,322 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:48:02,325 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:48:02,327 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -26)
+2025-06-23 13:48:04,795 - INFO - [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+2025-06-23 13:48:04,796 - INFO - [SUCCESS] Inventory change for CSTE_0148_SG_ButterFly_RedGreen synced to Airtable
+2025-06-23 13:48:04,796 - INFO - DJANGO | STOCK_UPDATED | CSTE_0148_SG_ButterFly_RedGreen @ TLCQ: -1 (new: -22)
+2025-06-23 13:48:07,776 - INFO - [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+2025-06-23 13:48:07,794 - INFO - [SUCCESS] Inventory change for CSTE_0148_SG_ButterFly_RedGreen synced to Airtable
+2025-06-23 13:48:07,795 - INFO - DJANGO | STOCK_UPDATED | CSTE_0148_SG_ButterFly_RedGreen @ TLCQ: -1 (new: -23)
+2025-06-23 13:48:10,454 - INFO - [SUCCESS] Synced inventory for CSTE_0157_SG_FireGlass_Green to Airtable
+2025-06-23 13:48:10,457 - INFO - [SUCCESS] Inventory change for CSTE_0157_SG_FireGlass_Green synced to Airtable
+2025-06-23 13:48:10,457 - INFO - DJANGO | STOCK_UPDATED | CSTE_0157_SG_FireGlass_Green @ TLCQ: -1 (new: -4)
+2025-06-23 13:48:12,673 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:48:12,675 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:48:12,676 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -2 (new: -28)
+2025-06-23 13:48:14,926 - INFO - [SUCCESS] Synced inventory for CSTE_0111_HD_Rug_CircleFurmat_White to Airtable
+2025-06-23 13:48:14,928 - INFO - [SUCCESS] Inventory change for CSTE_0111_HD_Rug_CircleFurmat_White synced to Airtable
+2025-06-23 13:48:14,929 - INFO - DJANGO | STOCK_UPDATED | CSTE_0111_HD_Rug_CircleFurmat_White @ TLCQ: -1 (new: -4)
+2025-06-23 13:48:20,671 - INFO - [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+2025-06-23 13:48:20,673 - INFO - [SUCCESS] Inventory change for CSTE_O0390_OT_Toiletry_Bottles synced to Airtable
+2025-06-23 13:48:20,675 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0390_OT_Toiletry_Bottles @ TLCQ: -1 (new: -29)
+2025-06-23 13:48:20,680 - INFO - INVENTORY | UPDATED | Inventory updated successfully
+2025-06-23 13:58:22,291 - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmp9gzdaety_gl_fk.csv
+2025-06-23 13:58:22,298 - INFO - Detected format: .csv
+2025-06-23 13:58:22,459 - INFO - Successfully loaded data: 11 rows, 37 columns
+2025-06-23 13:58:22,529 - INFO - Cleaned data: (11, 37) -> (11, 34)
+2025-06-23 13:58:22,596 - INFO - DJANGO | CONNECTED | Django ORM connection established
+2025-06-23 13:58:22,597 - INFO - SYSTEM | DJANGO_MODE | Initializing with Django ORM
+2025-06-23 13:58:23,783 - INFO - DJANGO | LOADED | SKU mappings loaded: 2905 records
+2025-06-23 13:58:24,817 - INFO - DJANGO | LOADED | Combo data loaded: 360 combos
+2025-06-23 13:59:06,698 - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmpugadn9f5_gl_fk.csv
+2025-06-23 13:59:06,708 - INFO - Detected format: .csv
+2025-06-23 13:59:06,800 - INFO - Successfully loaded data: 11 rows, 37 columns
+2025-06-23 13:59:06,835 - INFO - Cleaned data: (11, 37) -> (11, 34)
+2025-06-23 13:59:06,866 - INFO - DJANGO | CONNECTED | Django ORM connection established
+2025-06-23 13:59:06,870 - INFO - SYSTEM | DJANGO_MODE | Initializing with Django ORM
+2025-06-23 13:59:09,062 - INFO - DJANGO | LOADED | SKU mappings loaded: 2905 records
+2025-06-23 13:59:10,344 - INFO - DJANGO | LOADED | Inventory data loaded: 1013 products
+2025-06-23 13:59:10,359 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status', 'marketplace_price', 'product_name', 'created_at', 'updated_at']
+2025-06-23 13:59:10,369 - INFO - COMBO | INITIALIZED | Combo hashtable built with 360 entries
+2025-06-23 13:59:10,907 - INFO - MAPPER | HASHTABLE | Built hashtable with 5225 mappings
+2025-06-23 13:59:10,911 - INFO - SYSTEM | INITIALIZED | All components loaded successfully (Django mode)
+2025-06-23 13:59:10,915 - INFO - MAPPER | STARTED | Processing SKU mappings (marketplace: GL_FK)
+2025-06-23 13:59:10,922 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['ordered on', 'shipment id', 'order item id', 'order id', 'hsn code', 'order state', 'order type', 'fsn', 'sku', 'product', 'invoice no.', 'igst', 'invoice date (mm/dd/yy)', 'invoice amount', 'selling price per item', 'shipping and handling charges', 'quantity', 'price inc. fkmp contribution & subsidy', 'buyer name', 'ship to name', 'address line 1', 'address line 2', 'city', 'state', 'pin code', 'dispatch after date', 'dispatch by date', 'tracking id', 'package length (cm)', 'package breadth (cm)', 'package height (cm)', 'package weight (kg)', 'ready to make', 'with attachment']
+2025-06-23 13:59:10,944 - INFO - MAPPER | COMPLETED | Processed 11 records
+2025-06-23 13:59:10,947 - INFO - MAPPER | DEBUG | Full error: NoneType: None
+
+2025-06-23 13:59:10,968 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 11 records
+2025-06-23 13:59:11,527 - INFO - DJANGO | LOADED | Combo data loaded: 360 combos
+2025-06-23 13:59:15,328 - INFO - [SUCCESS] Synced inventory for CSTE_0204_MB_MHA12_Brown to Airtable
+2025-06-23 13:59:15,331 - INFO - [SUCCESS] Inventory change for CSTE_0204_MB_MHA12_Brown synced to Airtable
+2025-06-23 13:59:15,334 - INFO - DJANGO | STOCK_UPDATED | CSTE_0204_MB_MHA12_Brown @ TLCQ: -1 (new: 8)
+2025-06-23 13:59:18,257 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 13:59:18,264 - INFO - [SUCCESS] Inventory change for CSTE_0059_MB_YouAreMySunshine_Black synced to Airtable
+2025-06-23 13:59:18,270 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -21)
+2025-06-23 13:59:20,996 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 13:59:21,001 - INFO - [SUCCESS] Inventory change for CSTE_0059_MB_YouAreMySunshine_Black synced to Airtable
+2025-06-23 13:59:21,003 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -22)
+2025-06-23 13:59:23,652 - INFO - [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+2025-06-23 13:59:23,656 - INFO - [SUCCESS] Inventory change for CSTE_0017_MB_HP_Brown synced to Airtable
+2025-06-23 13:59:23,660 - INFO - DJANGO | STOCK_UPDATED | CSTE_0017_MB_HP_Brown @ TLCQ: -1 (new: -46)
+2025-06-23 13:59:26,004 - INFO - [SUCCESS] Synced inventory for CSTE_0021_MB_Beatles_Black to Airtable
+2025-06-23 13:59:26,014 - INFO - [SUCCESS] Inventory change for CSTE_0021_MB_Beatles_Black synced to Airtable
+2025-06-23 13:59:26,014 - INFO - DJANGO | STOCK_UPDATED | CSTE_0021_MB_Beatles_Black @ TLCQ: -1 (new: -5)
+2025-06-23 13:59:28,654 - INFO - [SUCCESS] Synced inventory for CSTE_0044_MB_LaVienRose_Black to Airtable
+2025-06-23 13:59:28,659 - INFO - [SUCCESS] Inventory change for CSTE_0044_MB_LaVienRose_Black synced to Airtable
+2025-06-23 13:59:28,662 - INFO - DJANGO | STOCK_UPDATED | CSTE_0044_MB_LaVienRose_Black @ TLCQ: -1 (new: -12)
+2025-06-23 13:59:30,909 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 13:59:30,912 - INFO - [SUCCESS] Inventory change for CSTE_0059_MB_YouAreMySunshine_Black synced to Airtable
+2025-06-23 13:59:30,915 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -23)
+2025-06-23 13:59:33,135 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+2025-06-23 13:59:33,142 - INFO - [SUCCESS] Inventory change for CSTE_0217_SG_ThugLife_Thin synced to Airtable
+2025-06-23 13:59:33,145 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 593)
+2025-06-23 13:59:35,532 - INFO - [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
+2025-06-23 13:59:35,544 - INFO - [SUCCESS] Inventory change for CSTE_0240_SG_Wings_Red synced to Airtable
+2025-06-23 13:59:35,548 - INFO - DJANGO | STOCK_UPDATED | CSTE_0240_SG_Wings_Red @ TLCQ: -1 (new: -13)
+2025-06-23 13:59:39,369 - INFO - [SUCCESS] Synced inventory for CSTE_O0324_OT_Doll_White to Airtable
+2025-06-23 13:59:39,373 - INFO - [SUCCESS] Inventory change for CSTE_O0324_OT_Doll_White synced to Airtable
+2025-06-23 13:59:39,377 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0324_OT_Doll_White @ TLCQ: -1 (new: -5)
+2025-06-23 13:59:41,580 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+2025-06-23 13:59:41,583 - INFO - [SUCCESS] Inventory change for CSTE_0217_SG_ThugLife_Thin synced to Airtable
+2025-06-23 13:59:41,584 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 592)
+2025-06-23 13:59:41,588 - INFO - INVENTORY | UPDATED | Inventory updated successfully
+2025-06-23 14:00:01,845 - INFO - DJANGO | LOADED | Inventory data loaded: 1013 products
+2025-06-23 14:00:01,849 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status', 'marketplace_price', 'product_name', 'created_at', 'updated_at']
+2025-06-23 14:00:01,852 - INFO - COMBO | INITIALIZED | Combo hashtable built with 360 entries
+2025-06-23 14:00:02,476 - INFO - MAPPER | HASHTABLE | Built hashtable with 5225 mappings
+2025-06-23 14:00:02,480 - INFO - SYSTEM | INITIALIZED | All components loaded successfully (Django mode)
+2025-06-23 14:00:02,481 - INFO - MAPPER | STARTED | Processing SKU mappings (marketplace: GL_FK)
+2025-06-23 14:00:02,485 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['ordered on', 'shipment id', 'order item id', 'order id', 'hsn code', 'order state', 'order type', 'fsn', 'sku', 'product', 'invoice no.', 'igst', 'invoice date (mm/dd/yy)', 'invoice amount', 'selling price per item', 'shipping and handling charges', 'quantity', 'price inc. fkmp contribution & subsidy', 'buyer name', 'ship to name', 'address line 1', 'address line 2', 'city', 'state', 'pin code', 'dispatch after date', 'dispatch by date', 'tracking id', 'package length (cm)', 'package breadth (cm)', 'package height (cm)', 'package weight (kg)', 'ready to make', 'with attachment']
+2025-06-23 14:00:02,495 - INFO - MAPPER | COMPLETED | Processed 11 records
+2025-06-23 14:00:02,496 - INFO - MAPPER | DEBUG | Full error: NoneType: None
+
+2025-06-23 14:00:02,504 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 11 records
+2025-06-23 14:00:05,773 - INFO - [SUCCESS] Synced inventory for CSTE_0204_MB_MHA12_Brown to Airtable
+2025-06-23 14:00:05,776 - INFO - [SUCCESS] Inventory change for CSTE_0204_MB_MHA12_Brown synced to Airtable
+2025-06-23 14:00:05,777 - INFO - DJANGO | STOCK_UPDATED | CSTE_0204_MB_MHA12_Brown @ TLCQ: -1 (new: 7)
+2025-06-23 14:00:09,871 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 14:00:09,873 - INFO - [SUCCESS] Inventory change for CSTE_0059_MB_YouAreMySunshine_Black synced to Airtable
+2025-06-23 14:00:09,874 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -24)
+2025-06-23 14:00:12,374 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 14:00:12,375 - INFO - [SUCCESS] Inventory change for CSTE_0059_MB_YouAreMySunshine_Black synced to Airtable
+2025-06-23 14:00:12,376 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -25)
+2025-06-23 14:00:14,914 - INFO - [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+2025-06-23 14:00:14,917 - INFO - [SUCCESS] Inventory change for CSTE_0017_MB_HP_Brown synced to Airtable
+2025-06-23 14:00:14,918 - INFO - DJANGO | STOCK_UPDATED | CSTE_0017_MB_HP_Brown @ TLCQ: -1 (new: -47)
+2025-06-23 14:00:18,586 - INFO - [SUCCESS] Synced inventory for CSTE_0021_MB_Beatles_Black to Airtable
+2025-06-23 14:00:18,587 - INFO - [SUCCESS] Inventory change for CSTE_0021_MB_Beatles_Black synced to Airtable
+2025-06-23 14:00:18,587 - INFO - DJANGO | STOCK_UPDATED | CSTE_0021_MB_Beatles_Black @ TLCQ: -1 (new: -6)
+2025-06-23 14:00:20,807 - INFO - [SUCCESS] Synced inventory for CSTE_0044_MB_LaVienRose_Black to Airtable
+2025-06-23 14:00:20,810 - INFO - [SUCCESS] Inventory change for CSTE_0044_MB_LaVienRose_Black synced to Airtable
+2025-06-23 14:00:20,811 - INFO - DJANGO | STOCK_UPDATED | CSTE_0044_MB_LaVienRose_Black @ TLCQ: -1 (new: -13)
+2025-06-23 14:00:25,219 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 14:00:25,220 - INFO - [SUCCESS] Inventory change for CSTE_0059_MB_YouAreMySunshine_Black synced to Airtable
+2025-06-23 14:00:25,221 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -26)
+2025-06-23 14:00:28,456 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+2025-06-23 14:00:28,458 - INFO - [SUCCESS] Inventory change for CSTE_0217_SG_ThugLife_Thin synced to Airtable
+2025-06-23 14:00:28,459 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 591)
+2025-06-23 14:00:31,582 - INFO - [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
+2025-06-23 14:00:31,583 - INFO - [SUCCESS] Inventory change for CSTE_0240_SG_Wings_Red synced to Airtable
+2025-06-23 14:00:31,584 - INFO - DJANGO | STOCK_UPDATED | CSTE_0240_SG_Wings_Red @ TLCQ: -1 (new: -14)
+2025-06-23 14:00:35,093 - INFO - [SUCCESS] Synced inventory for CSTE_O0324_OT_Doll_White to Airtable
+2025-06-23 14:00:35,164 - INFO - [SUCCESS] Inventory change for CSTE_O0324_OT_Doll_White synced to Airtable
+2025-06-23 14:00:35,168 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0324_OT_Doll_White @ TLCQ: -1 (new: -6)
+2025-06-23 14:00:38,435 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+2025-06-23 14:00:38,436 - INFO - [SUCCESS] Inventory change for CSTE_0217_SG_ThugLife_Thin synced to Airtable
+2025-06-23 14:00:38,437 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 590)
+2025-06-23 14:00:38,439 - INFO - INVENTORY | UPDATED | Inventory updated successfully
+2025-06-23 14:04:00,460 - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmp1imn1plz_gl_fk.csv
+2025-06-23 14:04:00,473 - INFO - Detected format: .csv
+2025-06-23 14:04:00,549 - INFO - Successfully loaded data: 11 rows, 37 columns
+2025-06-23 14:04:00,558 - INFO - Cleaned data: (11, 37) -> (11, 34)
+2025-06-23 14:04:00,582 - INFO - DJANGO | CONNECTED | Django ORM connection established
+2025-06-23 14:04:00,583 - INFO - SYSTEM | DJANGO_MODE | Initializing with Django ORM
+2025-06-23 14:04:01,741 - INFO - DJANGO | LOADED | SKU mappings loaded: 2905 records
+2025-06-23 14:04:02,563 - INFO - DJANGO | LOADED | Combo data loaded: 360 combos
+2025-06-23 14:04:49,784 - INFO - DJANGO | LOADED | Inventory data loaded: 1013 products
+2025-06-23 14:04:49,792 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status', 'marketplace_price', 'product_name', 'created_at', 'updated_at']
+2025-06-23 14:04:49,796 - INFO - COMBO | INITIALIZED | Combo hashtable built with 360 entries
+2025-06-23 14:04:50,434 - INFO - MAPPER | HASHTABLE | Built hashtable with 5225 mappings
+2025-06-23 14:04:50,436 - INFO - SYSTEM | INITIALIZED | All components loaded successfully (Django mode)
+2025-06-23 14:04:50,440 - INFO - MAPPER | STARTED | Processing SKU mappings (marketplace: GL_FK)
+2025-06-23 14:04:50,446 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['ordered on', 'shipment id', 'order item id', 'order id', 'hsn code', 'order state', 'order type', 'fsn', 'sku', 'product', 'invoice no.', 'igst', 'invoice date (mm/dd/yy)', 'invoice amount', 'selling price per item', 'shipping and handling charges', 'quantity', 'price inc. fkmp contribution & subsidy', 'buyer name', 'ship to name', 'address line 1', 'address line 2', 'city', 'state', 'pin code', 'dispatch after date', 'dispatch by date', 'tracking id', 'package length (cm)', 'package breadth (cm)', 'package height (cm)', 'package weight (kg)', 'ready to make', 'with attachment']
+2025-06-23 14:04:50,465 - INFO - MAPPER | COMPLETED | Processed 11 records
+2025-06-23 14:04:50,466 - INFO - MAPPER | DEBUG | Full error: NoneType: None
+
+2025-06-23 14:04:50,494 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 11 records
+2025-06-23 14:04:59,357 - INFO - [SUCCESS] Synced inventory for CSTE_0204_MB_MHA12_Brown to Airtable
+2025-06-23 14:04:59,359 - INFO - [SUCCESS] Inventory change for CSTE_0204_MB_MHA12_Brown synced to Airtable
+2025-06-23 14:04:59,361 - INFO - DJANGO | STOCK_UPDATED | CSTE_0204_MB_MHA12_Brown @ TLCQ: -1 (new: 6)
+2025-06-23 14:05:04,790 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 14:05:04,792 - INFO - [SUCCESS] Inventory change for CSTE_0059_MB_YouAreMySunshine_Black synced to Airtable
+2025-06-23 14:05:04,792 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -27)
+2025-06-23 14:05:09,525 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 14:05:09,528 - INFO - [SUCCESS] Inventory change for CSTE_0059_MB_YouAreMySunshine_Black synced to Airtable
+2025-06-23 14:05:09,531 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -28)
+2025-06-23 14:05:12,901 - INFO - [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+2025-06-23 14:05:12,908 - INFO - [SUCCESS] Inventory change for CSTE_0017_MB_HP_Brown synced to Airtable
+2025-06-23 14:05:12,912 - INFO - DJANGO | STOCK_UPDATED | CSTE_0017_MB_HP_Brown @ TLCQ: -1 (new: -48)
+2025-06-23 14:05:16,563 - INFO - [SUCCESS] Synced inventory for CSTE_0021_MB_Beatles_Black to Airtable
+2025-06-23 14:05:16,564 - INFO - [SUCCESS] Inventory change for CSTE_0021_MB_Beatles_Black synced to Airtable
+2025-06-23 14:05:16,566 - INFO - DJANGO | STOCK_UPDATED | CSTE_0021_MB_Beatles_Black @ TLCQ: -1 (new: -7)
+2025-06-23 14:05:23,623 - INFO - [SUCCESS] Synced inventory for CSTE_0044_MB_LaVienRose_Black to Airtable
+2025-06-23 14:05:23,623 - INFO - [SUCCESS] Inventory change for CSTE_0044_MB_LaVienRose_Black synced to Airtable
+2025-06-23 14:05:23,624 - INFO - DJANGO | STOCK_UPDATED | CSTE_0044_MB_LaVienRose_Black @ TLCQ: -1 (new: -14)
+2025-06-23 14:05:27,507 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 14:05:27,510 - INFO - [SUCCESS] Inventory change for CSTE_0059_MB_YouAreMySunshine_Black synced to Airtable
+2025-06-23 14:05:27,511 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -29)
+2025-06-23 14:05:31,904 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+2025-06-23 14:05:31,907 - INFO - [SUCCESS] Inventory change for CSTE_0217_SG_ThugLife_Thin synced to Airtable
+2025-06-23 14:05:31,908 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 589)
+2025-06-23 14:05:34,689 - INFO - [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
+2025-06-23 14:05:34,690 - INFO - [SUCCESS] Inventory change for CSTE_0240_SG_Wings_Red synced to Airtable
+2025-06-23 14:05:34,690 - INFO - DJANGO | STOCK_UPDATED | CSTE_0240_SG_Wings_Red @ TLCQ: -1 (new: -15)
+2025-06-23 14:05:37,339 - INFO - [SUCCESS] Synced inventory for CSTE_O0324_OT_Doll_White to Airtable
+2025-06-23 14:05:37,340 - INFO - [SUCCESS] Inventory change for CSTE_O0324_OT_Doll_White synced to Airtable
+2025-06-23 14:05:37,343 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0324_OT_Doll_White @ TLCQ: -1 (new: -7)
+2025-06-23 14:05:41,318 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+2025-06-23 14:05:41,320 - INFO - [SUCCESS] Inventory change for CSTE_0217_SG_ThugLife_Thin synced to Airtable
+2025-06-23 14:05:41,321 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 588)
+2025-06-23 14:05:41,322 - INFO - INVENTORY | UPDATED | Inventory updated successfully
+2025-06-23 14:11:28,880 - ERROR - Internal Server Error: /web/
+Traceback (most recent call last):
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\django_app\web\views.py", line 230, in process_sales_data
+    return render(request, 'web/upload_form.html', {
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
