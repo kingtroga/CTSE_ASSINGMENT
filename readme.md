@@ -17,48 +17,7 @@ This is my submission for the **CTSE Assignment** - a comprehensive end-to-end d
 * **Bi-directional Sync** : Django DB updates reflect in Airtable (within free tier limits)
 
 ## 🏗️ Project StructureCTSE_ASSIGNMENT/│├── 📊 da_notebooks/                    # Data Analysis & Cleaning
-```bash
-│   ├── Cleaning_sku_mappings.ipynb     # SKU mapping data cleaning
-│   ├── Cleaning_Combo_sku.ipynb       # Combo product data cleaning
-│   └── Cleaning_inventory.ipynb       # Inventory data cleaning
-│
-├── 🚀 django_app/                     # Main Django Application
-│   ├── clean_data/                    # Processed clean datasets
-│   │   ├── cleaned_inventory.csv
-│   │   ├── sku_mappings_final_clean.csv
-│   │   └── combo_sku_clean.csv
-│   │
-│   ├── core/                          # Core Django app (Models, Views, etc.)
-│   ├── flexible_input_processor/      # Dynamic data processing engine
-│   ├── inventory_system/              # Django project settings
-│   ├── logs/                          # System logging
-│   ├── memory/                        # Processed data storage
-│   ├── raw_daily_reports/             # Daily report processing
-│   ├── sku_mapper/                    # SKU mapping functionality
-│   │   └── core_code/                 # (Renamed from 'core' to avoid conflicts)
-│   ├── web/                           # Web interface
-│   ├── manage.py                      # Django management
-│   ├── requirements.txt               # Python dependencies
-│   ├── db.sqlite3                     # SQLite database
-│   └── .env                           # Environment variables
-│
-├── 📁 raws/                           # Raw Input Data
-│   ├── combo_sku.csv                 # Raw combo product data
-│   ├── current_inventory.csv         # Raw inventory data
-│   └── sku_mappings.csv              # Raw SKU mapping data
-│
-├── 🖼️ images/                          # Documentation Images
-│   ├── notes1.jpg
-│   ├── notes2.jpg
-│   ├── notes3.jpg
-│   └── notes4.jpg                   
-│
-└── 📤 test_output_data/               # Generated Reports
-    ├── cste_fk_outbound.csv
-    ├── cste_meesho_outbound.csv
-    ├── gl_fk_outbound.csv
-    └── rudrav_meesho_outbound.csv
-```
+<pre lang="markdown"> ```bash CTSE_ASSIGNMENT/ ├── da_notebooks/ # Data Analysis & Cleaning │ ├── Cleaning_sku_mappings.ipynb # SKU mapping data cleaning │ ├── Cleaning_Combo_sku.ipynb # Combo product data cleaning │ └── Cleaning_inventory.ipynb # Inventory data cleaning │ ├── 🚀 django_app/ # Main Django Application │ ├── clean_data/ # Processed clean datasets │ │ ├── cleaned_inventory.csv │ │ ├── sku_mappings_final_clean.csv │ │ └── combo_sku_clean.csv │ │ │ ├── core/ # Core Django app (Models, Views, etc.) │ ├── flexible_input_processor/ # Dynamic data processing engine │ ├── inventory_system/ # Django project settings │ ├── logs/ # System logging │ ├── memory/ # Processed data storage │ ├── raw_daily_reports/ # Daily report processing │ ├── sku_mapper/ # SKU mapping functionality │ │ └── core_code/ # (Renamed from 'core' to avoid conflicts) │ ├── web/ # Web interface │ ├── manage.py # Django management │ ├── requirements.txt # Python dependencies │ ├── db.sqlite3 # SQLite database │ └── .env # Environment variables │ ├── 📁 raws/ # Raw Input Data │ ├── combo_sku.csv # Raw combo product data │ ├── current_inventory.csv # Raw inventory data │ └── sku_mappings.csv # Raw SKU mapping data │ ├── 🖼️ images/ # Documentation Images │ ├── notes1.jpg │ ├── notes2.jpg │ ├── notes3.jpg │ └── notes4.jpg │ └── 📤 test_output_data/ # Generated Reports ├── cste_fk_outbound.csv ├── cste_meesho_outbound.csv ├── gl_fk_outbound.csv └── rudrav_meesho_outbound.csv ``` </pre>
 
 ## 📝 **My Journey: From Confusion to Clarity**
 
