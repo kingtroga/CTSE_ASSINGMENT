@@ -1621,3 +1621,16 @@ INFO 2025-06-23 09:45:00,276 airtable_sync 24064 2864 [SUCCESS] Synced inventory
 INFO 2025-06-23 09:45:02,508 airtable_sync 24064 2864 [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
 INFO 2025-06-23 09:45:04,655 airtable_sync 24064 2864 [SUCCESS] Synced inventory for CSTE_O0324_OT_Doll_White to Airtable
 INFO 2025-06-23 09:45:06,936 airtable_sync 24064 2864 [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+INFO 2025-06-23 09:55:22,750 airtable_sync 20912 8736 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 09:55:24,460 airtable_sync 676 27628 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 09:56:11,728 airtable_sync 676 12028 [SUCCESS] Synced inventory for CSTE_0204_MB_MHA12_Brown to Airtable
+INFO 2025-06-23 09:56:16,402 airtable_sync 676 12028 [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+INFO 2025-06-23 09:56:18,714 airtable_sync 676 12028 [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+INFO 2025-06-23 09:56:24,333 airtable_sync 676 12028 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 09:56:29,716 airtable_sync 676 12028 [SUCCESS] Synced inventory for CSTE_0021_MB_Beatles_Black to Airtable
+INFO 2025-06-23 09:56:32,025 airtable_sync 676 12028 [SUCCESS] Synced inventory for CSTE_0044_MB_LaVienRose_Black to Airtable
+INFO 2025-06-23 09:56:34,133 airtable_sync 676 12028 [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+INFO 2025-06-23 09:56:36,255 airtable_sync 676 12028 [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+INFO 2025-06-23 09:56:38,349 airtable_sync 676 12028 [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
+INFO 2025-06-23 09:56:40,399 airtable_sync 676 12028 [SUCCESS] Synced inventory for CSTE_O0324_OT_Doll_White to Airtable
+INFO 2025-06-23 09:56:42,562 airtable_sync 676 12028 [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable

@@ -9,7 +9,7 @@ class OutputProcessor:
     def __init__(self, logger: WMSLogger):
         self.logger = logger
     
-    def format_outbound_data(self, processed_df: pd.DataFrame) -> pd.DataFrame:
+    def format_outbound_data(self, processed_df: pd.DataFrame, marketplace) -> pd.DataFrame:
         """Format data for outbound orders: [date, panel, sku, msku, quantity, warehouse]"""
         try:
             if processed_df is None or processed_df.empty:
@@ -27,7 +27,7 @@ class OutputProcessor:
             if 'panels' in outbound_df.columns:
                 outbound_df['panel'] = outbound_df['panels']
             elif 'panel' not in outbound_df.columns:
-                outbound_df['panel'] = 'unknown'
+                outbound_df['panel'] = marketplace
             
             if 'warehouse' not in outbound_df.columns:
                 outbound_df['warehouse'] = Config.DEFAULT_WAREHOUSE

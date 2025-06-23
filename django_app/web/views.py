@@ -310,7 +310,7 @@ def process_uploaded_file_immediate(uploaded_file, marketplace, session_id):
             mapper.process_sku_mappings(marketplace_filter=marketplace)
             
             # Step 4: Get outbound data IMMEDIATELY (before inventory update)
-            outbound_data = mapper.get_outbound_data()
+            outbound_data = mapper.get_outbound_data(marketplace)
             
             if outbound_data is None or outbound_data.empty:
                 return {

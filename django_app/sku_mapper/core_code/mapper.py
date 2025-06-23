@@ -283,9 +283,9 @@ class SKUMapper:
         except Exception as e:
             self.logger.log_process("INVENTORY", "ERROR", f"Failed to update Django inventory: {str(e)}")
     
-    def get_outbound_data(self) -> pd.DataFrame:
+    def get_outbound_data(self, marketplace) -> pd.DataFrame:
         """Get formatted outbound data"""
-        return self.output_processor.format_outbound_data(self.processed_df)
+        return self.output_processor.format_outbound_data(self.processed_df, marketplace)
     
     def load_additional_mappings(self, mapping_file_path: str, replace_existing: bool = False):
         """Load additional mapping data"""

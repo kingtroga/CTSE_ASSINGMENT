@@ -1649,3 +1649,39 @@
 2025-06-23 09:45:06,936 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
 2025-06-23 09:45:06,939 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 596)
 2025-06-23 09:45:06,939 - INFO - INVENTORY | UPDATED | Inventory updated successfully
+2025-06-23 09:55:51,449 - INFO - DJANGO | CONNECTED | Django ORM connection established
+2025-06-23 09:55:51,450 - INFO - SYSTEM | DJANGO_MODE | Initializing with Django ORM
+2025-06-23 09:55:51,719 - INFO - DJANGO | LOADED | SKU mappings loaded: 2905 records
+2025-06-23 09:55:52,106 - INFO - DJANGO | LOADED | Combo data loaded: 360 combos
+2025-06-23 09:56:08,881 - INFO - DJANGO | LOADED | Inventory data loaded: 1013 products
+2025-06-23 09:56:08,887 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status', 'marketplace_price', 'product_name', 'created_at', 'updated_at']
+2025-06-23 09:56:08,890 - INFO - COMBO | INITIALIZED | Combo hashtable built with 360 entries
+2025-06-23 09:56:09,145 - INFO - MAPPER | HASHTABLE | Built hashtable with 5225 mappings
+2025-06-23 09:56:09,146 - INFO - SYSTEM | INITIALIZED | All components loaded successfully (Django mode)
+2025-06-23 09:56:09,146 - INFO - MAPPER | STARTED | Processing SKU mappings (marketplace: GL_FK)
+2025-06-23 09:56:09,148 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['ordered on', 'shipment id', 'order item id', 'order id', 'hsn code', 'order state', 'order type', 'fsn', 'sku', 'product', 'invoice no.', 'igst', 'invoice date (mm/dd/yy)', 'invoice amount', 'selling price per item', 'shipping and handling charges', 'quantity', 'price inc. fkmp contribution & subsidy', 'buyer name', 'ship to name', 'address line 1', 'address line 2', 'city', 'state', 'pin code', 'dispatch after date', 'dispatch by date', 'tracking id', 'package length (cm)', 'package breadth (cm)', 'package height (cm)', 'package weight (kg)', 'ready to make', 'with attachment']
+2025-06-23 09:56:09,156 - INFO - MAPPER | COMPLETED | Processed 11 records
+2025-06-23 09:56:09,160 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 11 records
+2025-06-23 09:56:11,728 - INFO - [SUCCESS] Synced inventory for CSTE_0204_MB_MHA12_Brown to Airtable
+2025-06-23 09:56:11,754 - INFO - DJANGO | STOCK_UPDATED | CSTE_0204_MB_MHA12_Brown @ TLCQ: -1 (new: 9)
+2025-06-23 09:56:16,402 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 09:56:16,408 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -17)
+2025-06-23 09:56:18,714 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 09:56:18,719 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -18)
+2025-06-23 09:56:24,333 - INFO - [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+2025-06-23 09:56:24,362 - INFO - DJANGO | STOCK_UPDATED | CSTE_0017_MB_HP_Brown @ TLCQ: -1 (new: -34)
+2025-06-23 09:56:29,716 - INFO - [SUCCESS] Synced inventory for CSTE_0021_MB_Beatles_Black to Airtable
+2025-06-23 09:56:29,720 - INFO - DJANGO | STOCK_UPDATED | CSTE_0021_MB_Beatles_Black @ TLCQ: -1 (new: -4)
+2025-06-23 09:56:32,025 - INFO - [SUCCESS] Synced inventory for CSTE_0044_MB_LaVienRose_Black to Airtable
+2025-06-23 09:56:32,033 - INFO - DJANGO | STOCK_UPDATED | CSTE_0044_MB_LaVienRose_Black @ TLCQ: -1 (new: -10)
+2025-06-23 09:56:34,133 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 09:56:34,137 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -19)
+2025-06-23 09:56:36,255 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+2025-06-23 09:56:36,265 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 595)
+2025-06-23 09:56:38,349 - INFO - [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
+2025-06-23 09:56:38,357 - INFO - DJANGO | STOCK_UPDATED | CSTE_0240_SG_Wings_Red @ TLCQ: -1 (new: -11)
+2025-06-23 09:56:40,399 - INFO - [SUCCESS] Synced inventory for CSTE_O0324_OT_Doll_White to Airtable
+2025-06-23 09:56:40,403 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0324_OT_Doll_White @ TLCQ: -1 (new: -4)
+2025-06-23 09:56:42,562 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+2025-06-23 09:56:42,567 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 594)
+2025-06-23 09:56:42,568 - INFO - INVENTORY | UPDATED | Inventory updated successfully
