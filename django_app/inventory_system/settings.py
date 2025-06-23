@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-change-me')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', "b404-102-91-104-212.ngrok-free.app"]
 
 
 # Application definition
@@ -148,7 +148,18 @@ BASEROW_SKU_MAPPING_TABLE_ID = '581827'
 BASEROW_INVENTORY_TABLE_ID = '581833'  
 BASEROW_COMBO_TABLE_ID = '581839'
 
+# Airtable Configuration (using modern Personal Access Token)
+AIRTABLE_BASE_ID = config('AIRTABLE_BASE_ID')
+AIRTABLE_PERSONAL_ACCESS_TOKEN = config('AIRTABLE_PERSONAL_ACCESS_TOKEN')
+AIRTABLE_WEBHOOK_SECRET = config('AIRTABLE_WEBHOOK_SECRET')
 
+AIRTABLE_TABLES = {
+    'sku_mappings': 'SKU_Mappings',
+    'inventory': 'Inventory', 
+    'combo_products': 'Combo_Products'
+}
+
+# Logging configuration
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -156,16 +167,12 @@ LOGGING = {
         'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR.parent, 'logs', 'baserow_sync.log'),
-        },
-        'console': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
+            'filename': os.path.join(BASE_DIR.parent, 'logs', 'airtable_sync.log'),
         },
     },
     'loggers': {
-        'core.services.baserow_memory_manager': {
-            'handlers': ['file', 'console'],
+        'core.airtable_sync': {
+            'handlers': ['file'],
             'level': 'INFO',
             'propagate': True,
         },

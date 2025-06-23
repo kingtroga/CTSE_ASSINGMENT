@@ -1,5 +1,55 @@
-# core/admin.py - Step 2: Basic Admin Interface
+# core/admin.py
+import csv
+from django.http import HttpResponse
+from django.contrib import admin
 
+def export_as_csv(modeladmin, request, queryset):
+    """
+    Generic csv export admin action.
+    """
+    meta = modeladmin.model._meta
+    field_names = [field.name for field in meta.fields]
+    
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = f'attachment; filename={meta}.csv'
+    writer = csv.writer(response)
+    
+    # Write header
+    header = []
+    for field_name in field_names:
+        if field_name in ['product', 'marketplace', 'warehouse']:
+            # Handle foreign key fields
+            if field_name == 'product':
+                header.extend(['product_msku', 'product_name'])
+            elif field_name == 'marketplace':
+                header.extend(['marketplace_code', 'marketplace_name'])
+            elif field_name == 'warehouse':
+                header.extend(['warehouse_code', 'warehouse_name'])
+        else:
+            header.append(field_name)
+    
+    writer.writerow(header)
+    
+    # Write data
+    for obj in queryset:
+        row = []
+        for field_name in field_names:
+            if field_name == 'product' and hasattr(obj, 'product'):
+                row.extend([obj.product.msku, obj.product.product_name])
+            elif field_name == 'marketplace' and hasattr(obj, 'marketplace'):
+                row.extend([obj.marketplace.code, obj.marketplace.name])
+            elif field_name == 'warehouse' and hasattr(obj, 'warehouse'):
+                row.extend([obj.warehouse.code, obj.warehouse.name])
+            else:
+                value = getattr(obj, field_name)
+                if value is None:
+                    value = ''
+                row.append(value)
+        writer.writerow(row)
+    
+    return response
+
+export_as_csv.short_description = "Export Selected as CSV"
 from django.contrib import admin
 from .models import (Product, Warehouse, Inventory, Marketplace, SKUMapping, 
                      ComboProduct, ComboProductItem, Order, OrderItem, InventoryMovement)
@@ -14,6 +64,8 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ['is_active', 'category', 'brand', 'created_at']
     search_fields = ['msku', 'product_name']
     readonly_fields = ['created_at', 'updated_at']
+
+    actions = [export_as_csv]
     
     fieldsets = (
         ('Product Information', {
@@ -179,6 +231,8 @@ class SKUMappingAdmin(admin.ModelAdmin):
     list_filter = ['marketplace', 'status', 'status_2', 'updated_at']
     search_fields = ['sku', 'product__msku', 'product__product_name']
     readonly_fields = ['created_at', 'updated_at']
+
+    actions = [export_as_csv]
     
     fieldsets = (
         ('Core Mapping', {
@@ -226,6 +280,8 @@ class ComboProductAdmin(admin.ModelAdmin):
     search_fields = ['combo_sku', 'combo_name']
     readonly_fields = ['created_at', 'updated_at', 'calculated_cost', 'profit_margin']
     inlines = [ComboProductItemInline]
+
+    actions = [export_as_csv]
     
     fieldsets = (
         ('Combo Information', {

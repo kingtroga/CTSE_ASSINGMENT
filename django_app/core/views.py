@@ -1,105 +1,107 @@
 
-from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.core.files.storage import default_storage
-import pandas as pd
+from django.views.decorators.http import require_POST
+from django.conf import settings
+from .airtable_sync import airtable_sync
+from typing import Dict, Optional
 import json
+import hmac
+import hashlib
+import logging
 
-def upload_daily_report(request):
-    """Handle daily report uploads and process with Django SKU_Mapper"""
-    if request.method == 'POST':
+logger = logging.getLogger(__name__)
+
+@csrf_exempt
+@require_POST
+def airtable_webhook(request):
+    """Handle webhooks from Airtable"""
+    try:
+        body = request.body
+        data = json.loads(body.decode('utf-8'))
+        
+        # Optional signature verification
+        if settings.AIRTABLE_WEBHOOK_SECRET:
+            signature = request.headers.get('X-Airtable-Content-MAC')
+            if signature:
+                expected_signature = hmac.new(
+                    settings.AIRTABLE_WEBHOOK_SECRET.encode(),
+                    body,
+                    hashlib.sha256
+                ).hexdigest()
+                
+                if not hmac.compare_digest(f"hmac-sha256={expected_signature}", signature):
+                    logger.warning("Invalid webhook signature")
+                    return HttpResponse('Invalid signature', status=401)
+        
+        # Process webhook changes
+        for change in data.get('changes', []):
+            process_airtable_change(change)
+        
+        return JsonResponse({'status': 'success'})
+        
+    except Exception as e:
+        logger.error(f"Webhook processing error: {e}")
+        return HttpResponse('Error processing webhook', status=500)
+
+def process_airtable_change(change):
+    """Process individual Airtable change"""
+    table_id = change.get('tableId')
+    record_id = change.get('recordId')
+    action = change.get('action')  # 'created', 'updated', 'deleted'
+    
+    # Map table IDs to handlers
+    table_handlers = {
+        'tbl0c8O7MWVIRrm96': handle_sku_mapping_change,    # SKU_Mappings
+        'tblu0dzhsY7CgW3Qn': handle_combo_product_change,  # Combo_Products
+        'tbl2LVelu8mpV6Vkr': handle_inventory_change       # Inventory
+    }
+    
+    handler = table_handlers.get(table_id)
+    if handler:
         try:
-            # Get uploaded file
-            uploaded_file = request.FILES.get('report_file')
-            marketplace = request.POST.get('marketplace', 'MISC')
+            # Get full record data for processing
+            if action != 'deleted':
+                record_data = get_airtable_record(table_id, record_id)
+                if record_data:
+                    handler(record_data)
             
-            if not uploaded_file:
-                return JsonResponse({'error': 'No file uploaded'}, status=400)
-            
-            # Save file temporarily
-            file_path = default_storage.save(f'temp/{uploaded_file.name}', uploaded_file)
-            
-            # Read uploaded data
-            if uploaded_file.name.endswith('.csv'):
-                df = pd.read_csv(default_storage.path(file_path))
-            elif uploaded_file.name.endswith('.xlsx'):
-                df = pd.read_excel(default_storage.path(file_path))
-            else:
-                return JsonResponse({'error': 'Unsupported file format'}, status=400)
-            
-            # Process with Django SKU_Mapper
-            mapper = DjangoSKUMapper(df)
-            mapper.process_sku_mappings()
-            mapper.update_inventory()
-            
-            # Get results
-            outbound_data = mapper.get_outbound_data()
-            unmapped_skus = mapper.unmapped_skus
-            
-            # Convert to JSON-serializable format
-            if outbound_data is not None:
-                outbound_json = outbound_data.to_dict('records')
-            else:
-                outbound_json = []
-            
-            # Clean up temp file
-            default_storage.delete(file_path)
-            
-            return JsonResponse({
-                'success': True,
-                'outbound_data': outbound_json,
-                'unmapped_skus': unmapped_skus,
-                'total_processed': len(outbound_json),
-                'total_unmapped': len(unmapped_skus)
-            })
+            logger.info(f"[SUCCESS] Processed {action} on table {table_id}")
             
         except Exception as e:
-            return JsonResponse({'error': str(e)}, status=500)
-    
-    return render(request, 'core/upload_report.html')
+            logger.error(f"[ERROR] Error processing change: {e}")
+    else:
+        logger.warning(f"Unknown table ID in webhook: {table_id}")
 
-def sync_baserow(request):
-    """Trigger Baserow sync via web interface"""
+def get_airtable_record(table_id: str, record_id: str) -> Optional[Dict]:
+    """Get full record data from Airtable"""
     try:
-        from .services.baserow_memory_manager import BaserowMemoryManager
+        # Map table IDs to names
+        table_names = {
+            'tbl0c8O7MWVIRrm96': 'SKU_Mappings',
+            'tblu0dzhsY7CgW3Qn': 'Combo_Products', 
+            'tbl2LVelu8mpV6Vkr': 'Inventory'
+        }
         
-        manager = BaserowMemoryManager()
+        table_name = table_names.get(table_id)
+        if not table_name:
+            return None
         
-        # Get sync type from request
-        sync_type = request.GET.get('type', 'full')
+        result = airtable_sync._make_request('GET', f"{table_name}/{record_id}")
+        return result
         
-        if sync_type == 'push':
-            # Push Django → Baserow
-            sku_results = manager.push_sku_mappings_to_baserow()
-            inv_results = manager.push_inventory_to_baserow()
-            
-            return JsonResponse({
-                'success': True,
-                'type': 'push',
-                'sku_mappings': sku_results,
-                'inventory': inv_results
-            })
-            
-        elif sync_type == 'pull':
-            # Pull Baserow → Django
-            results = manager.pull_sku_mappings_from_baserow()
-            
-            return JsonResponse({
-                'success': True,
-                'type': 'pull',
-                'results': results
-            })
-            
-        else:
-            # Full sync
-            results = manager.full_sync_process()
-            
-            return JsonResponse({
-                'success': results['success'],
-                'type': 'full',
-                'results': results
-            })
-            
     except Exception as e:
-        return JsonResponse({'error': str(e)}, status=500)
+        logger.error(f"Error getting record {record_id}: {e}")
+        return None
+
+def handle_sku_mapping_change(record_data: Dict):
+    """Handle SKU mapping changes from Airtable"""
+    airtable_sync.sync_sku_mapping_from_airtable(record_data)
+
+def handle_combo_product_change(record_data: Dict):
+    """Handle combo product changes from Airtable"""
+    airtable_sync.sync_combo_product_from_airtable(record_data)
+
+def handle_inventory_change(record_data: Dict):
+    """Handle inventory changes from Airtable"""
+    airtable_sync.sync_inventory_from_airtable(record_data)
