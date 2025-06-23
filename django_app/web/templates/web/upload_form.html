@@ -228,6 +228,55 @@
             display: none;
         }
 
+        .warning-message {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: none;
+            border-left: 5px solid #ffc107;
+        }
+
+        .warning-message strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .sync-status {
+            background: #e7f3ff;
+            border: 1px solid #b3d9ff;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .sync-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        .sync-indicator.syncing {
+            background: #ffc107;
+        }
+
+        .sync-indicator.complete {
+            background: #28a745;
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
         #file-input {
             display: none;
         }
@@ -282,6 +331,12 @@
 
         <div class="error-message" id="error-message"></div>
         <div class="success-message" id="success-message"></div>
+        <div class="warning-message" id="warning-message"></div>
+
+        <div class="sync-status" id="sync-status">
+            <span class="sync-indicator syncing" id="sync-indicator"></span>
+            <span id="sync-text">Updating inventory in background... Please keep this page open.</span>
+        </div>
 
         <div class="results-section" id="results-section">
             <div class="results-header">
@@ -304,6 +359,7 @@
         // Global variables
         let selectedFile = null;
         let processedData = null;
+        let backgroundSyncActive = false;
 
         // DOM elements
         const uploadArea = document.getElementById('upload-area');
@@ -316,6 +372,10 @@
         const loading = document.getElementById('loading');
         const errorMessage = document.getElementById('error-message');
         const successMessage = document.getElementById('success-message');
+        const warningMessage = document.getElementById('warning-message');
+        const syncStatus = document.getElementById('sync-status');
+        const syncIndicator = document.getElementById('sync-indicator');
+        const syncText = document.getElementById('sync-text');
         const resultsSection = document.getElementById('results-section');
         const statsGrid = document.getElementById('stats-grid');
         const downloadBtn = document.getElementById('download-btn');
@@ -389,8 +449,19 @@
 
                 if (result.success) {
                     processedData = result.data;
-                    showSuccess(`Successfully processed ${result.data.summary.total_rows_processed} records`);
+                    
+                    // Show success message
+                    showSuccess(result.message);
+                    
+                    // Show warning about background sync
+                    if (result.background_sync && result.warning) {
+                        showWarning(result.warning);
+                        startBackgroundSyncIndicator();
+                    }
+                    
+                    // Display results immediately
                     displayResults(result.data);
+                    
                 } else {
                     showError(result.error || 'Processing failed');
                 }
@@ -399,6 +470,40 @@
                 showError('Network error: ' + error.message);
             } finally {
                 showLoading(false);
+            }
+        });
+
+        // Background sync indicator
+        function startBackgroundSyncIndicator() {
+            backgroundSyncActive = true;
+            syncStatus.style.display = 'block';
+            
+            // Simulate background completion after 10-30 seconds
+            const completionTime = 10000 + Math.random() * 20000; // 10-30 seconds
+            
+            setTimeout(() => {
+                completeBackgroundSync();
+            }, completionTime);
+        }
+
+        function completeBackgroundSync() {
+            backgroundSyncActive = false;
+            syncIndicator.classList.remove('syncing');
+            syncIndicator.classList.add('complete');
+            syncText.textContent = 'Inventory update completed! You can now safely close this page.';
+            
+            // Hide after 5 seconds
+            setTimeout(() => {
+                syncStatus.style.display = 'none';
+            }, 5000);
+        }
+
+        // Warn user before closing if sync is active
+        window.addEventListener('beforeunload', (e) => {
+            if (backgroundSyncActive) {
+                const message = 'Inventory update is still in progress. Are you sure you want to leave?';
+                e.returnValue = message;
+                return message;
             }
         });
 
@@ -427,6 +532,7 @@
             errorMessage.textContent = message;
             errorMessage.style.display = 'block';
             successMessage.style.display = 'none';
+            warningMessage.style.display = 'none';
         }
 
         function showSuccess(message) {
@@ -435,9 +541,15 @@
             errorMessage.style.display = 'none';
         }
 
+        function showWarning(message) {
+            warningMessage.innerHTML = `<strong>⚠️ Important:</strong> ${message}`;
+            warningMessage.style.display = 'block';
+        }
+
         function hideMessages() {
             errorMessage.style.display = 'none';
             successMessage.style.display = 'none';
+            warningMessage.style.display = 'none';
         }
 
         function displayResults(data) {

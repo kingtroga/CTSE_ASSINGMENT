@@ -1,11 +1,13 @@
-# django_app/web/views.py (or wherever your views are)
+# django_app/web/views.py
 # =============================================================================
-# Django Views for SKU Mapper Integration
+# Django Views for SKU Mapper Integration - Data First Approach
 # =============================================================================
 
 import os
 import json
 import pandas as pd
+import threading
+import time
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -44,7 +46,6 @@ def process_sales_data(request):
     
     elif request.method == 'POST':
         try:
-
             # Get uploaded file
             uploaded_file = request.FILES.get('sales_file')
             marketplace = request.POST.get('marketplace', '')
@@ -61,8 +62,8 @@ def process_sales_data(request):
                     'error': 'No marketplace selected'
                 }, status=400)
             
-            # Process the file
-            result = process_uploaded_file(uploaded_file, marketplace)
+            # Process the file with immediate data return
+            result = process_uploaded_file_immediate(uploaded_file, marketplace)
             
             if result['success']:
                 return JsonResponse(result)
@@ -76,8 +77,8 @@ def process_sales_data(request):
             }, status=500)
 
 
-def process_uploaded_file(uploaded_file, marketplace):
-    """Process uploaded file and return results"""
+def process_uploaded_file_immediate(uploaded_file, marketplace):
+    """Process uploaded file and return data immediately, sync inventory in background"""
     
     try:
         # Create temporary file
@@ -107,10 +108,7 @@ def process_uploaded_file(uploaded_file, marketplace):
             # Step 3: Process SKU mappings with marketplace filter
             mapper.process_sku_mappings(marketplace_filter=marketplace)
             
-            # Step 4: Update inventory
-            mapper.update_inventory()
-            
-            # Step 5: Get outbound data
+            # Step 4: Get outbound data IMMEDIATELY (before inventory update)
             outbound_data = mapper.get_outbound_data()
             
             if outbound_data is None or outbound_data.empty:
@@ -119,14 +117,29 @@ def process_uploaded_file(uploaded_file, marketplace):
                     'error': 'No valid data found after processing'
                 }
             
-            # Step 6: Get processing summary
+            # Step 5: Get processing summary
             summary = mapper.get_processing_summary()
             
-            # Step 7: Convert outbound data to JSON for response
+            # Step 6: Convert outbound data to JSON for response
             outbound_json = outbound_data.to_dict('records')
             
-            # Step 8: Create downloadable CSV
+            # Step 7: Create downloadable CSV
             csv_content = outbound_data.to_csv(index=False)
+            
+            # Step 8: Start background inventory update in separate thread
+            def background_inventory_sync():
+                """Run inventory update in background"""
+                try:
+                    print(f"[BACKGROUND] Starting inventory sync for {marketplace}...")
+                    mapper.update_inventory()
+                    print(f"[BACKGROUND] ✅ Inventory sync completed for {marketplace}")
+                except Exception as e:
+                    print(f"[BACKGROUND] ❌ Inventory sync failed: {str(e)}")
+            
+            # Start background thread
+            sync_thread = threading.Thread(target=background_inventory_sync)
+            sync_thread.daemon = True
+            sync_thread.start()
             
             return {
                 'success': True,
@@ -136,7 +149,9 @@ def process_uploaded_file(uploaded_file, marketplace):
                     'csv_content': csv_content,
                     'filename': f"{marketplace.lower()}_outbound_{uploaded_file.name.split('.')[0]}.csv"
                 },
-                'message': f'Successfully processed {len(outbound_data)} records'
+                'message': f'Successfully processed {len(outbound_data)} records',
+                'warning': 'Your data is ready for download! However, please keep this page open while we update inventory in the background.',
+                'background_sync': True
             }
             
         finally:
@@ -216,10 +231,6 @@ def get_system_status(request):
             'error': f'Status error: {str(e)}'
         }, status=500)
 
-
-# =============================================================================
-# Additional utility views
-# =============================================================================
 
 def get_unmapped_skus(request):
     """Get list of unmapped SKUs for review"""
