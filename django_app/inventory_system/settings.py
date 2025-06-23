@@ -71,6 +71,7 @@ CRONTAB_COMMAND_PREFIX = f'cd {BASE_DIR} &&'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -183,7 +184,6 @@ LOGS_DIR.mkdir(exist_ok=True)
 GEMINI_API_KEY = config('GEMINI_API_KEY')
 
 
-# Logging configuration with dynamic path
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -198,26 +198,37 @@ LOGGING = {
         },
     },
     'handlers': {
-        'file': {
+        'airtable_file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': LOGS_DIR / 'airtable_sync.log',
             'formatter': 'verbose',
         },
+        'smart_assistant_file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'smart_assistant.log'),
+            'formatter': 'verbose',
+        },
         'console': {
-            'level': 'INFO', 
+            'level': 'DEBUG',  # You can lower or raise this as needed
             'class': 'logging.StreamHandler',
             'formatter': 'simple',
         },
     },
     'loggers': {
         'core.airtable_sync': {
-            'handlers': ['file', 'console'],
+            'handlers': ['airtable_file', 'console'],
             'level': 'INFO',
             'propagate': True,
         },
         'core.management.commands.sync_from_airtable': {
-            'handlers': ['file', 'console'], 
+            'handlers': ['airtable_file', 'console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'web.smart_assistant': {
+            'handlers': ['smart_assistant_file', 'console'],
             'level': 'INFO',
             'propagate': True,
         },

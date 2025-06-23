@@ -9,6 +9,7 @@ import json
 import hmac
 import hashlib
 import logging
+from django.shortcuts import render
 
 logger = logging.getLogger(__name__)
 
@@ -105,3 +106,9 @@ def handle_combo_product_change(record_data: Dict):
 def handle_inventory_change(record_data: Dict):
     """Handle inventory changes from Airtable"""
     airtable_sync.sync_inventory_from_airtable(record_data)
+
+def custom_404_view(request, exception):
+    return render(request, 'core/404.html', status=404)
+
+def custom_500_view(request):
+    return render(request, 'core/500.html', status=500)
