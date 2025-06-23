@@ -671,17 +671,24 @@ class SKUMapper:
             self.report_data_df = self.validator.normalize_column_names(self.report_data_df)
             
             # Validate required columns
-            is_valid, error_msg = self.validator.validate_required_columns(self.report_data_df, ['sku'])
-            if not is_valid:
-                self.logger.log_process("MAPPER", "ERROR", f"Validation failed: {error_msg}")
-                return
+            if 'msku' not in self.report_data_df.columns or self.report_data_df['msku'].isnull().all():
+                is_valid, error_msg = self.validator.validate_required_columns(self.report_data_df, ['sku'])
+                if not is_valid:
+                    self.logger.log_process("MAPPER", "ERROR", f"Validation failed: {error_msg}")
+                    return
             
             # Map SKUs to MSKUs if column doesn't exist or is empty
             if 'msku' not in self.report_data_df.columns or self.report_data_df['msku'].isnull().all():
                 self.report_data_df['msku'] = self.report_data_df['sku'].apply(self.map_sku_with_combo_check)
             
-            # Identify unmapped SKUs
-            self.unmapped_skus = self.report_data_df[self.report_data_df['msku'].isnull()]['sku'].unique().tolist()
+            # Only map if 'msku' is missing or empty AND 'sku' is available
+            if 'msku' not in self.report_data_df.columns or self.report_data_df['msku'].isnull().all():
+                if 'sku' in self.report_data_df.columns:
+                    self.report_data_df['msku'] = self.report_data_df['sku'].apply(self.map_sku_with_combo_check)
+                else:
+                    self.logger.log_process("MAPPER", "ERROR", "Cannot map MSKUs: 'sku' column is missing")
+                    return
+
             
             if self.unmapped_skus:
                 self.logger.log_process("MAPPER", "UNMAPPED", f"Found {len(self.unmapped_skus)} unmapped SKUs")

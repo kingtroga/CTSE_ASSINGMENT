@@ -152,9 +152,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Path configuration for your existing data
-CLEAN_DATA_PATH = os.path.join(BASE_DIR, config('CLEAN_DATA_PATH', default='../clean_data'))
-RAW_REPORTS_PATH = os.path.join(BASE_DIR, config('RAW_REPORTS_PATH', default='../raw_daily_reports'))
-SKU_MAPPER_PATH = os.path.join(BASE_DIR, config('SKU_MAPPER_PATH', default='../sku_mapper'))
+CLEAN_DATA_PATH = os.path.join(BASE_DIR, config('CLEAN_DATA_PATH', default='clean_data'))
+RAW_REPORTS_PATH = os.path.join(BASE_DIR, config('RAW_REPORTS_PATH', default='raw_daily_reports'))
+SKU_MAPPER_PATH = os.path.join(BASE_DIR, config('SKU_MAPPER_PATH', default='sku_mapper'))
 
 # Baserow API configuration
 BASEROW_BASE_URL = 'https://api.baserow.io'
