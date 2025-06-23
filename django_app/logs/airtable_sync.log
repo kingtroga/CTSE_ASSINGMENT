@@ -2041,3 +2041,5 @@ INFO 2025-06-23 17:56:53,258 airtable_sync 18844 21196 [SUCCESS] Synced inventor
 INFO 2025-06-23 17:56:55,704 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
 INFO 2025-06-23 17:56:58,116 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_O0324_OT_Doll_White to Airtable
 INFO 2025-06-23 17:57:00,796 airtable_sync 18844 21196 [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+INFO 2025-06-23 19:42:02,252 airtable_sync 8596 18900 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 19:43:24,513 airtable_sync 16744 8704 [SUCCESS]  Airtable connection validated successfully

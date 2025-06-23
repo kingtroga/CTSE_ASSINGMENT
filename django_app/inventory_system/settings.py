@@ -157,6 +157,9 @@ RAW_REPORTS_PATH = os.path.join(BASE_DIR, config('RAW_REPORTS_PATH', default='ra
 SKU_MAPPER_PATH = os.path.join(BASE_DIR, config('SKU_MAPPER_PATH', default='sku_mapper'))
 
 # Baserow API configuration
+# Beforw I configured Airtable, I used Baserow 
+# then I read the assingment again a
+# nd watched the video and I saw that use said to use Airtable 😂
 BASEROW_BASE_URL = 'https://api.baserow.io'
 BASEROW_API_TOKEN = config('BASEROW_API_TOKEN')
 BASEROW_DATABASE_ID = config('BASEROW_DATABASE_ID')
@@ -209,7 +212,7 @@ LOGGING = {
             'formatter': 'verbose',
         },
         'console': {
-            'level': 'DEBUG',  # You can lower or raise this as needed
+            'level': 'DEBUG', 
             'class': 'logging.StreamHandler',
             'formatter': 'simple',
         },

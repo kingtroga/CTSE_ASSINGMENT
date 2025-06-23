@@ -22,7 +22,7 @@ class AirtableSync:
         }
         
         # Test connection on initialization
-        self._validate_connection()
+        # self._validate_connection() TODO:Uncomment this line to validate connection if you have the Airtable API access token set up. 😝
     
     def _validate_connection(self):
         """Validate Airtable connection"""
