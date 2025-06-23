@@ -2910,3 +2910,53 @@ Traceback (most recent call last):
   File "C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+2025-06-23 16:37:05,156 - INFO - DJANGO | CONNECTED | Django ORM connection established
+2025-06-23 16:37:05,159 - INFO - SYSTEM | DJANGO_MODE | Initializing with Django ORM
+2025-06-23 16:37:06,913 - INFO - DJANGO | LOADED | SKU mappings loaded: 2905 records
+2025-06-23 16:37:09,607 - INFO - DJANGO | LOADED | Combo data loaded: 360 combos
+2025-06-23 16:38:13,224 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-23 16:38:22,761 - INFO - DJANGO | LOADED | Inventory data loaded: 1013 products
+2025-06-23 16:38:22,776 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status', 'marketplace_price', 'product_name', 'created_at', 'updated_at']
+2025-06-23 16:38:22,784 - INFO - COMBO | INITIALIZED | Combo hashtable built with 360 entries
+2025-06-23 16:38:23,711 - INFO - MAPPER | HASHTABLE | Built hashtable with 5225 mappings
+2025-06-23 16:38:23,715 - INFO - SYSTEM | INITIALIZED | All components loaded successfully (Django mode)
+2025-06-23 16:38:23,718 - INFO - MAPPER | STARTED | Processing SKU mappings (marketplace: GL_FK)
+2025-06-23 16:38:23,725 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['ordered on', 'shipment id', 'order item id', 'order id', 'hsn code', 'order state', 'order type', 'fsn', 'sku', 'product', 'invoice no.', 'igst', 'invoice date (mm/dd/yy)', 'invoice amount', 'selling price per item', 'shipping and handling charges', 'quantity', 'price inc. fkmp contribution & subsidy', 'buyer name', 'ship to name', 'address line 1', 'address line 2', 'city', 'state', 'pin code', 'dispatch after date', 'dispatch by date', 'tracking id', 'package length (cm)', 'package breadth (cm)', 'package height (cm)', 'package weight (kg)', 'ready to make', 'with attachment']
+2025-06-23 16:38:23,748 - INFO - MAPPER | COMPLETED | Processed 11 records
+2025-06-23 16:38:23,750 - INFO - MAPPER | DEBUG | Full error: NoneType: None
+
+2025-06-23 16:38:23,778 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 11 records
+2025-06-23 16:38:27,587 - INFO - [SUCCESS] Synced inventory for CSTE_0204_MB_MHA12_Brown to Airtable
+2025-06-23 16:38:27,590 - INFO - [SUCCESS] Inventory change for CSTE_0204_MB_MHA12_Brown synced to Airtable
+2025-06-23 16:38:27,591 - INFO - DJANGO | STOCK_UPDATED | CSTE_0204_MB_MHA12_Brown @ TLCQ: -1 (new: 5)
+2025-06-23 16:38:30,102 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 16:38:30,104 - INFO - [SUCCESS] Inventory change for CSTE_0059_MB_YouAreMySunshine_Black synced to Airtable
+2025-06-23 16:38:30,104 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -30)
+2025-06-23 16:38:32,702 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 16:38:32,703 - INFO - [SUCCESS] Inventory change for CSTE_0059_MB_YouAreMySunshine_Black synced to Airtable
+2025-06-23 16:38:32,704 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -31)
+2025-06-23 16:38:35,111 - INFO - [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+2025-06-23 16:38:35,115 - INFO - [SUCCESS] Inventory change for CSTE_0017_MB_HP_Brown synced to Airtable
+2025-06-23 16:38:35,116 - INFO - DJANGO | STOCK_UPDATED | CSTE_0017_MB_HP_Brown @ TLCQ: -1 (new: -49)
+2025-06-23 16:38:37,883 - INFO - [SUCCESS] Synced inventory for CSTE_0021_MB_Beatles_Black to Airtable
+2025-06-23 16:38:37,886 - INFO - [SUCCESS] Inventory change for CSTE_0021_MB_Beatles_Black synced to Airtable
+2025-06-23 16:38:37,888 - INFO - DJANGO | STOCK_UPDATED | CSTE_0021_MB_Beatles_Black @ TLCQ: -1 (new: -8)
+2025-06-23 16:38:40,544 - INFO - [SUCCESS] Synced inventory for CSTE_0044_MB_LaVienRose_Black to Airtable
+2025-06-23 16:38:40,546 - INFO - [SUCCESS] Inventory change for CSTE_0044_MB_LaVienRose_Black synced to Airtable
+2025-06-23 16:38:40,548 - INFO - DJANGO | STOCK_UPDATED | CSTE_0044_MB_LaVienRose_Black @ TLCQ: -1 (new: -15)
+2025-06-23 16:38:43,107 - INFO - [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+2025-06-23 16:38:43,110 - INFO - [SUCCESS] Inventory change for CSTE_0059_MB_YouAreMySunshine_Black synced to Airtable
+2025-06-23 16:38:43,111 - INFO - DJANGO | STOCK_UPDATED | CSTE_0059_MB_YouAreMySunshine_Black @ TLCQ: -1 (new: -32)
+2025-06-23 16:38:45,441 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+2025-06-23 16:38:45,443 - INFO - [SUCCESS] Inventory change for CSTE_0217_SG_ThugLife_Thin synced to Airtable
+2025-06-23 16:38:45,444 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 587)
+2025-06-23 16:38:48,132 - INFO - [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
+2025-06-23 16:38:48,135 - INFO - [SUCCESS] Inventory change for CSTE_0240_SG_Wings_Red synced to Airtable
+2025-06-23 16:38:48,137 - INFO - DJANGO | STOCK_UPDATED | CSTE_0240_SG_Wings_Red @ TLCQ: -1 (new: -16)
+2025-06-23 16:38:50,645 - INFO - [SUCCESS] Synced inventory for CSTE_O0324_OT_Doll_White to Airtable
+2025-06-23 16:38:50,647 - INFO - [SUCCESS] Inventory change for CSTE_O0324_OT_Doll_White synced to Airtable
+2025-06-23 16:38:50,649 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0324_OT_Doll_White @ TLCQ: -1 (new: -8)
+2025-06-23 16:38:53,449 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+2025-06-23 16:38:53,451 - INFO - [SUCCESS] Inventory change for CSTE_0217_SG_ThugLife_Thin synced to Airtable
+2025-06-23 16:38:53,453 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 586)
+2025-06-23 16:38:53,456 - INFO - INVENTORY | UPDATED | Inventory updated successfully

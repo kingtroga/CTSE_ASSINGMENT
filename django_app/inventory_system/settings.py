@@ -48,7 +48,6 @@ INSTALLED_APPS = [
 
     # Local apps
     'core',
-    'api',
     'web',
 ]
 
@@ -160,12 +159,12 @@ SKU_MAPPER_PATH = os.path.join(BASE_DIR, config('SKU_MAPPER_PATH', default='../s
 
 # Baserow API configuration
 BASEROW_BASE_URL = 'https://api.baserow.io'
-BASEROW_API_TOKEN = 'E1OvSUYfQeIHTWivnKgB6luIIiopkcNa'
-BASEROW_DATABASE_ID = '245164'  
+BASEROW_API_TOKEN = config('BASEROW_API_TOKEN')
+BASEROW_DATABASE_ID = config('BASEROW_DATABASE_ID')
 
-BASEROW_SKU_MAPPING_TABLE_ID = '581827'
-BASEROW_INVENTORY_TABLE_ID = '581833'  
-BASEROW_COMBO_TABLE_ID = '581839'
+BASEROW_SKU_MAPPING_TABLE_ID = config('BASEROW_SKU_MAPPING_TABLE_ID')
+BASEROW_INVENTORY_TABLE_ID = config('BASEROW_INVENTORY_TABLE_ID')
+BASEROW_COMBO_TABLE_ID = config('BASEROW_COMBO_TABLE_ID')
 
 # Airtable Configuration (using modern Personal Access Token)
 AIRTABLE_BASE_ID = config('AIRTABLE_BASE_ID')

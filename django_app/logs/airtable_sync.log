@@ -1973,3 +1973,17 @@ INFO 2025-06-23 14:05:37,339 airtable_sync 3036 19804 [SUCCESS] Synced inventory
 INFO 2025-06-23 14:05:41,318 airtable_sync 3036 19804 [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
 INFO 2025-06-23 15:50:26,543 airtable_sync 15268 12148 [SUCCESS]  Airtable connection validated successfully
 INFO 2025-06-23 15:50:28,761 airtable_sync 23272 5208 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 16:34:23,062 airtable_sync 19812 7092 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 16:34:25,647 airtable_sync 14592 14292 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 16:35:23,003 airtable_sync 7932 22004 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 16:38:27,587 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_0204_MB_MHA12_Brown to Airtable
+INFO 2025-06-23 16:38:30,102 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+INFO 2025-06-23 16:38:32,702 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+INFO 2025-06-23 16:38:35,111 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 16:38:37,883 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_0021_MB_Beatles_Black to Airtable
+INFO 2025-06-23 16:38:40,544 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_0044_MB_LaVienRose_Black to Airtable
+INFO 2025-06-23 16:38:43,107 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+INFO 2025-06-23 16:38:45,441 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+INFO 2025-06-23 16:38:48,132 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
+INFO 2025-06-23 16:38:50,645 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_O0324_OT_Doll_White to Airtable
+INFO 2025-06-23 16:38:53,449 airtable_sync 7932 4168 [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
