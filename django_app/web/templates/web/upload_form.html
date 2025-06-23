@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMS - Sales Data Processor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .upload-section {
+            border: 3px dashed #e0e0e0;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .upload-section:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .upload-section.dragover {
+            border-color: #667eea;
+            background: #f0f4ff;
+            transform: scale(1.02);
+        }
+
+        .upload-icon {
+            font-size: 4rem;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .upload-text {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .upload-subtext {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .process-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .process-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .process-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .results-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .results-title {
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .download-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        .file-info {
+            margin-top: 15px;
+            padding: 10px;
+            background: #e3f2fd;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏪 WMS Sales Processor</h1>
+            <p>Upload your sales data and select marketplace to get outbound orders</p>
+        </div>
+
+        <form id="upload-form" enctype="multipart/form-data">
+            <div class="upload-section" id="upload-area">
+                <div class="upload-icon">📁</div>
+                <div class="upload-text">Drag & drop your sales file here</div>
+                <div class="upload-subtext">or click to browse (CSV, Excel, TSV supported)</div>
+                <input type="file" id="file-input" name="sales_file" accept=".csv,.xlsx,.xls,.tsv">
+            </div>
+
+            <div class="file-info" id="file-info">
+                <strong>Selected file:</strong> <span id="file-name"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="marketplace">Select Marketplace:</label>
+                <select id="marketplace" name="marketplace" required>
+                    <option value="">Choose marketplace...</option>
+                    {% for marketplace in marketplaces %}
+                    <option value="{{ marketplace }}">{{ marketplace }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <button type="submit" class="process-btn" id="process-btn" disabled>
+                Process Sales Data
+            </button>
+        </form>
+
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Processing your data...</p>
+        </div>
+
+        <div class="error-message" id="error-message"></div>
+        <div class="success-message" id="success-message"></div>
+
+        <div class="results-section" id="results-section">
+            <div class="results-header">
+                <div class="results-title">Processing Results</div>
+                <button class="download-btn" id="download-btn">Download CSV</button>
+            </div>
+
+            <div class="stats-grid" id="stats-grid">
+                <!-- Stats will be populated by JavaScript -->
+            </div>
+
+            <div id="unmapped-skus" style="display: none;">
+                <h4>Unmapped SKUs (Review Required):</h4>
+                <div id="unmapped-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let selectedFile = null;
+        let processedData = null;
+
+        // DOM elements
+        const uploadArea = document.getElementById('upload-area');
+        const fileInput = document.getElementById('file-input');
+        const fileInfo = document.getElementById('file-info');
+        const fileName = document.getElementById('file-name');
+        const marketplace = document.getElementById('marketplace');
+        const processBtn = document.getElementById('process-btn');
+        const form = document.getElementById('upload-form');
+        const loading = document.getElementById('loading');
+        const errorMessage = document.getElementById('error-message');
+        const successMessage = document.getElementById('success-message');
+        const resultsSection = document.getElementById('results-section');
+        const statsGrid = document.getElementById('stats-grid');
+        const downloadBtn = document.getElementById('download-btn');
+
+        // File upload handling
+        uploadArea.addEventListener('click', () => fileInput.click());
+        uploadArea.addEventListener('dragover', handleDragOver);
+        uploadArea.addEventListener('dragleave', handleDragLeave);
+        uploadArea.addEventListener('drop', handleDrop);
+        fileInput.addEventListener('change', handleFileSelect);
+        marketplace.addEventListener('change', updateSubmitButton);
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        }
+
+        function handleDragLeave(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                handleFileSelect();
+            }
+        }
+
+        function handleFileSelect() {
+            const file = fileInput.files[0];
+            if (file) {
+                selectedFile = file;
+                fileName.textContent = file.name;
+                fileInfo.style.display = 'block';
+                updateSubmitButton();
+            }
+        }
+
+        function updateSubmitButton() {
+            processBtn.disabled = !(selectedFile && marketplace.value);
+        }
+
+        // Form submission
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            if (!selectedFile || !marketplace.value) {
+                showError('Please select a file and marketplace');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('sales_file', selectedFile);
+            formData.append('marketplace', marketplace.value);
+
+            try {
+                showLoading(true);
+                hideMessages();
+
+                const response = await fetch('{% url "process_sales_data" %}', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    processedData = result.data;
+                    showSuccess(`Successfully processed ${result.data.summary.total_rows_processed} records`);
+                    displayResults(result.data);
+                } else {
+                    showError(result.error || 'Processing failed');
+                }
+
+            } catch (error) {
+                showError('Network error: ' + error.message);
+            } finally {
+                showLoading(false);
+            }
+        });
+
+        // Download functionality
+        downloadBtn.addEventListener('click', () => {
+            if (processedData && processedData.csv_content) {
+                const blob = new Blob([processedData.csv_content], { type: 'text/csv' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = processedData.filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            }
+        });
+
+        // Utility functions
+        function showLoading(show) {
+            loading.style.display = show ? 'block' : 'none';
+            processBtn.disabled = show;
+        }
+
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+        }
+
+        function showSuccess(message) {
+            successMessage.textContent = message;
+            successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+        }
+
+        function hideMessages() {
+            errorMessage.style.display = 'none';
+            successMessage.style.display = 'none';
+        }
+
+        function displayResults(data) {
+            const summary = data.summary;
+            
+            // Create stats cards
+            statsGrid.innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-number">${summary.total_rows_processed}</div>
+                    <div class="stat-label">Records Processed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${summary.unmapped_skus_count}</div>
+                    <div class="stat-label">Unmapped SKUs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${summary.success_rate.toFixed(1)}%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${marketplace.value}</div>
+                    <div class="stat-label">Marketplace</div>
+                </div>
+            `;
+
+            // Show unmapped SKUs if any
+            if (summary.unmapped_skus_count > 0) {
+                const unmappedDiv = document.getElementById('unmapped-skus');
+                const unmappedList = document.getElementById('unmapped-list');
+                
+                unmappedList.innerHTML = summary.unmapped_skus.map(sku => 
+                    `<span style="background: #fff3cd; padding: 2px 6px; margin: 2px; border-radius: 3px; display: inline-block;">${sku}</span>`
+                ).join('');
+                
+                unmappedDiv.style.display = 'block';
+            }
+
+            resultsSection.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

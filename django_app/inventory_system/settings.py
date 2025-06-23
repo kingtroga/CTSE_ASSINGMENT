@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-change-me')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', "b404-102-91-104-212.ngrok-free.app"]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', "b404-102-91-104-212.ngrok-free.app", ]
 
 
 # Application definition
@@ -178,7 +178,7 @@ AIRTABLE_TABLES = {
     'combo_products': 'Combo_Products'
 }
 
-LOGS_DIR = BASE_DIR.parent / 'logs'
+LOGS_DIR = BASE_DIR / 'logs'
 LOGS_DIR.mkdir(exist_ok=True)
 
 

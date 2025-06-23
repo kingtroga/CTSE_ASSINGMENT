@@ -1143,3 +1143,271 @@
 2025-06-22 00:40:33,622 - INFO - INVENTORY | UPDATED | Processed 64 orders
 2025-06-22 00:40:33,623 - INFO - INVENTORY | UPDATED | Inventory updated successfully
 2025-06-22 00:40:33,630 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 64 records
+2025-06-23 07:39:03,111 - INFO - DJANGO | CONNECTED | Django ORM connection established
+2025-06-23 07:39:03,114 - INFO - SYSTEM | DJANGO_MODE | Initializing with Django ORM
+2025-06-23 07:39:04,357 - INFO - DJANGO | LOADED | SKU mappings loaded: 2905 records
+2025-06-23 07:39:06,110 - INFO - DJANGO | LOADED | Combo data loaded: 360 combos
+2025-06-23 07:39:51,431 - INFO - DJANGO | LOADED | Inventory data loaded: 1013 products
+2025-06-23 07:39:51,463 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status', 'marketplace_price', 'product_name', 'created_at', 'updated_at']
+2025-06-23 07:39:51,473 - INFO - COMBO | INITIALIZED | Combo hashtable built with 360 entries
+2025-06-23 07:39:52,353 - INFO - MAPPER | HASHTABLE | Built hashtable with 5225 mappings
+2025-06-23 07:39:52,356 - INFO - SYSTEM | INITIALIZED | All components loaded successfully (Django mode)
+2025-06-23 07:39:52,358 - INFO - MAPPER | STARTED | Processing SKU mappings (marketplace: CSTE_AMAZON)
+2025-06-23 07:39:52,370 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['date', 'fnsku', 'asin', 'msku', 'title', 'event type', 'quantity', 'fulfillment center', 'disposition', 'country', 'date and time']
+2025-06-23 07:39:52,373 - INFO - MAPPER | ERROR | Validation failed: Missing required columns: ['sku']. Available: ['date', 'fnsku', 'asin', 'msku', 'title', 'event type', 'quantity', 'fulfillment center', 'disposition', 'country', 'date and time']
+2025-06-23 07:39:52,376 - INFO - INVENTORY | ERROR | No processed data for inventory update
+2025-06-23 07:39:52,378 - INFO - OUTPUT | ERROR | No processed data available
+2025-06-23 07:39:52,392 - WARNING - Bad Request: /web/
+2025-06-23 07:41:02,382 - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmpcgr5k4uy_cste_fk.csv
+2025-06-23 07:41:02,385 - INFO - Detected format: .csv
+2025-06-23 07:41:02,448 - INFO - Successfully loaded data: 110 rows, 37 columns
+2025-06-23 07:41:02,485 - INFO - Cleaned data: (110, 37) -> (110, 36)
+2025-06-23 07:41:02,506 - INFO - DJANGO | CONNECTED | Django ORM connection established
+2025-06-23 07:41:02,508 - INFO - SYSTEM | DJANGO_MODE | Initializing with Django ORM
+2025-06-23 07:41:02,984 - INFO - DJANGO | LOADED | SKU mappings loaded: 2905 records
+2025-06-23 07:41:04,192 - INFO - DJANGO | LOADED | Combo data loaded: 360 combos
+2025-06-23 07:41:46,323 - INFO - DJANGO | LOADED | Inventory data loaded: 1013 products
+2025-06-23 07:41:46,332 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status', 'marketplace_price', 'product_name', 'created_at', 'updated_at']
+2025-06-23 07:41:46,342 - INFO - COMBO | INITIALIZED | Combo hashtable built with 360 entries
+2025-06-23 07:41:47,118 - INFO - MAPPER | HASHTABLE | Built hashtable with 5225 mappings
+2025-06-23 07:41:47,121 - INFO - SYSTEM | INITIALIZED | All components loaded successfully (Django mode)
+2025-06-23 07:41:47,123 - INFO - MAPPER | STARTED | Processing SKU mappings (marketplace: CSTE_FK)
+2025-06-23 07:41:47,129 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['ordered on', 'shipment id', 'order item id', 'order id', 'hsn code', 'order state', 'order type', 'fsn', 'sku', 'product', 'invoice no.', 'cgst', 'igst', 'sgst', 'invoice date (mm/dd/yy)', 'invoice amount', 'selling price per item', 'shipping and handling charges', 'quantity', 'price inc. fkmp contribution & subsidy', 'buyer name', 'ship to name', 'address line 1', 'address line 2', 'city', 'state', 'pin code', 'dispatch after date', 'dispatch by date', 'tracking id', 'package length (cm)', 'package breadth (cm)', 'package height (cm)', 'package weight (kg)', 'ready to make', 'with attachment']
+2025-06-23 07:41:47,450 - INFO - MAPPER | COMPLETED | Processed 110 records
+2025-06-23 07:42:32,309 - ERROR - Airtable API error: HTTPSConnectionPool(host='api.airtable.com', port=443): Read timed out. (read timeout=None)
+2025-06-23 07:42:32,313 - ERROR - Error finding record by msku=CSTE_0546_ST_Animal_Lucifer_Cat_Black: HTTPSConnectionPool(host='api.airtable.com', port=443): Read timed out. (read timeout=None)
+2025-06-23 07:46:45,356 - INFO - DJANGO | CONNECTED | Django ORM connection established
+2025-06-23 07:46:45,357 - INFO - SYSTEM | DJANGO_MODE | Initializing with Django ORM
+2025-06-23 07:46:46,025 - INFO - DJANGO | LOADED | SKU mappings loaded: 2905 records
+2025-06-23 07:46:47,402 - INFO - DJANGO | LOADED | Combo data loaded: 360 combos
+2025-06-23 07:47:33,428 - INFO - DJANGO | LOADED | Inventory data loaded: 1013 products
+2025-06-23 07:47:33,438 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['sku', 'msku', 'panels', 'status', 'marketplace_price', 'product_name', 'created_at', 'updated_at']
+2025-06-23 07:47:33,442 - INFO - COMBO | INITIALIZED | Combo hashtable built with 360 entries
+2025-06-23 07:47:34,256 - INFO - MAPPER | HASHTABLE | Built hashtable with 5225 mappings
+2025-06-23 07:47:34,259 - INFO - SYSTEM | INITIALIZED | All components loaded successfully (Django mode)
+2025-06-23 07:47:34,262 - INFO - MAPPER | STARTED | Processing SKU mappings (marketplace: CSTE_FK)
+2025-06-23 07:47:34,272 - INFO - VALIDATOR | SUCCESS | Normalized columns: ['ordered on', 'shipment id', 'order item id', 'order id', 'hsn code', 'order state', 'order type', 'fsn', 'sku', 'product', 'invoice no.', 'cgst', 'igst', 'sgst', 'invoice date (mm/dd/yy)', 'invoice amount', 'selling price per item', 'shipping and handling charges', 'quantity', 'price inc. fkmp contribution & subsidy', 'buyer name', 'ship to name', 'address line 1', 'address line 2', 'city', 'state', 'pin code', 'dispatch after date', 'dispatch by date', 'tracking id', 'package length (cm)', 'package breadth (cm)', 'package height (cm)', 'package weight (kg)', 'ready to make', 'with attachment']
+2025-06-23 07:47:34,583 - INFO - MAPPER | COMPLETED | Processed 110 records
+2025-06-23 07:47:43,924 - INFO - [SUCCESS] Synced inventory for CSTE_0546_ST_Animal_Lucifer_Cat_Black to Airtable
+2025-06-23 07:47:43,998 - INFO - DJANGO | STOCK_UPDATED | CSTE_0546_ST_Animal_Lucifer_Cat_Black @ TLCQ: -1 (new: -1)
+2025-06-23 07:47:46,726 - INFO - [SUCCESS] Synced inventory for CSTE_0015_MB_HBD_Black to Airtable
+2025-06-23 07:47:46,758 - INFO - DJANGO | STOCK_UPDATED | CSTE_0015_MB_HBD_Black @ TLCQ: -1 (new: 335)
+2025-06-23 07:47:50,111 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 07:47:50,174 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 68)
+2025-06-23 07:47:52,772 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 07:47:52,838 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 67)
+2025-06-23 07:47:55,625 - INFO - [SUCCESS] Synced inventory for CSTE_0015_MB_HBD_Black to Airtable
+2025-06-23 07:47:55,652 - INFO - DJANGO | STOCK_UPDATED | CSTE_0015_MB_HBD_Black @ TLCQ: -1 (new: 334)
+2025-06-23 07:47:58,397 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:47:58,461 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 38)
+2025-06-23 07:48:01,384 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:48:01,476 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 37)
+2025-06-23 07:48:04,376 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 07:48:04,450 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 66)
+2025-06-23 07:48:07,270 - INFO - [SUCCESS] Synced inventory for CSTE_0470_ST_Minecraft_Sword_Small to Airtable
+2025-06-23 07:48:07,330 - INFO - DJANGO | STOCK_UPDATED | CSTE_0470_ST_Minecraft_Sword_Small @ TLCQ: -1 (new: 66)
+2025-06-23 07:48:09,995 - INFO - [SUCCESS] Synced inventory for CSTE_0470_ST_Minecraft_Sword_Small to Airtable
+2025-06-23 07:48:10,066 - INFO - DJANGO | STOCK_UPDATED | CSTE_0470_ST_Minecraft_Sword_Small @ TLCQ: -1 (new: 65)
+2025-06-23 07:48:12,639 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 07:48:12,656 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 65)
+2025-06-23 07:48:15,279 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 07:48:15,297 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 64)
+2025-06-23 07:48:18,680 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:48:18,756 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 36)
+2025-06-23 07:48:22,804 - INFO - [SUCCESS] Synced inventory for CSTE_0470_ST_Minecraft_Sword_Small to Airtable
+2025-06-23 07:48:22,872 - INFO - DJANGO | STOCK_UPDATED | CSTE_0470_ST_Minecraft_Sword_Small @ TLCQ: -1 (new: 64)
+2025-06-23 07:48:25,538 - INFO - [SUCCESS] Synced inventory for CSTE_0218_SG_ThugLife_Big to Airtable
+2025-06-23 07:48:25,592 - INFO - DJANGO | STOCK_UPDATED | CSTE_0218_SG_ThugLife_Big @ TLCQ: -1 (new: -1)
+2025-06-23 07:48:28,716 - INFO - [SUCCESS] Synced inventory for CSTE_0306_MB_Sabrina_8Notes_Brown to Airtable
+2025-06-23 07:48:28,771 - INFO - DJANGO | STOCK_UPDATED | CSTE_0306_MB_Sabrina_8Notes_Brown @ TLCQ: -1 (new: 14)
+2025-06-23 07:48:31,869 - INFO - [SUCCESS] Synced inventory for CSTE_0014_MB_HBD_Brown to Airtable
+2025-06-23 07:48:31,924 - INFO - DJANGO | STOCK_UPDATED | CSTE_0014_MB_HBD_Brown @ TLCQ: -1 (new: 379)
+2025-06-23 07:48:35,066 - INFO - [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
+2025-06-23 07:48:35,164 - INFO - DJANGO | STOCK_UPDATED | CSTE_0240_SG_Wings_Red @ TLCQ: -1 (new: -2)
+2025-06-23 07:48:38,128 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:48:38,182 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 35)
+2025-06-23 07:48:40,805 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:48:40,863 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 34)
+2025-06-23 07:48:43,983 - INFO - [SUCCESS] Synced inventory for CSTE_0491_ST_Fruit_Blox_Spirit to Airtable
+2025-06-23 07:48:44,036 - INFO - DJANGO | STOCK_UPDATED | CSTE_0491_ST_Fruit_Blox_Spirit @ TLCQ: -1 (new: 0)
+2025-06-23 07:48:46,834 - INFO - [SUCCESS] Synced inventory for CSTE_0533_ST_Animal_Breathing_Koala_Grey to Airtable
+2025-06-23 07:48:46,884 - INFO - DJANGO | STOCK_UPDATED | CSTE_0533_ST_Animal_Breathing_Koala_Grey @ TLCQ: -1 (new: 1)
+2025-06-23 07:48:50,021 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 07:48:50,041 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: -1 (new: 3)
+2025-06-23 07:48:53,527 - INFO - [SUCCESS] Synced inventory for CSTE_0491_ST_Fruit_Blox_Spirit to Airtable
+2025-06-23 07:48:53,566 - INFO - DJANGO | STOCK_UPDATED | CSTE_0491_ST_Fruit_Blox_Spirit @ TLCQ: -1 (new: -1)
+2025-06-23 07:48:56,312 - INFO - [SUCCESS] Synced inventory for CSTE_0488_ST_Animal_Breathing_Stitch_Blue to Airtable
+2025-06-23 07:48:56,378 - INFO - DJANGO | STOCK_UPDATED | CSTE_0488_ST_Animal_Breathing_Stitch_Blue @ TLCQ: -1 (new: 81)
+2025-06-23 07:48:59,064 - INFO - [SUCCESS] Synced inventory for CSTE_0526_ST_Animal_Breathing_Otter_Pink to Airtable
+2025-06-23 07:48:59,119 - INFO - DJANGO | STOCK_UPDATED | CSTE_0526_ST_Animal_Breathing_Otter_Pink @ TLCQ: -1 (new: 54)
+2025-06-23 07:49:02,118 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 07:49:02,146 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: -1 (new: -3)
+2025-06-23 07:49:05,047 - INFO - [SUCCESS] Synced inventory for CSTE_0486_ST_Animal_Breathing_Otter_Brown to Airtable
+2025-06-23 07:49:05,065 - INFO - DJANGO | STOCK_UPDATED | CSTE_0486_ST_Animal_Breathing_Otter_Brown @ TLCQ: -1 (new: -1)
+2025-06-23 07:49:07,685 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:49:07,748 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 33)
+2025-06-23 07:49:10,707 - INFO - [SUCCESS] Synced inventory for CSTE_0160_SG_FireGlass_MercuryGreen to Airtable
+2025-06-23 07:49:10,761 - INFO - DJANGO | STOCK_UPDATED | CSTE_0160_SG_FireGlass_MercuryGreen @ TLCQ: -1 (new: 0)
+2025-06-23 07:49:13,447 - INFO - [SUCCESS] Synced inventory for CSTE_0014_MB_HBD_Brown to Airtable
+2025-06-23 07:49:13,548 - INFO - DJANGO | STOCK_UPDATED | CSTE_0014_MB_HBD_Brown @ TLCQ: -1 (new: 378)
+2025-06-23 07:49:16,419 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:49:16,443 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 32)
+2025-06-23 07:49:19,296 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 07:49:19,338 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 63)
+2025-06-23 07:49:21,880 - INFO - [SUCCESS] Synced inventory for CSTE_0149_SG_ButterFly_Pink to Airtable
+2025-06-23 07:49:21,933 - INFO - DJANGO | STOCK_UPDATED | CSTE_0149_SG_ButterFly_Pink @ TLCQ: -1 (new: 0)
+2025-06-23 07:49:24,595 - INFO - [SUCCESS] Synced inventory for CSTE_0014_MB_HBD_Brown to Airtable
+2025-06-23 07:49:24,647 - INFO - DJANGO | STOCK_UPDATED | CSTE_0014_MB_HBD_Brown @ TLCQ: -1 (new: 377)
+2025-06-23 07:49:27,894 - INFO - [SUCCESS] Synced inventory for CSTE_0217_SG_ThugLife_Thin to Airtable
+2025-06-23 07:49:27,945 - INFO - DJANGO | STOCK_UPDATED | CSTE_0217_SG_ThugLife_Thin @ TLCQ: -1 (new: 607)
+2025-06-23 07:49:31,436 - INFO - [SUCCESS] Synced inventory for CSTE_0015_MB_HBD_Black to Airtable
+2025-06-23 07:49:31,514 - INFO - DJANGO | STOCK_UPDATED | CSTE_0015_MB_HBD_Black @ TLCQ: -1 (new: 333)
+2025-06-23 07:49:34,054 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 07:49:34,116 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 62)
+2025-06-23 07:49:36,621 - INFO - [SUCCESS] Synced inventory for CSTE_0015_MB_HBD_Black to Airtable
+2025-06-23 07:49:36,668 - INFO - DJANGO | STOCK_UPDATED | CSTE_0015_MB_HBD_Black @ TLCQ: -1 (new: 332)
+2025-06-23 07:49:39,485 - INFO - [SUCCESS] Synced inventory for CSTE_0470_ST_Minecraft_Sword_Small to Airtable
+2025-06-23 07:49:39,535 - INFO - DJANGO | STOCK_UPDATED | CSTE_0470_ST_Minecraft_Sword_Small @ TLCQ: -1 (new: 63)
+2025-06-23 07:49:44,096 - INFO - [SUCCESS] Synced inventory for CSTE_0292_OT_Dumbledore_wand to Airtable
+2025-06-23 07:49:44,155 - INFO - DJANGO | STOCK_UPDATED | CSTE_0292_OT_Dumbledore_wand @ TLCQ: -1 (new: 1)
+2025-06-23 07:49:46,652 - INFO - [SUCCESS] Synced inventory for CSTE_0491_ST_Fruit_Blox_Spirit to Airtable
+2025-06-23 07:49:46,740 - INFO - DJANGO | STOCK_UPDATED | CSTE_0491_ST_Fruit_Blox_Spirit @ TLCQ: -1 (new: -2)
+2025-06-23 07:49:49,260 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 07:49:49,342 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: -1 (new: -4)
+2025-06-23 07:49:51,635 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 07:49:51,676 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: -1 (new: 2)
+2025-06-23 07:49:54,182 - INFO - [SUCCESS] Synced inventory for CSTE_0478_ST_Minecraft_Cow_Brown to Airtable
+2025-06-23 07:49:54,261 - INFO - DJANGO | STOCK_UPDATED | CSTE_0478_ST_Minecraft_Cow_Brown @ TLCQ: -1 (new: 1)
+2025-06-23 07:49:56,965 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 07:49:57,011 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: -1 (new: 1)
+2025-06-23 07:49:59,756 - INFO - [SUCCESS] Synced inventory for CSTE_0045_MB_LavienRose_Brown to Airtable
+2025-06-23 07:49:59,875 - INFO - DJANGO | STOCK_UPDATED | CSTE_0045_MB_LavienRose_Brown @ TLCQ: -1 (new: 52)
+2025-06-23 07:50:02,325 - INFO - [SUCCESS] Synced inventory for CSTE_0160_SG_FireGlass_MercuryGreen to Airtable
+2025-06-23 07:50:02,348 - INFO - DJANGO | STOCK_UPDATED | CSTE_0160_SG_FireGlass_MercuryGreen @ TLCQ: -1 (new: -1)
+2025-06-23 07:50:05,122 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:50:05,179 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 31)
+2025-06-23 07:50:07,889 - INFO - [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+2025-06-23 07:50:07,985 - INFO - DJANGO | STOCK_UPDATED | CSTE_0017_MB_HP_Brown @ TLCQ: -1 (new: -23)
+2025-06-23 07:50:11,124 - INFO - [SUCCESS] Synced inventory for CSTE_0292_OT_Dumbledore_wand to Airtable
+2025-06-23 07:50:11,183 - INFO - DJANGO | STOCK_UPDATED | CSTE_0292_OT_Dumbledore_wand @ TLCQ: -1 (new: 0)
+2025-06-23 07:50:16,377 - INFO - [SUCCESS] Synced inventory for CSTE_0487_ST_Animal_Breathing_Otter_Blue to Airtable
+2025-06-23 07:50:16,424 - INFO - DJANGO | STOCK_UPDATED | CSTE_0487_ST_Animal_Breathing_Otter_Blue @ TLCQ: -1 (new: 74)
+2025-06-23 07:50:20,147 - INFO - [SUCCESS] Synced inventory for CSTE_0486_ST_Animal_Breathing_Otter_Brown to Airtable
+2025-06-23 07:50:20,200 - INFO - DJANGO | STOCK_UPDATED | CSTE_0486_ST_Animal_Breathing_Otter_Brown @ TLCQ: -1 (new: -2)
+2025-06-23 07:50:23,592 - INFO - [SUCCESS] Synced inventory for CSTE_0015_MB_HBD_Black to Airtable
+2025-06-23 07:50:23,659 - INFO - DJANGO | STOCK_UPDATED | CSTE_0015_MB_HBD_Black @ TLCQ: -1 (new: 331)
+2025-06-23 07:50:27,214 - INFO - [SUCCESS] Synced inventory for CSTE_0084_MB_Spirated_Black to Airtable
+2025-06-23 07:50:27,289 - INFO - DJANGO | STOCK_UPDATED | CSTE_0084_MB_Spirated_Black @ TLCQ: -1 (new: -2)
+2025-06-23 07:50:30,582 - INFO - [SUCCESS] Synced inventory for CSTE_0491_ST_Fruit_Blox_Spirit to Airtable
+2025-06-23 07:50:30,600 - INFO - DJANGO | STOCK_UPDATED | CSTE_0491_ST_Fruit_Blox_Spirit @ TLCQ: -1 (new: -3)
+2025-06-23 07:50:33,659 - INFO - [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+2025-06-23 07:50:33,704 - INFO - DJANGO | STOCK_UPDATED | CSTE_0017_MB_HP_Brown @ TLCQ: -1 (new: -24)
+2025-06-23 07:50:37,417 - INFO - [SUCCESS] Synced inventory for CSTE_0036_MB_HBD_White to Airtable
+2025-06-23 07:50:37,469 - INFO - DJANGO | STOCK_UPDATED | CSTE_0036_MB_HBD_White @ TLCQ: -1 (new: 44)
+2025-06-23 07:50:41,867 - INFO - [SUCCESS] Synced inventory for CSTE_0014_MB_HBD_Brown to Airtable
+2025-06-23 07:50:41,989 - INFO - DJANGO | STOCK_UPDATED | CSTE_0014_MB_HBD_Brown @ TLCQ: -1 (new: 376)
+2025-06-23 07:50:47,987 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:50:48,037 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 30)
+2025-06-23 07:50:52,817 - INFO - [SUCCESS] Synced inventory for CSTE_0015_MB_HBD_Black to Airtable
+2025-06-23 07:50:52,877 - INFO - DJANGO | STOCK_UPDATED | CSTE_0015_MB_HBD_Black @ TLCQ: -1 (new: 330)
+2025-06-23 07:50:57,401 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 07:50:57,492 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 61)
+2025-06-23 07:51:04,485 - INFO - [SUCCESS] Synced inventory for CSTE_0482_ST_Animal_Kitty_Kuromi_Black to Airtable
+2025-06-23 07:51:04,562 - INFO - DJANGO | STOCK_UPDATED | CSTE_0482_ST_Animal_Kitty_Kuromi_Black @ TLCQ: -1 (new: 4)
+2025-06-23 07:51:07,477 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:51:07,677 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 29)
+2025-06-23 07:51:12,836 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:51:13,100 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 28)
+2025-06-23 07:51:17,946 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 07:51:18,054 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: -1 (new: 0)
+2025-06-23 07:51:23,029 - INFO - [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+2025-06-23 07:51:23,047 - INFO - DJANGO | STOCK_UPDATED | CSTE_0490_ST_Fruit_Blox_Shadow @ TLCQ: -1 (new: -5)
+2025-06-23 07:51:29,479 - INFO - [SUCCESS] Synced inventory for CSTE_0014_MB_HBD_Brown to Airtable
+2025-06-23 07:51:29,510 - INFO - DJANGO | STOCK_UPDATED | CSTE_0014_MB_HBD_Brown @ TLCQ: -1 (new: 375)
+2025-06-23 07:51:34,524 - INFO - [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+2025-06-23 07:51:34,577 - INFO - DJANGO | STOCK_UPDATED | CSTE_0017_MB_HP_Brown @ TLCQ: -1 (new: -25)
+2025-06-23 07:51:38,589 - INFO - [SUCCESS] Synced inventory for CSTE_0014_MB_HBD_Brown to Airtable
+2025-06-23 07:51:38,620 - INFO - DJANGO | STOCK_UPDATED | CSTE_0014_MB_HBD_Brown @ TLCQ: -1 (new: 374)
+2025-06-23 07:51:41,245 - INFO - [SUCCESS] Synced inventory for CSTE_0305_MB_Crystle_17Notes_Transparent to Airtable
+2025-06-23 07:51:41,269 - INFO - DJANGO | STOCK_UPDATED | CSTE_0305_MB_Crystle_17Notes_Transparent @ TLCQ: -1 (new: 1)
+2025-06-23 07:51:45,739 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:51:45,784 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 27)
+2025-06-23 07:51:48,625 - INFO - [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
+2025-06-23 07:51:48,716 - INFO - DJANGO | STOCK_UPDATED | CSTE_0240_SG_Wings_Red @ TLCQ: -1 (new: -3)
+2025-06-23 07:51:53,856 - INFO - [SUCCESS] Synced inventory for CSTE_0486_ST_Animal_Breathing_Otter_Brown to Airtable
+2025-06-23 07:51:53,924 - INFO - DJANGO | STOCK_UPDATED | CSTE_0486_ST_Animal_Breathing_Otter_Brown @ TLCQ: -1 (new: -3)
+2025-06-23 07:51:58,974 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 07:51:59,047 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 60)
+2025-06-23 07:52:08,404 - INFO - [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+2025-06-23 07:52:08,448 - INFO - DJANGO | STOCK_UPDATED | CSTE_0020_MB_HP_Black @ TLCQ: -1 (new: 59)
+2025-06-23 07:52:12,243 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:52:12,348 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 26)
+2025-06-23 07:52:16,008 - INFO - [SUCCESS] Synced inventory for CSTE_0532_ST_Animal_Breathing_Rabbit_Grey to Airtable
+2025-06-23 07:52:16,054 - INFO - DJANGO | STOCK_UPDATED | CSTE_0532_ST_Animal_Breathing_Rabbit_Grey @ TLCQ: -1 (new: 5)
+2025-06-23 07:52:19,238 - INFO - [SUCCESS] Synced inventory for CSTE_0487_ST_Animal_Breathing_Otter_Blue to Airtable
+2025-06-23 07:52:19,280 - INFO - DJANGO | STOCK_UPDATED | CSTE_0487_ST_Animal_Breathing_Otter_Blue @ TLCQ: -1 (new: 73)
+2025-06-23 07:52:22,901 - INFO - [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+2025-06-23 07:52:22,966 - INFO - DJANGO | STOCK_UPDATED | CSTE_0017_MB_HP_Brown @ TLCQ: -1 (new: -26)
+2025-06-23 07:52:26,145 - INFO - [SUCCESS] Synced inventory for CSTE_O0031_OT_StandingElephant_Grey to Airtable
+2025-06-23 07:52:26,167 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0031_OT_StandingElephant_Grey @ TLCQ: -1 (new: 7)
+2025-06-23 07:52:31,544 - INFO - [SUCCESS] Synced inventory for CSTE_0419_ST_MineCraft_Creeper to Airtable
+2025-06-23 07:52:31,616 - INFO - DJANGO | STOCK_UPDATED | CSTE_0419_ST_MineCraft_Creeper @ TLCQ: -1 (new: 23)
+2025-06-23 07:52:34,700 - INFO - [SUCCESS] Synced inventory for CSTE_0330_Wands_Harrypotter_Light to Airtable
+2025-06-23 07:52:34,743 - INFO - DJANGO | STOCK_UPDATED | CSTE_0330_Wands_Harrypotter_Light @ TLCQ: -1 (new: 77)
+2025-06-23 07:52:39,191 - INFO - [SUCCESS] Synced inventory for CSTE_0015_MB_HBD_Black to Airtable
+2025-06-23 07:52:39,235 - INFO - DJANGO | STOCK_UPDATED | CSTE_0015_MB_HBD_Black @ TLCQ: -1 (new: 329)
+2025-06-23 07:52:43,727 - INFO - [SUCCESS] Synced inventory for CSTE_0487_ST_Animal_Breathing_Otter_Blue to Airtable
+2025-06-23 07:52:43,764 - INFO - DJANGO | STOCK_UPDATED | CSTE_0487_ST_Animal_Breathing_Otter_Blue @ TLCQ: -1 (new: 72)
+2025-06-23 07:52:51,851 - INFO - [SUCCESS] Synced inventory for CSTE_0191_MB_MHA2_Brown to Airtable
+2025-06-23 07:52:51,882 - INFO - DJANGO | STOCK_UPDATED | CSTE_0191_MB_MHA2_Brown @ TLCQ: -1 (new: -1)
+2025-06-23 07:52:54,324 - INFO - [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+2025-06-23 07:52:54,388 - INFO - DJANGO | STOCK_UPDATED | CSTE_0017_MB_HP_Brown @ TLCQ: -1 (new: -27)
+2025-06-23 07:53:04,822 - INFO - [SUCCESS] Synced inventory for CSTE_0512_ST_Animal_Cow_Plush to Airtable
+2025-06-23 07:53:04,904 - INFO - DJANGO | STOCK_UPDATED | CSTE_0512_ST_Animal_Cow_Plush @ TLCQ: -1 (new: 4)
+2025-06-23 07:53:07,901 - INFO - [SUCCESS] Synced inventory for CSTE_0333_Wands_Dumbledore_Light to Airtable
+2025-06-23 07:53:07,935 - INFO - DJANGO | STOCK_UPDATED | CSTE_0333_Wands_Dumbledore_Light @ TLCQ: -1 (new: 80)
+2025-06-23 07:53:10,665 - INFO - [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
+2025-06-23 07:53:10,706 - INFO - DJANGO | STOCK_UPDATED | CSTE_0240_SG_Wings_Red @ TLCQ: -1 (new: -4)
+2025-06-23 07:53:17,115 - INFO - [SUCCESS] Synced inventory for CSTE_0014_MB_HBD_Brown to Airtable
+2025-06-23 07:53:17,154 - INFO - DJANGO | STOCK_UPDATED | CSTE_0014_MB_HBD_Brown @ TLCQ: -1 (new: 373)
+2025-06-23 07:53:21,527 - INFO - [SUCCESS] Synced inventory for CSTE_O0031_OT_StandingElephant_Grey to Airtable
+2025-06-23 07:53:21,631 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0031_OT_StandingElephant_Grey @ TLCQ: -1 (new: 6)
+2025-06-23 07:53:25,532 - INFO - [SUCCESS] Synced inventory for CSTE_O0031_OT_StandingElephant_Grey to Airtable
+2025-06-23 07:53:25,616 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0031_OT_StandingElephant_Grey @ TLCQ: -1 (new: 5)
+2025-06-23 07:53:30,327 - INFO - [SUCCESS] Synced inventory for CSTE_O0031_OT_StandingElephant_Grey to Airtable
+2025-06-23 07:53:30,365 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0031_OT_StandingElephant_Grey @ TLCQ: -1 (new: 4)
+2025-06-23 07:53:34,836 - INFO - [SUCCESS] Synced inventory for CSTE_0014_MB_HBD_Brown to Airtable
+2025-06-23 07:53:34,877 - INFO - DJANGO | STOCK_UPDATED | CSTE_0014_MB_HBD_Brown @ TLCQ: -1 (new: 372)
+2025-06-23 07:53:37,491 - INFO - [SUCCESS] Synced inventory for CSTE_0292_OT_Dumbledore_wand to Airtable
+2025-06-23 07:53:37,538 - INFO - DJANGO | STOCK_UPDATED | CSTE_0292_OT_Dumbledore_wand @ TLCQ: -1 (new: -1)
+2025-06-23 07:53:40,402 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:53:40,605 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 25)
+2025-06-23 07:53:43,533 - INFO - [SUCCESS] Synced inventory for CSTE_0036_MB_HBD_White to Airtable
+2025-06-23 07:53:43,590 - INFO - DJANGO | STOCK_UPDATED | CSTE_0036_MB_HBD_White @ TLCQ: -1 (new: 43)
+2025-06-23 07:53:46,578 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:53:46,603 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 24)
+2025-06-23 07:53:50,009 - INFO - [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+2025-06-23 07:53:50,075 - INFO - DJANGO | STOCK_UPDATED | CSTE_0060_MB_YouAreMySunshine_Brown @ TLCQ: -1 (new: 23)
+2025-06-23 07:53:53,424 - INFO - [SUCCESS] Synced inventory for CSTE_O0055_OT_PrincessDigitalWatch_Blue to Airtable
+2025-06-23 07:53:53,473 - INFO - DJANGO | STOCK_UPDATED | CSTE_O0055_OT_PrincessDigitalWatch_Blue @ TLCQ: -1 (new: -1)
+2025-06-23 07:53:57,576 - INFO - [SUCCESS] Synced inventory for CSTE_0543_ST_Animal_Breathing_Strawberry_Rabbit to Airtable
+2025-06-23 07:53:57,593 - INFO - DJANGO | STOCK_UPDATED | CSTE_0543_ST_Animal_Breathing_Strawberry_Rabbit @ TLCQ: -1 (new: -2)
+2025-06-23 07:54:01,663 - INFO - [SUCCESS] Synced inventory for CSTE_0476_ST_Minecraft_Zombie_Black to Airtable
+2025-06-23 07:54:01,736 - INFO - DJANGO | STOCK_UPDATED | CSTE_0476_ST_Minecraft_Zombie_Black @ TLCQ: -1 (new: 15)
+2025-06-23 07:54:07,898 - INFO - [SUCCESS] Synced inventory for CSTE_0488_ST_Animal_Breathing_Stitch_Blue to Airtable
+2025-06-23 07:54:07,946 - INFO - DJANGO | STOCK_UPDATED | CSTE_0488_ST_Animal_Breathing_Stitch_Blue @ TLCQ: -1 (new: 80)
+2025-06-23 07:54:11,925 - INFO - [SUCCESS] Synced inventory for CSTE_0502_ST_Minecraft_Pickaxe_Foam to Airtable
+2025-06-23 07:54:11,946 - INFO - DJANGO | STOCK_UPDATED | CSTE_0502_ST_Minecraft_Pickaxe_Foam @ TLCQ: -1 (new: -5)
+2025-06-23 07:54:16,004 - INFO - [SUCCESS] Synced inventory for CSTE_0489_ST_Fruit_Blox_Light to Airtable
+2025-06-23 07:54:16,032 - INFO - DJANGO | STOCK_UPDATED | CSTE_0489_ST_Fruit_Blox_Light @ TLCQ: -1 (new: -1)
+2025-06-23 07:54:19,026 - INFO - [SUCCESS] Synced inventory for CSTE_0491_ST_Fruit_Blox_Spirit to Airtable
+2025-06-23 07:54:19,070 - INFO - DJANGO | STOCK_UPDATED | CSTE_0491_ST_Fruit_Blox_Spirit @ TLCQ: -1 (new: -4)
+2025-06-23 07:54:28,086 - INFO - [SUCCESS] Synced inventory for CSTE_0486_ST_Animal_Breathing_Otter_Brown to Airtable
+2025-06-23 07:54:28,116 - INFO - DJANGO | STOCK_UPDATED | CSTE_0486_ST_Animal_Breathing_Otter_Brown @ TLCQ: -1 (new: -4)
+2025-06-23 07:54:34,451 - INFO - [SUCCESS] Synced inventory for CSTE_0486_ST_Animal_Breathing_Otter_Brown to Airtable
+2025-06-23 07:54:34,531 - INFO - DJANGO | STOCK_UPDATED | CSTE_0486_ST_Animal_Breathing_Otter_Brown @ TLCQ: -1 (new: -5)
+2025-06-23 07:54:37,601 - INFO - [SUCCESS] Synced inventory for CSTE_0292_OT_Dumbledore_wand to Airtable
+2025-06-23 07:54:37,643 - INFO - DJANGO | STOCK_UPDATED | CSTE_0292_OT_Dumbledore_wand @ TLCQ: -1 (new: -2)
+2025-06-23 07:54:37,645 - INFO - INVENTORY | UPDATED | Inventory updated successfully
+2025-06-23 07:54:37,690 - INFO - OUTPUT | SUCCESS | Outbound data formatted: 110 records
+2025-06-23 08:12:58,536 - INFO - C:\Users\dell\Documents\desktop\real projects\CTSE_ASSINGMENT\django_app\sku_mapper\core_code\mapper.py changed, reloading.
