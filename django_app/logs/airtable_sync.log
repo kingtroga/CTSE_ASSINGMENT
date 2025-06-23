@@ -1738,3 +1738,6 @@ INFO 2025-06-23 10:13:35,668 airtable_sync 27004 20004 [SUCCESS] Synced inventor
 INFO 2025-06-23 10:13:37,758 airtable_sync 27004 20004 [SUCCESS] Synced inventory for CSTE_0213_SG_ButterFly_Black to Airtable
 INFO 2025-06-23 10:13:40,043 airtable_sync 27004 20004 [SUCCESS] Synced inventory for CSTE_0322_ST_Axolotl_Blue to Airtable
 INFO 2025-06-23 10:13:49,119 airtable_sync 22540 10880 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 10:19:35,756 airtable_sync 9220 11704 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 10:19:59,744 airtable_sync 20340 9480 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 10:20:54,686 airtable_sync 19436 24592 [SUCCESS]  Airtable connection validated successfully

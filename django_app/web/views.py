@@ -268,8 +268,23 @@ def process_uploaded_file_immediate(uploaded_file, marketplace, session_id):
             })
 
             # Step 1: Process file using FlexibleInputProcessor
-            processor = FlexibleInputProcessor(verbose=True, auto_install=False)
-            report_data = processor.process_file(temp_file_path)
+            processor = FlexibleInputProcessor(verbose=True, auto_install=True)
+            try:
+                report_data = processor.process_file(temp_file_path)
+            except Exception as e:
+                if "You must specify which sheet" in str(e):
+                    log_queue.put({
+                        'session_id': session_id,
+                        'source': 'system',
+                        'timestamp': time.strftime('%H:%M:%S'),
+                        'message': 'Error: You excel file has more than one sheet. Please save it as a single sheet and retry.',
+                        'level': 'ERROR',
+                        'component': 'FILE_PROCESSOR'
+                    })
+                    return {
+                        'success': False,
+                        'error': 'You excel file has more than one sheet. Please save it as a single sheet and retry.',
+                    }
             
             if report_data is None or report_data.empty:
                 return {
