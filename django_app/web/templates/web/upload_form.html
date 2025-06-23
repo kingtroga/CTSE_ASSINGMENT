@@ -251,6 +251,7 @@
             border-radius: 5px;
             margin-bottom: 15px;
             display: none;
+            align-items: center;
         }
 
         .sync-indicator {
@@ -266,7 +267,7 @@
             background: #ffc107;
         }
 
-        .sync-indicator.complete {
+        .sync-indicator.completed {
             background: #28a745;
             animation: none;
         }
@@ -275,6 +276,95 @@
             0% { opacity: 1; }
             50% { opacity: 0.5; }
             100% { opacity: 1; }
+        }
+
+        .log-viewer {
+            background: #1e1e1e;
+            border-radius: 10px;
+            margin-top: 20px;
+            max-height: 400px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .log-header {
+            background: #2d2d2d;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .log-header h4 {
+            color: #fff;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .toggle-logs-btn {
+            background: #444;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .toggle-logs-btn:hover {
+            background: #555;
+        }
+
+        .log-content {
+            height: 350px;
+            overflow-y: auto;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .log-entry {
+            margin-bottom: 3px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .log-entry.info {
+            color: #87ceeb;
+        }
+
+        .log-entry.success {
+            color: #90ee90;
+            background: rgba(144, 238, 144, 0.1);
+        }
+
+        .log-entry.error {
+            color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.1);
+        }
+
+        .log-entry.warning {
+            color: #ffd700;
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .log-timestamp {
+            color: #888;
+            font-size: 0.7rem;
+        }
+
+        .log-component {
+            color: #ff79c6;
+            font-weight: bold;
+        }
+
+        .log-source {
+            color: #8be9fd;
+            font-style: italic;
         }
 
         #file-input {
@@ -338,6 +428,16 @@
             <span id="sync-text">Updating inventory in background... Please keep this page open.</span>
         </div>
 
+        <div class="log-viewer" id="log-viewer" style="display: none;">
+            <div class="log-header">
+                <h4>📊 Processing Logs</h4>
+                <button class="toggle-logs-btn" id="toggle-logs-btn">Hide Logs</button>
+            </div>
+            <div class="log-content" id="log-content">
+                <!-- Real-time logs will appear here -->
+            </div>
+        </div>
+
         <div class="results-section" id="results-section">
             <div class="results-header">
                 <div class="results-title">Processing Results</div>
@@ -360,6 +460,8 @@
         let selectedFile = null;
         let processedData = null;
         let backgroundSyncActive = false;
+        let eventSource = null;
+        let currentSessionId = null;
 
         // DOM elements
         const uploadArea = document.getElementById('upload-area');
@@ -379,6 +481,9 @@
         const resultsSection = document.getElementById('results-section');
         const statsGrid = document.getElementById('stats-grid');
         const downloadBtn = document.getElementById('download-btn');
+        const logViewer = document.getElementById('log-viewer');
+        const logContent = document.getElementById('log-content');
+        const toggleLogsBtn = document.getElementById('toggle-logs-btn');
 
         // File upload handling
         uploadArea.addEventListener('click', () => fileInput.click());
@@ -387,6 +492,7 @@
         uploadArea.addEventListener('drop', handleDrop);
         fileInput.addEventListener('change', handleFileSelect);
         marketplace.addEventListener('change', updateSubmitButton);
+        toggleLogsBtn.addEventListener('click', toggleLogViewer);
 
         function handleDragOver(e) {
             e.preventDefault();
@@ -439,8 +545,20 @@
             try {
                 showLoading(true);
                 hideMessages();
+                
+                // Show log viewer immediately
+                logViewer.style.display = 'block';
+                
+                // Add initial log entry
+                addLogEntry({
+                    timestamp: new Date().toLocaleTimeString(),
+                    source: 'system',
+                    component: 'SYSTEM',
+                    level: 'info',
+                    message: 'Uploading file and starting processing...'
+                });
 
-                const response = await fetch('{% url "process_sales_data" %}', {
+                const response = await fetch('{% url "web:process_sales_data" %}', {
                     method: 'POST',
                     body: formData
                 });
@@ -449,6 +567,10 @@
 
                 if (result.success) {
                     processedData = result.data;
+                    currentSessionId = result.session_id;
+                    
+                    // Start real-time log streaming
+                    startLogStreaming(currentSessionId);
                     
                     // Show success message
                     showSuccess(result.message);
@@ -468,34 +590,131 @@
 
             } catch (error) {
                 showError('Network error: ' + error.message);
+                addLogEntry({
+                    timestamp: new Date().toLocaleTimeString(),
+                    source: 'system',
+                    component: 'SYSTEM',
+                    level: 'error',
+                    message: 'Network error: ' + error.message
+                });
             } finally {
                 showLoading(false);
             }
         });
 
         // Background sync indicator
-        function startBackgroundSyncIndicator() {
-            backgroundSyncActive = true;
-            syncStatus.style.display = 'block';
+        function startLogStreaming(sessionId) {
+            if (eventSource) {
+                eventSource.close();
+            }
             
-            // Simulate background completion after 10-30 seconds
-            const completionTime = 10000 + Math.random() * 20000; // 10-30 seconds
+            // Show log viewer
+            logViewer.style.display = 'block';
             
-            setTimeout(() => {
-                completeBackgroundSync();
-            }, completionTime);
+            // Initialize EventSource for Server-Sent Events
+            eventSource = new EventSource(`{% url 'web:stream_logs' '0' %}`.replace('0', sessionId));
+            
+            eventSource.onmessage = function(event) {
+                try {
+                    const logData = JSON.parse(event.data);
+                    
+                    if (logData.type === 'heartbeat') {
+                        return; // Ignore heartbeat messages
+                    }
+                    
+                    addLogEntry(logData);
+                    
+                } catch (error) {
+                    console.error('Error parsing log data:', error);
+                }
+            };
+            
+            eventSource.onerror = function(event) {
+                console.error('EventSource error:', event);
+                // Attempt to reconnect after 3 seconds
+                setTimeout(() => {
+                    if (backgroundSyncActive) {
+                        startLogStreaming(sessionId);
+                    }
+                }, 3000);
+            };
         }
 
-        function completeBackgroundSync() {
-            backgroundSyncActive = false;
-            syncIndicator.classList.remove('syncing');
-            syncIndicator.classList.add('complete');
-            syncText.textContent = 'Inventory update completed! You can now safely close this page.';
+        function addLogEntry(logData) {
+            const logEntry = document.createElement('div');
+            logEntry.className = `log-entry ${logData.level.toLowerCase()}`;
             
-            // Hide after 5 seconds
+            let componentText = '';
+            if (logData.component) {
+                componentText = `[${logData.component}] `;
+            }
+            
+            let sourceText = '';
+            if (logData.source && logData.source !== 'system') {
+                sourceText = `(${logData.source}) `;
+            }
+            
+            logEntry.innerHTML = `
+                <span class="log-timestamp">${logData.timestamp}</span> 
+                <span class="log-source">${sourceText}</span>
+                <span class="log-component">${componentText}</span>
+                ${logData.message}
+            `;
+            
+            logContent.appendChild(logEntry);
+            
+            // Auto-scroll to bottom
+            logContent.scrollTop = logContent.scrollHeight;
+            
+            // Check for completion messages
+            if (logData.message.includes('Background inventory sync completed')) {
+                stopBackgroundSyncIndicator();
+            }
+            
+            if (logData.message.includes('Background sync failed')) {
+                stopBackgroundSyncIndicator();
+                showError('Background inventory sync failed. Please check logs.');
+            }
+            
+            // Limit log entries to prevent memory issues
+            const maxEntries = 200;
+            if (logContent.children.length > maxEntries) {
+                logContent.removeChild(logContent.firstChild);
+            }
+        }
+
+        function toggleLogViewer() {
+            const isVisible = logViewer.style.display !== 'none';
+            if (isVisible) {
+                logViewer.style.display = 'none';
+                toggleLogsBtn.textContent = 'Show Logs';
+            } else {
+                logViewer.style.display = 'block';
+                toggleLogsBtn.textContent = 'Hide Logs';
+            }
+        }
+        function startBackgroundSyncIndicator() {
+            backgroundSyncActive = true;
+            syncStatus.style.display = 'flex';
+            syncIndicator.className = 'sync-indicator syncing';
+            syncText.textContent = 'Updating inventory in background... Please keep this page open.';
+        }
+
+        function stopBackgroundSyncIndicator() {
+            backgroundSyncActive = false;
+            syncIndicator.className = 'sync-indicator completed';
+            syncText.textContent = 'Background inventory sync completed!';
+            
+            // Close EventSource
+            if (eventSource) {
+                eventSource.close();
+                eventSource = null;
+            }
+            
+            // Hide sync status after 3 seconds
             setTimeout(() => {
                 syncStatus.style.display = 'none';
-            }, 5000);
+            }, 3000);
         }
 
         // Warn user before closing if sync is active
