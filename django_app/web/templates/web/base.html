@@ -117,11 +117,24 @@
             }
         }
 
+        /* Footer heart animation */
+        .heart {
+            color: #ff6b6b;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.3); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.3); }
+            70% { transform: scale(1); }
+        }
 
         {% block extra_css %}{% endblock %}
     </style>
 </head>
-<body class="min-h-screen gradient-bg" style="overflow-x: hidden; max-width: 100vw;">
+<body class="min-h-screen gradient-bg flex flex-col" style="overflow-x: hidden; max-width: 100vw;">
     <!-- Navigation Bar -->
     <nav class="sticky top-0 z-50 glass border-b border-white/20 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -147,7 +160,6 @@
                         </a>
                     </div>
                 </div>
-
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
@@ -183,15 +195,32 @@
                 </a>
             </div>
         </div>
+    </nav>
 
     <!-- Page Content -->
-    <div class="flex items-center justify-center min-h-[calc(100vh-4rem)] p-4 sm:p-6 lg:p-8" style="max-width: 100vw; overflow-x: hidden;">
+    <div class="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8" style="max-width: 100vw; overflow-x: hidden;">
         <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl p-6 sm:p-8 lg:p-10" style="max-width: calc(80vw - 2rem); overflow-x: hidden;">
             {% block content %}
             <!-- Content goes here -->
             {% endblock %}
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="glass border-t border-white/20 py-4 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-700 text-sm">
+                    Created with <span class="heart">♥</span> by 
+                    <a href="https://www.instagram.com/atari.can/" 
+                       target="_blank" 
+                       class="font-semibold text-primary-600 hover:text-primary-700 transition-colors duration-200 hover:underline">
+                        atary
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
 
     {% block javascript %}
     <!-- Mobile menu toggle functionality -->

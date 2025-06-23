@@ -9,6 +9,9 @@ This is my submission for the **CTSE Assignment** - a comprehensive end-to-end d
 1. **🚀 Full Web Application** : [https://wmsystem.pythonanywhere.com/web/](https://wmsystem.pythonanywhere.com/web/)
 2. **📊 Airtable Dashboard** : [https://airtable.com/appLt31NqOLXcv3V1/pagcd42VrrF85luRt](https://airtable.com/appLt31NqOLXcv3V1/pagcd42VrrF85luRt)
 3. **🗄️ Airtable Database** : [https://airtable.com/appLt31NqOLXcv3V1/shrUCs6rqpBMNmhAt](https://airtable.com/appLt31NqOLXcv3V1/shrUCs6rqpBMNmhAt)
+4. **The Complete code files** : [https://drive.google.com/file/d/1G8EYVkwLnsjY-HiOE8dZgv73r6ynxR7O/view?usp=sharing](https://drive.google.com/file/d/1G8EYVkwLnsjY-HiOE8dZgv73r6ynxR7O/view?usp=sharing)
+5. **I also added `vaibhav@cste.international` to the original git repo this code was made on**
+6. **Loom Video** : [https://www.loom.com/share/e2a0a30488e24335971fe55ea19dc956?sid=b05e1c89-7740-4186-a337-c1a18757f75d](https://www.loom.com/share/e2a0a30488e24335971fe55ea19dc956?sid=b05e1c89-7740-4186-a337-c1a18757f75d)
 
 ### ⚠️ **Technical Limitations Encountered:**
 
