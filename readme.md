@@ -17,7 +17,7 @@ This is my submission for the **CTSE Assignment** - a comprehensive end-to-end d
 * **Bi-directional Sync** : Django DB updates reflect in Airtable (within free tier limits)
 
 ## 🏗️ Project StructureCTSE_ASSIGNMENT/│├── 📊 da_notebooks/                    # Data Analysis & Cleaning
-
+```bash
 │   ├── Cleaning_sku_mappings.ipynb     # SKU mapping data cleaning
 │   ├── Cleaning_Combo_sku.ipynb       # Combo product data cleaning
 │   └── Cleaning_inventory.ipynb       # Inventory data cleaning
@@ -58,6 +58,7 @@ This is my submission for the **CTSE Assignment** - a comprehensive end-to-end d
     ├── cste_meesho_outbound.csv
     ├── gl_fk_outbound.csv
     └── rudrav_meesho_outbound.csv
+```
 
 ## 📝 **My Journey: From Confusion to Clarity**
 
