@@ -1,4 +1,3 @@
-
 import requests
 import json
 import logging
@@ -115,6 +114,26 @@ class AirtableSync:
             data = {"fields": fields}
             result = self._make_request('POST', table_name, data)
             return result['id']
+    
+    def _get_all_records(self, table_name: str) -> List[Dict]:
+        """Get all records from an Airtable table"""
+        all_records = []
+        offset = None
+        
+        while True:
+            endpoint = table_name
+            if offset:
+                endpoint += f"?offset={offset}"
+            
+            result = self._make_request('GET', endpoint)
+            records = result.get('records', [])
+            all_records.extend(records)
+            
+            offset = result.get('offset')
+            if not offset:
+                break
+        
+        return all_records
     
     # =============================================================================
     # SKU MAPPINGS SYNC (Django → Airtable)
@@ -385,6 +404,59 @@ class AirtableSync:
             
         except Exception as e:
             logger.error(f"[ERROR] Failed to sync combo product from Airtable: {e}")
+    
+    # =============================================================================
+    # AIRTABLE → DJANGO BULK SYNC (for cron jobs)
+    # =============================================================================
+    
+    def sync_from_airtable(self, model_type: str = 'all', limit: Optional[int] = None) -> Dict[str, int]:
+        """Sync data FROM Airtable TO Django (for cron jobs)"""
+        results = {'created': 0, 'updated': 0, 'errors': 0}
+        
+        try:
+            if model_type in ['all', 'inventory']:
+                logger.info("🔄 Syncing inventory FROM Airtable TO Django...")
+                airtable_records = self._get_all_records('Inventory')
+                
+                for record in airtable_records[:limit] if limit else airtable_records:
+                    try:
+                        self.sync_inventory_from_airtable(record)
+                        results['updated'] += 1
+                    except Exception as e:
+                        logger.error(f"Error syncing inventory record: {e}")
+                        results['errors'] += 1
+            
+            if model_type in ['all', 'sku_mappings']:
+                logger.info("🔄 Syncing SKU mappings FROM Airtable TO Django...")
+                airtable_records = self._get_all_records('SKU_Mappings')
+                
+                for record in airtable_records[:limit] if limit else airtable_records:
+                    try:
+                        self.sync_sku_mapping_from_airtable(record)
+                        results['updated'] += 1
+                    except Exception as e:
+                        logger.error(f"Error syncing SKU mapping record: {e}")
+                        results['errors'] += 1
+            
+            if model_type in ['all', 'combo_products']:
+                logger.info("🔄 Syncing combo products FROM Airtable TO Django...")
+                airtable_records = self._get_all_records('Combo_Products')
+                
+                for record in airtable_records[:limit] if limit else airtable_records:
+                    try:
+                        self.sync_combo_product_from_airtable(record)
+                        results['updated'] += 1
+                    except Exception as e:
+                        logger.error(f"Error syncing combo product record: {e}")
+                        results['errors'] += 1
+            
+            logger.info(f"[SUCCESS] Sync from Airtable complete: {results}")
+            return results
+            
+        except Exception as e:
+            logger.error(f"[ERROR] Error in sync_from_airtable: {e}")
+            results['errors'] += 1
+            return results
 
 # Create global instance
 airtable_sync = AirtableSync()

@@ -44,12 +44,31 @@ INSTALLED_APPS = [
     # Third party
     'rest_framework',
     'corsheaders',
+    'django_crontab',
 
     # Local apps
     'core',
     'api',
     'web',
 ]
+
+# Cron job definitions
+CRONJOBS = [
+    # Sync FROM Airtable TO Django every 15 minutes
+    ('*/15 * * * *', 'core.management.commands.sync_from_airtable.Command', '--quiet'),
+    
+    # Alternative schedules (uncomment what you prefer):
+    # Every 5 minutes: ('*/5 * * * *', 'core.management.commands.sync_from_airtable.Command', '--quiet'),
+    # Every 30 minutes: ('*/30 * * * *', 'core.management.commands.sync_from_airtable.Command', '--quiet'),
+    # Every hour: ('0 * * * *', 'core.management.commands.sync_from_airtable.Command', '--quiet'),
+    
+    # Sync only inventory every 10 minutes
+    ('*/10 * * * *', 'core.management.commands.sync_from_airtable.Command', '--type=inventory --quiet'),
+]
+
+# Cron job settings
+CRONTAB_DJANGO_SETTINGS_MODULE = 'inventory_system.settings'
+CRONTAB_COMMAND_PREFIX = f'cd {BASE_DIR} &&'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -159,20 +178,45 @@ AIRTABLE_TABLES = {
     'combo_products': 'Combo_Products'
 }
 
-# Logging configuration
+LOGS_DIR = BASE_DIR.parent / 'logs'
+LOGS_DIR.mkdir(exist_ok=True)
+
+
+# Logging configuration with dynamic path
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
     'handlers': {
         'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR.parent, 'logs', 'airtable_sync.log'),
+            'filename': LOGS_DIR / 'airtable_sync.log',
+            'formatter': 'verbose',
+        },
+        'console': {
+            'level': 'INFO', 
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
         },
     },
     'loggers': {
         'core.airtable_sync': {
-            'handlers': ['file'],
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'core.management.commands.sync_from_airtable': {
+            'handlers': ['file', 'console'], 
             'level': 'INFO',
             'propagate': True,
         },
