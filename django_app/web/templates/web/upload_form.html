@@ -388,6 +388,7 @@
         </div>
 
         <form id="upload-form" enctype="multipart/form-data">
+            {% csrf_token %}
             <div class="upload-section" id="upload-area">
                 <div class="upload-icon">📁</div>
                 <div class="upload-text">Drag & drop your sales file here</div>
@@ -539,6 +540,11 @@
             }
 
             const formData = new FormData();
+            // Get CSRF token from the form
+            const csrfTokenElement = document.querySelector('[name=csrfmiddlewaretoken]');
+            if (csrfTokenElement) {
+                formData.append('csrfmiddlewaretoken', csrfTokenElement.value);
+            }
             formData.append('sales_file', selectedFile);
             formData.append('marketplace', marketplace.value);
 
@@ -562,6 +568,10 @@
                     method: 'POST',
                     body: formData
                 });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
 
                 const result = await response.json();
 

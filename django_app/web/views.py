@@ -175,6 +175,56 @@ def _import_processors():
 def process_sales_data(request):
     """Main view for processing sales data files"""
     
+    # ========== COMPREHENSIVE DEBUG LOGGING ==========
+    if request.method == 'POST':
+        print("=" * 60)
+        print("🔍 DEBUG: POST REQUEST RECEIVED")
+        print("=" * 60)
+        
+        # 1. Basic request info
+        print(f"🔍 Request Method: {request.method}")
+        print(f"🔍 Content Type: {getattr(request, 'content_type', 'UNKNOWN')}")
+        print(f"🔍 Content Length: {request.META.get('CONTENT_LENGTH', 'UNKNOWN')}")
+        print(f"🔍 User Agent: {request.META.get('HTTP_USER_AGENT', 'UNKNOWN')}")
+        
+        # 2. CSRF Debug
+        print(f"🔍 CSRF Cookie: {request.META.get('CSRF_COOKIE', 'NOT_FOUND')}")
+        print(f"🔍 CSRF Token in POST: {request.POST.get('csrfmiddlewaretoken', 'NOT_FOUND')}")
+        print(f"🔍 CSRF Token in META: {request.META.get('CSRF_COOKIE_USED', 'NOT_FOUND')}")
+        
+        # 3. Files debug
+        print(f"🔍 Files in request: {list(request.FILES.keys())}")
+        print(f"🔍 POST data keys: {list(request.POST.keys())}")
+        
+        # 4. File details
+        if 'sales_file' in request.FILES:
+            file_obj = request.FILES['sales_file']
+            print(f"🔍 File name: {file_obj.name}")
+            print(f"🔍 File size: {file_obj.size}")
+            print(f"🔍 File content type: {file_obj.content_type}")
+        else:
+            print("🔍 ❌ NO 'sales_file' found in request.FILES")
+        
+        # 5. Marketplace debug
+        marketplace = request.POST.get('marketplace', '')
+        print(f"🔍 Marketplace: '{marketplace}'")
+        
+        # 6. Raw POST data (first 500 chars)
+        try:
+            raw_post = str(request.POST)[:500]
+            print(f"🔍 Raw POST (first 500): {raw_post}")
+        except Exception as e:
+            print(f"🔍 Error reading POST: {e}")
+        
+        # 7. Headers debug
+        print("🔍 Key Headers:")
+        for header in ['HTTP_ACCEPT', 'HTTP_ACCEPT_ENCODING', 'HTTP_CONNECTION']:
+            print(f"  {header}: {request.META.get(header, 'MISSING')}")
+        
+        print("=" * 60)
+    
+    # ========== ORIGINAL CODE CONTINUES ==========
+    
     if request.method == 'GET':
         # Return the upload form
         return render(request, 'web/upload_form.html', {
@@ -190,43 +240,63 @@ def process_sales_data(request):
     
     elif request.method == 'POST':
         try:
+            print("🔍 Starting POST processing...")
+            
             # Get uploaded file
             uploaded_file = request.FILES.get('sales_file')
             marketplace = request.POST.get('marketplace', '')
             
+            print(f"🔍 File check: {uploaded_file is not None}")
+            print(f"🔍 Marketplace check: '{marketplace}'")
+            
             if not uploaded_file:
+                print("🔍 ❌ RETURNING ERROR: No file uploaded")
                 return JsonResponse({
                     'success': False,
                     'error': 'No file uploaded'
                 }, status=400)
             
             if not marketplace:
+                print("🔍 ❌ RETURNING ERROR: No marketplace selected")
                 return JsonResponse({
                     'success': False,
                     'error': 'No marketplace selected'
                 }, status=400)
             
+            print("🔍 ✅ Validation passed, continuing...")
+            
             # Generate session ID
             session_id = str(int(time.time() * 1000000))
+            print(f"🔍 Generated session ID: {session_id}")
             
             # Start log watcher for this session
             watcher = LogFileWatcher(session_id)
             active_watchers[session_id] = watcher
             watcher.start_watching()
+            print("🔍 ✅ Log watcher started")
             
             # Process the file with immediate data return
+            print("🔍 ⚡ Starting file processing...")
             result = process_uploaded_file_immediate(uploaded_file, marketplace, session_id)
+            print(f"🔍 ⚡ Processing result success: {result.get('success', False)}")
             
             if result['success']:
                 result['session_id'] = session_id
+                print("🔍 ✅ RETURNING SUCCESS RESPONSE")
                 return JsonResponse(result)
             else:
+                print(f"🔍 ❌ PROCESSING FAILED: {result.get('error', 'Unknown error')}")
                 # Clean up watcher on error
                 watcher.stop_watching()
                 del active_watchers[session_id]
                 return JsonResponse(result, status=400)
                 
         except Exception as e:
+            print(f"🔍 💥 EXCEPTION in POST processing: {str(e)}")
+            print(f"🔍 💥 Exception type: {type(e).__name__}")
+            import traceback
+            print(f"🔍 💥 Full traceback:\n{traceback.format_exc()}")
+            
             return JsonResponse({
                 'success': False,
                 'error': f'Server error: {str(e)}'

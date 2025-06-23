@@ -427,7 +427,7 @@ class AirtableSync:
                         results['errors'] += 1
             
             if model_type in ['all', 'sku_mappings']:
-                logger.info("🔄 Syncing SKU mappings FROM Airtable TO Django...")
+                logger.info("[OPERATION] Syncing SKU mappings FROM Airtable TO Django...")
                 airtable_records = self._get_all_records('SKU_Mappings')
                 
                 for record in airtable_records[:limit] if limit else airtable_records:
@@ -439,7 +439,7 @@ class AirtableSync:
                         results['errors'] += 1
             
             if model_type in ['all', 'combo_products']:
-                logger.info("🔄 Syncing combo products FROM Airtable TO Django...")
+                logger.info("[OPERATION] Syncing combo products FROM Airtable TO Django...")
                 airtable_records = self._get_all_records('Combo_Products')
                 
                 for record in airtable_records[:limit] if limit else airtable_records:

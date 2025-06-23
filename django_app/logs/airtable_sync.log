@@ -1741,3 +1741,125 @@ INFO 2025-06-23 10:13:49,119 airtable_sync 22540 10880 [SUCCESS]  Airtable conne
 INFO 2025-06-23 10:19:35,756 airtable_sync 9220 11704 [SUCCESS]  Airtable connection validated successfully
 INFO 2025-06-23 10:19:59,744 airtable_sync 20340 9480 [SUCCESS]  Airtable connection validated successfully
 INFO 2025-06-23 10:20:54,686 airtable_sync 19436 24592 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 12:01:14,801 airtable_sync 12248 17956 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 12:01:16,639 airtable_sync 10316 2852 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 12:03:26,604 airtable_sync 1224 8444 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 12:03:40,384 airtable_sync 4944 3612 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 12:07:38,841 airtable_sync 5572 14880 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 12:12:43,999 airtable_sync 15216 23524 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 12:13:52,488 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0199_MB_MHA8_Brown to Airtable
+INFO 2025-06-23 12:13:55,145 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0045_MB_LavienRose_Brown to Airtable
+INFO 2025-06-23 12:13:57,642 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:14:00,478 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:14:03,093 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+INFO 2025-06-23 12:14:05,676 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 12:14:08,237 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:14:10,795 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0015_MB_HBD_Black to Airtable
+INFO 2025-06-23 12:14:13,162 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 12:14:15,257 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0044_MB_LaVienRose_Black to Airtable
+INFO 2025-06-23 12:14:17,443 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:14:19,640 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0240_SG_Wings_Red to Airtable
+INFO 2025-06-23 12:14:21,804 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 12:14:23,954 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:14:26,118 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0200_MB_MHLasaCasaDePapel_Brown to Airtable
+INFO 2025-06-23 12:14:28,315 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0199_MB_MHA8_Brown to Airtable
+INFO 2025-06-23 12:14:30,739 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:14:33,860 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0330_Wands_Harrypotter_Light to Airtable
+INFO 2025-06-23 12:14:36,032 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 12:14:38,494 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 12:14:40,797 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0045_MB_LavienRose_Brown to Airtable
+INFO 2025-06-23 12:14:43,019 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:14:45,939 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0059_MB_YouAreMySunshine_Black to Airtable
+INFO 2025-06-23 12:14:48,758 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0045_MB_LavienRose_Brown to Airtable
+INFO 2025-06-23 12:14:53,316 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:14:59,394 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:15:01,598 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 12:15:03,847 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0359_Wands_Hermoine_light_SG to Airtable
+INFO 2025-06-23 12:15:06,177 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0434_ST_Pokemon_Bulbasour_Green to Airtable
+INFO 2025-06-23 12:15:08,374 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 12:15:10,648 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0199_MB_MHA8_Brown to Airtable
+INFO 2025-06-23 12:15:12,985 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:15:15,112 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0060_MB_YouAreMySunshine_Brown to Airtable
+INFO 2025-06-23 12:15:18,310 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0157_SG_FireGlass_Green to Airtable
+INFO 2025-06-23 12:15:21,557 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:15:25,753 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0320_ST_StrawberryRed to Airtable
+INFO 2025-06-23 12:15:28,516 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0045_MB_LavienRose_Brown to Airtable
+INFO 2025-06-23 12:15:32,012 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 12:15:34,686 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0430_Org_Compression_Kit_Blue to Airtable
+INFO 2025-06-23 12:15:37,259 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0015_MB_HBD_Black to Airtable
+INFO 2025-06-23 12:15:39,761 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 12:15:42,357 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0045_MB_LavienRose_Brown to Airtable
+INFO 2025-06-23 12:15:44,572 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0436_MB_Kalimba_8Notes_Heartshape to Airtable
+INFO 2025-06-23 12:15:46,752 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 12:15:49,368 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:15:51,913 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0017_MB_HP_Brown to Airtable
+INFO 2025-06-23 12:15:54,740 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0484_ST_Animal_Kaonashi_Ghost_Black to Airtable
+INFO 2025-06-23 12:15:57,027 airtable_sync 15216 2524 [SUCCESS] Synced inventory for CSTE_0397_Organizer_StorageBox_Blue to Airtable
+INFO 2025-06-23 12:19:37,499 airtable_sync 17416 9692 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 12:24:11,740 airtable_sync 12224 8484 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 12:24:28,825 airtable_sync 24220 15764 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 12:24:39,078 airtable_sync 10188 17660 [SUCCESS]  Airtable connection validated successfully
+INFO 2025-06-23 12:25:44,826 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+INFO 2025-06-23 12:25:47,271 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0442_CLT_AF_Goku_Big to Airtable
+INFO 2025-06-23 12:25:49,909 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:25:52,278 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:25:54,740 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+INFO 2025-06-23 12:26:03,781 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0490_ST_Fruit_Blox_Shadow to Airtable
+INFO 2025-06-23 12:26:11,394 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:26:14,270 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:26:17,047 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:26:21,839 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:26:24,606 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:26:27,065 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:26:30,511 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0454_ST_Animal_Garfield_Orange to Airtable
+INFO 2025-06-23 12:26:33,003 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+INFO 2025-06-23 12:26:36,028 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:26:38,584 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0417_Organizer_StorageBox_SkyBlue to Airtable
+INFO 2025-06-23 12:26:44,494 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:26:47,278 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:26:49,782 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0162_SG_FireGlass_MercuryPink to Airtable
+INFO 2025-06-23 12:26:52,344 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:26:57,539 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0478_ST_Minecraft_Cow_Brown to Airtable
+INFO 2025-06-23 12:27:00,702 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:27:03,878 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0013_MB_HBD_Red to Airtable
+INFO 2025-06-23 12:27:06,432 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+INFO 2025-06-23 12:27:08,716 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:27:14,102 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0157_SG_FireGlass_Green to Airtable
+INFO 2025-06-23 12:27:19,827 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0463_ST_Pokemon_Gengar to Airtable
+INFO 2025-06-23 12:27:28,424 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:27:44,935 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:27:47,512 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+INFO 2025-06-23 12:27:49,896 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:27:51,985 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+INFO 2025-06-23 12:27:54,061 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0157_SG_FireGlass_Green to Airtable
+INFO 2025-06-23 12:27:56,049 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:27:58,834 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0447_CLT_AF_Goku_SSJ to Airtable
+INFO 2025-06-23 12:28:14,041 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0417_Organizer_StorageBox_SkyBlue to Airtable
+INFO 2025-06-23 12:28:28,158 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+INFO 2025-06-23 12:28:30,711 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0156_SG_FireGlass_Yellow to Airtable
+INFO 2025-06-23 12:28:33,502 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0120_OT_DolphinBubbleMachine to Airtable
+INFO 2025-06-23 12:28:36,290 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0054_MB_Starwar_Black to Airtable
+INFO 2025-06-23 12:28:38,865 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+INFO 2025-06-23 12:28:42,077 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:28:45,289 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0445_OT_Glue_Sand_Rubber_Monkey to Airtable
+INFO 2025-06-23 12:28:53,604 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0294_OT_Harrypotter_new_wand to Airtable
+INFO 2025-06-23 12:29:03,847 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0533_ST_Animal_Breathing_Koala_Grey to Airtable
+INFO 2025-06-23 12:29:07,811 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+INFO 2025-06-23 12:29:13,436 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0470_ST_Minecraft_Sword_Small to Airtable
+INFO 2025-06-23 12:29:23,100 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0205_MB_MHA10_Brown to Airtable
+INFO 2025-06-23 12:29:29,783 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:29:32,512 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0157_SG_FireGlass_Green to Airtable
+INFO 2025-06-23 12:29:40,696 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:29:45,434 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0085_MB_Titanic_Brown to Airtable
+INFO 2025-06-23 12:29:47,614 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:29:50,679 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:29:53,431 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0111_HD_Rug_CircleFurmat_White to Airtable
+INFO 2025-06-23 12:29:56,077 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:30:03,960 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0020_MB_HP_Black to Airtable
+INFO 2025-06-23 12:30:08,351 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:30:13,229 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:30:15,560 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0148_SG_ButterFly_RedGreen to Airtable
+INFO 2025-06-23 12:30:18,149 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0157_SG_FireGlass_Green to Airtable
+INFO 2025-06-23 12:30:20,663 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable
+INFO 2025-06-23 12:30:26,729 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_0111_HD_Rug_CircleFurmat_White to Airtable
+INFO 2025-06-23 12:30:29,121 airtable_sync 10188 13104 [SUCCESS] Synced inventory for CSTE_O0390_OT_Toiletry_Bottles to Airtable

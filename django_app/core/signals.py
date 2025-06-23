@@ -13,9 +13,9 @@ def sync_sku_mapping_on_save(sender, instance, created, **kwargs):
     try:
         airtable_sync.sync_sku_mapping_to_airtable(instance)
         action = "Created" if created else "Updated"
-        logger.info(f"✅ {action} SKU mapping {instance.sku} synced to Airtable")
+        logger.info(f"[SUCCESS] {action} SKU mapping {instance.sku} synced to Airtable")
     except Exception as e:
-        logger.error(f"❌ Failed to sync SKU mapping {instance.sku}: {e}")
+        logger.error(f"[ERROR] Failed to sync SKU mapping {instance.sku}: {e}")
 
 @receiver(post_save, sender=Product)
 def sync_product_on_save(sender, instance, created, **kwargs):
@@ -23,9 +23,9 @@ def sync_product_on_save(sender, instance, created, **kwargs):
     try:
         airtable_sync.sync_product_to_airtable(instance)
         action = "Created" if created else "Updated"
-        logger.info(f"✅ {action} product {instance.msku} synced to Airtable")
+        logger.info(f"[SUCCESS] {action} product {instance.msku} synced to Airtable")
     except Exception as e:
-        logger.error(f"❌ Failed to sync product {instance.msku}: {e}")
+        logger.error(f"[ERROR] Failed to sync product {instance.msku}: {e}")
 
 @receiver(post_save, sender=ComboProduct)
 def sync_combo_product_on_save(sender, instance, created, **kwargs):
@@ -33,24 +33,24 @@ def sync_combo_product_on_save(sender, instance, created, **kwargs):
     try:
         airtable_sync.sync_combo_product_to_airtable(instance)
         action = "Created" if created else "Updated"
-        logger.info(f"✅ {action} combo product {instance.combo_sku} synced to Airtable")
+        logger.info(f"[SUCCESS] {action} combo product {instance.combo_sku} synced to Airtable")
     except Exception as e:
-        logger.error(f"❌ Failed to sync combo product {instance.combo_sku}: {e}")
+        logger.error(f"[ERROR] Failed to sync combo product {instance.combo_sku}: {e}")
 
 @receiver(post_save, sender=Inventory)
 def sync_inventory_on_save(sender, instance, created, **kwargs):
     """Auto-sync inventory changes to Airtable"""
     try:
         airtable_sync.sync_product_to_airtable(instance.product)
-        logger.info(f"✅ Inventory change for {instance.product.msku} synced to Airtable")
+        logger.info(f"[SUCCESS] Inventory change for {instance.product.msku} synced to Airtable")
     except Exception as e:
-        logger.error(f"❌ Failed to sync inventory for {instance.product.msku}: {e}")
+        logger.error(f"[ERROR] Failed to sync inventory for {instance.product.msku}: {e}")
 
 @receiver(post_save, sender=InventoryMovement)
 def sync_inventory_movement_on_save(sender, instance, created, **kwargs):
     """Auto-sync when inventory movements occur"""
     try:
         airtable_sync.sync_product_to_airtable(instance.product)
-        logger.info(f"✅ Inventory movement for {instance.product.msku} synced to Airtable")
+        logger.info(f"[SUCCESS] Inventory movement for {instance.product.msku} synced to Airtable")
     except Exception as e:
-        logger.error(f"❌ Failed to sync inventory movement for {instance.product.msku}: {e}")
+        logger.error(f"[ERROR] Failed to sync inventory movement for {instance.product.msku}: {e}")

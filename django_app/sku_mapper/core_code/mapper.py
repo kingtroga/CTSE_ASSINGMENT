@@ -2,7 +2,7 @@
 # =============================================================================
 # Updated SKU Mapper with Django Integration
 # =============================================================================
-
+import traceback
 import pandas as pd
 from ..utils.constants import Config
 from .logger import WMSLogger
@@ -255,7 +255,7 @@ class SKUMapper:
             
         except Exception as e:
             self.logger.log_process("MAPPER", "ERROR", f"Failed to process mappings: {str(e)}")
-            import traceback
+           
         self.logger.log_process("MAPPER", "DEBUG", f"Full error: {traceback.format_exc()}")
 
     def _get_marketplace_column(self) -> str:

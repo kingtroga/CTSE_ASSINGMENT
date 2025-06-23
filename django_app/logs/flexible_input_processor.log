@@ -80,3 +80,19 @@
 2025-06-23 10:20:16,730 - FlexibleInputProcessor - INFO - Excel file contains 13 sheet(s): ['Chronology', 'Legend', 'Current Inventory ', 'Combos skus', 'Msku With Skus', 'Outbound', 'Returns', 'Outflow', 'Inwards', 'inventory Upload FK And Meesho', 'Inventory Upload Amazon', 'packaging msku', 'Location ']
 2025-06-23 10:20:16,731 - FlexibleInputProcessor - ERROR - Error reading Excel file structure: Excel file contains 13 sheets: ['Chronology', 'Legend', 'Current Inventory ', 'Combos skus', 'Msku With Skus', 'Outbound', 'Returns', 'Outflow', 'Inwards', 'inventory Upload FK And Meesho', 'Inventory Upload Amazon', 'packaging msku', 'Location ']. You must specify which sheet to read using the 'sheet_name' parameter. Examples: sheet_name='Chronology' or sheet_name=0
 2025-06-23 10:20:16,731 - FlexibleInputProcessor - ERROR - Error processing file C:\Users\dell\AppData\Local\Temp\tmpn79y_9n8_WMS-04-02 (1).xlsx: Excel file contains 13 sheets: ['Chronology', 'Legend', 'Current Inventory ', 'Combos skus', 'Msku With Skus', 'Outbound', 'Returns', 'Outflow', 'Inwards', 'inventory Upload FK And Meesho', 'Inventory Upload Amazon', 'packaging msku', 'Location ']. You must specify which sheet to read using the 'sheet_name' parameter. Examples: sheet_name='Chronology' or sheet_name=0
+2025-06-23 12:02:35,273 - FlexibleInputProcessor - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmpx4blr7ig_cste_meesho.csv
+2025-06-23 12:02:35,274 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-23 12:02:35,279 - FlexibleInputProcessor - INFO - Successfully loaded data: 48 rows, 11 columns
+2025-06-23 12:02:35,283 - FlexibleInputProcessor - INFO - Cleaned data: (48, 11) -> (48, 10)
+2025-06-23 12:09:37,851 - FlexibleInputProcessor - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmpq6cyiyb9_cste_meesho.csv
+2025-06-23 12:09:37,852 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-23 12:09:37,879 - FlexibleInputProcessor - INFO - Successfully loaded data: 48 rows, 11 columns
+2025-06-23 12:09:37,912 - FlexibleInputProcessor - INFO - Cleaned data: (48, 11) -> (48, 10)
+2025-06-23 12:13:26,699 - FlexibleInputProcessor - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmpj61v5dqi_cste_meesho.csv
+2025-06-23 12:13:26,700 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-23 12:13:26,728 - FlexibleInputProcessor - INFO - Successfully loaded data: 48 rows, 11 columns
+2025-06-23 12:13:26,747 - FlexibleInputProcessor - INFO - Cleaned data: (48, 11) -> (48, 10)
+2025-06-23 12:25:15,210 - FlexibleInputProcessor - INFO - Processing file: C:\Users\dell\AppData\Local\Temp\tmpvo0ui50n_rudrav_meesho.csv
+2025-06-23 12:25:15,210 - FlexibleInputProcessor - INFO - Detected format: .csv
+2025-06-23 12:25:15,238 - FlexibleInputProcessor - INFO - Successfully loaded data: 64 rows, 11 columns
+2025-06-23 12:25:15,257 - FlexibleInputProcessor - INFO - Cleaned data: (64, 11) -> (64, 10)
